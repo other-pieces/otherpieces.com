@@ -1,2 +1,3 @@
-# otherpieces.com
-The Other Pieces website
+# Other Pieces Official Website
+
+[https://otherpieces.com](Visit our official website)
