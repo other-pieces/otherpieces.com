@@ -1,3 +1,3 @@
 # Other Pieces Official Website
 
-[https://otherpieces.com](Visit our official website)
+[Visit our official website](https://otherpieces.com)
