@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { injectGlobal } from 'styled-components';
 
+import {
+  sans,
+  weightExtraBold,
+  weightRegular,
+  weightSemiBold
+} from '../theme/settings';
+
 // Typography
 // Open Sans
 import openSansRegularTTF from '../assets/fonts/open-sans/OpenSans-Regular.ttf';
@@ -28,7 +35,7 @@ injectGlobal`
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: ${weightRegular};
     src: url(${openSansRegularWOFF2}) format('woff2'),
       url(${openSansRegularWOFF}) format('woff'),
       url(${openSansRegularTTF}) format('ttf');
@@ -37,7 +44,7 @@ injectGlobal`
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 600;
+    font-weight: ${weightSemiBold};
     src: url(${openSansSemiBoldWOFF2}) format('woff2'),
       url(${openSansSemiBoldWOFF}) format('woff'),
       url(${openSansSemiBoldTTF}) format('ttf');
@@ -46,7 +53,7 @@ injectGlobal`
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 800;
+    font-weight: ${weightExtraBold};
     src: url(${openSansExtraBoldWOFF2}) format('woff2'),
       url(${openSansExtraBoldWOFF}) format('woff'),
       url(${openSansExtraBoldTTF}) format('ttf');
@@ -56,7 +63,7 @@ injectGlobal`
   @font-face {
     font-family: 'Old Standard TT';
     font-style: normal;
-    font-weight: 400;
+    font-weight: ${weightRegular};
     src: url(${oldStandardRegularWOFF2}) format('woff2'),
       url(${oldStandardRegularWOFF}) format('woff'),
       url(${oldStandardRegularTTF}) format('ttf');
@@ -79,7 +86,7 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${sans};
     font-size: 1.6rem;
   }
 `
