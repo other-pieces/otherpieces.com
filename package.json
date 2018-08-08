@@ -5,15 +5,15 @@
   "author": "Other Piece <pieces.other@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
-    "gatsby": "^1.9.273",
-    "gatsby-link": "^1.6.45",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-javascript-frontmatter": "^1.0.10",
     "gatsby-transformer-remark": "^1.7.44",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.3.3"
+    "styled-components": "^3.4.2"
   },
   "keywords": [
     "gatsby"
@@ -26,6 +26,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.12.1"
+    "prettier": "^1.14.0"
   }
 }
