@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { injectGlobal } from 'styled-components';
 
 import {
-  sans,
+  fontFamilySans,
   weightExtraBold,
   weightRegular,
   weightSemiBold
@@ -86,7 +86,7 @@ injectGlobal`
   }
 
   body {
-    font-family: ${sans};
+    font-family: ${fontFamilySans};
     font-size: 1.6rem;
   }
 `

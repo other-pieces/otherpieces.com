@@ -1,12 +1,21 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
+
+import Logo from './Logo';
+import Nav from './Nav';
 
 const Header = () => (
-  <header>
-    <Link to="/">Other Pieces</Link>
-    <Link to="/posts">Recent Posts</Link>
-    <Link to="/about">About</Link>
-  </header>
-)
+  <StyledHeader>
+    <Logo />
+    <Nav />
+  </StyledHeader>
+);
+
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export default Header;
