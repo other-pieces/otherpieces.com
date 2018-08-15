@@ -1,9 +1,18 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
+
+import Card from '../components/Card';
 
 const IndexPage = ({ data }) => (
   <div>
     <h1>{data.site.siteMetadata.title}</h1>
+    <Card
+      path="/style"
+      linkText="Read post"
+      image="https://source.unsplash.com/random/720x960"
+      heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+      subhead="By Sara McCaskey"
+    />
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
@@ -11,8 +20,8 @@ const IndexPage = ({ data }) => (
           to={node.fields.slug}
         >
           <h3>
-            {node.frontmatter.title}{" "}
-            <span>— {node.frontmatter.date}</span>
+            {node.frontmatter.title}
+            <span>—{node.frontmatter.date}</span>
           </h3>
           <p>{node.excerpt}</p>
         </Link>

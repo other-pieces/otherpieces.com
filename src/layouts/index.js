@@ -5,6 +5,7 @@ import { injectGlobal } from 'styled-components';
 
 import {
   fontFamilySans,
+  spaceNone,
   weightExtraBold,
   weightRegular,
   weightSemiBold
@@ -103,13 +104,13 @@ const Layout = ({ children, data }) => (
     <Header />
     {children()}
   </div>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.func,
-}
+};
 
-export default Layout
+export default Layout;
 
 export const query = graphql`
   query SiteTitleQuery {
@@ -119,4 +120,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

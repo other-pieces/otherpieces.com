@@ -4,24 +4,23 @@ import styled from 'styled-components';
 
 import {
   colorCharcoal,
+  colorElectric,
   spaceInlineDefault,
-  spaceInsetSquishDouble,
-  weightSemiBold,
-  transition
+  weightSemiBold
 } from '../theme/settings';
 
 const Nav = () => (
   <StyledNav>
-    <StyledLink to="/posts">Style</StyledLink>
-    <StyledLink to="/about">Lifestyle</StyledLink>
-    <StyledLink to="/about">Travel</StyledLink>
+    <StyledLink to="/style">Style</StyledLink>
+    <StyledLink to="/lifestyle">Lifestyle</StyledLink>
+    <StyledLink to="/travel">Travel</StyledLink>
     <StyledLink to="/about">About</StyledLink>
-    <StyledLink to="/about">Search</StyledLink>
+    <StyledLink to="/search">Search</StyledLink>
   </StyledNav>
 );
 
 const StyledNav = styled.nav`
-  padding: ${spaceInsetSquishDouble};
+  max-width: 120.8rem;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -38,7 +37,11 @@ const StyledLink = styled(Link)`
   color: ${colorCharcoal};
   text-transform: uppercase;
   text-decoration: none;
-  transition: ${transition} color;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: ${colorElectric};
+  }
 `;
 
 export default Nav;
