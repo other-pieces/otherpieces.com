@@ -1,18 +1,63 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import CardGrid from '../components/CardGrid';
 import Card from '../components/Card';
 
 const IndexPage = ({ data }) => (
   <div>
     <h1>{data.site.siteMetadata.title}</h1>
-    <Card
-      path="/style"
-      linkText="Read post"
-      image="https://source.unsplash.com/random/720x960"
-      heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-      subhead="By Sara McCaskey"
-    />
+    <CardGrid>
+      <Card
+        path="/style"
+        linkText="Read post"
+        image="https://source.unsplash.com/random/720x960"
+        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+        subhead="By Sara McCaskey"
+      />
+      <Card
+        path="/style"
+        linkText="Read post"
+        image="https://source.unsplash.com/random/720x960"
+        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+        subhead="By Sara McCaskey"
+      />
+      <Card
+        path="/style"
+        linkText="Read post"
+        image="https://source.unsplash.com/random/720x960"
+        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+        subhead="By Sara McCaskey"
+      />
+      <Card
+        path="/style"
+        linkText="Read post"
+        image="https://source.unsplash.com/random/720x960"
+        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+        subhead="By Sara McCaskey"
+      />
+      <Card
+        path="/style"
+        linkText="Read post"
+        image="https://source.unsplash.com/random/720x960"
+        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+        subhead="By Sara McCaskey"
+      />
+      <Card
+        path="/style"
+        linkText="Read post"
+        image="https://source.unsplash.com/random/720x960"
+        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+        subhead="By Sara McCaskey"
+      />
+      <Card
+        path="/style"
+        linkText="Read post"
+        image="https://source.unsplash.com/random/720x960"
+        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
+        subhead="By Sara McCaskey"
+      />
+    </CardGrid>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>

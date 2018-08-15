@@ -29,7 +29,6 @@ const StyledNav = styled.nav`
 `;
 
 const StyledLink = styled(Link)`
-  margin: ${spaceInlineDefault};
   font-size: 1.8rem;
   font-weight: ${weightSemiBold};
   line-height: 2rem;
@@ -37,6 +36,10 @@ const StyledLink = styled(Link)`
   color: ${colorCharcoal};
   text-transform: uppercase;
   text-decoration: none;
+
+  &:not(:last-child) {
+    margin: ${spaceInlineDefault};
+  }
 
   &:hover {
     text-decoration: underline;
