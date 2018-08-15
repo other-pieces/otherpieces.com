@@ -1,78 +1,28 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import HiddenTitle from '../components/HiddenTitle';
 import CardGrid from '../components/CardGrid';
 import Card from '../components/Card';
 
 const IndexPage = ({ data }) => (
-  <div>
-    <h1>{data.site.siteMetadata.title}</h1>
+  <main>
+    <HiddenTitle>
+      {data.site.siteMetadata.title}
+    </HiddenTitle>
     <CardGrid>
-      <Card
-        path="/style"
-        linkText="Read post"
-        image="https://source.unsplash.com/random/720x960"
-        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-        subhead="By Sara McCaskey"
-      />
-      <Card
-        path="/style"
-        linkText="Read post"
-        image="https://source.unsplash.com/random/720x960"
-        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-        subhead="By Sara McCaskey"
-      />
-      <Card
-        path="/style"
-        linkText="Read post"
-        image="https://source.unsplash.com/random/720x960"
-        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-        subhead="By Sara McCaskey"
-      />
-      <Card
-        path="/style"
-        linkText="Read post"
-        image="https://source.unsplash.com/random/720x960"
-        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-        subhead="By Sara McCaskey"
-      />
-      <Card
-        path="/style"
-        linkText="Read post"
-        image="https://source.unsplash.com/random/720x960"
-        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-        subhead="By Sara McCaskey"
-      />
-      <Card
-        path="/style"
-        linkText="Read post"
-        image="https://source.unsplash.com/random/720x960"
-        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-        subhead="By Sara McCaskey"
-      />
-      <Card
-        path="/style"
-        linkText="Read post"
-        image="https://source.unsplash.com/random/720x960"
-        heading="I Want to Be the Hottest Bridesmaid at My Friend’s Wedding"
-        subhead="By Sara McCaskey"
-      />
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <Card
+          key={node.id}
+          path={node.fields.slug}
+          linkText={`Read ${node.frontmatter.title}`}
+          image={node.frontmatter.image}
+          heading={node.frontmatter.title}
+          subhead={`By ${node.frontmatter.author}`}
+        />
+      ))}
     </CardGrid>
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        <Link
-          to={node.fields.slug}
-        >
-          <h3>
-            {node.frontmatter.title}
-            <span>—{node.frontmatter.date}</span>
-          </h3>
-          <p>{node.excerpt}</p>
-        </Link>
-      </div>
-    ))}
-  </div>
+  </main>
 )
 
 export const query = graphql`
@@ -88,13 +38,13 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            author
+            image
             title
-            date(formatString: "DD MMMM, YYYY")
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }

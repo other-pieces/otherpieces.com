@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 
 import {
   colorCharcoal,
-  colorElectric,
+  colorPeacockLight,
   fontFamilySerif,
   spaceStackDouble,
   weightRegular,
-  spaceNone
+  spaceNone,
 } from '../theme/settings';
 
 const Card = ({
@@ -24,27 +24,34 @@ const Card = ({
       {linkText}
     </HiddenLinkText>
     <StyledCardImage src={image} />
-    {heading &&
-      <StyledCardHeading>
-        {heading}
-      </StyledCardHeading>
-    }
-    {subhead &&
-      <StyledCardSubhead>
-        {subhead}
-      </StyledCardSubhead>
-    }
+    <StyledCardContent>
+      {heading &&
+        <StyledCardHeading>
+          {heading}
+        </StyledCardHeading>
+      }
+      {subhead &&
+        <StyledCardSubhead>
+          {subhead}
+        </StyledCardSubhead>
+      }
+    </StyledCardContent>
   </StyledCard>
 );
 
 const StyledCard = styled(Link)`
   max-width: 36rem;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
 
+  &:hover img {
+    filter: brightness(1.02);
+  }
+
   &:hover h2 {
+    color: ${colorPeacockLight};
     text-decoration: underline;
-    text-decoration-color: ${colorElectric};
   }
 `;
 
@@ -56,6 +63,13 @@ const HiddenLinkText = styled.span`
 const StyledCardImage = styled.img`
   margin: ${spaceStackDouble};
   width: 100%;
+`;
+
+const StyledCardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 `;
 
 const StyledCardHeading = styled.h2`

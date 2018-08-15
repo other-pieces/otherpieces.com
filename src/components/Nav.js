@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import {
   colorCharcoal,
-  colorElectric,
+  colorPeacockLight,
   spaceInlineDefault,
   weightSemiBold
 } from '../theme/settings';
@@ -42,8 +42,8 @@ const StyledLink = styled(Link)`
   }
 
   &:hover {
+    color: ${colorPeacockLight};
     text-decoration: underline;
-    text-decoration-color: ${colorElectric};
   }
 `;
 
