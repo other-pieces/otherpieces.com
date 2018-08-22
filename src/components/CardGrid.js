@@ -14,6 +14,7 @@ const CardGrid = ({ children }) => (
 
 const StyledCardGrid = styled.div`
   margin-right: auto;
+  margin-bottom: ${spaceQuad};
   margin-left: auto;
   max-width: 120.8rem;
   display: grid;

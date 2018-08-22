@@ -2,19 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const HiddenTitle = ({ children }) => (
-  <StyledHiddenTitle>
+const TypeHiddenTitle = ({ children }) => (
+  <StyledTypeHiddenTitle>
     {children}
-  </StyledHiddenTitle>
+  </StyledTypeHiddenTitle>
 );
 
-const StyledHiddenTitle = styled.h1`
+const StyledTypeHiddenTitle = styled.h1`
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
 `;
 
-HiddenTitle.propTypes = {
+TypeHiddenTitle.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default HiddenTitle;
+export default TypeHiddenTitle;
