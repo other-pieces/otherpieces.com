@@ -32,6 +32,11 @@ const StyledLogo = styled(Link)`
   &:hover svg {
     fill: ${colorPeacockLight};
   }
+
+  &:focus {
+    outline: 0.4rem solid ${colorPeacockLight};
+    outline-offset: 0.8rem;
+  }
 `;
 
 const StyledLogoIcon = styled.svg`

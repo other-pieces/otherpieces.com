@@ -5,7 +5,6 @@ import { injectGlobal } from 'styled-components';
 
 import {
   fontFamilySans,
-  spaceNone,
   weightExtraBold,
   weightRegular,
   weightSemiBold
@@ -26,9 +25,13 @@ import openSansExtraBoldWOFF2 from '../assets/fonts/open-sans/OpenSans-ExtraBold
 import oldStandardRegularTTF from '../assets/fonts/old-standard-tt/OldStandard-Regular.ttf';
 import oldStandardRegularWOFF from '../assets/fonts/old-standard-tt/OldStandard-Regular.woff';
 import oldStandardRegularWOFF2 from '../assets/fonts/old-standard-tt/OldStandard-Regular.woff2';
+import oldStandardItalicTTF from '../assets/fonts/old-standard-tt/OldStandard-Italic.ttf';
+import oldStandardItalicWOFF from '../assets/fonts/old-standard-tt/OldStandard-Italic.woff';
+import oldStandardItalicWOFF2 from '../assets/fonts/old-standard-tt/OldStandard-Italic.woff2';
 
 // Components
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 injectGlobal`
   /* Typography */
@@ -70,6 +73,15 @@ injectGlobal`
       url(${oldStandardRegularTTF}) format('ttf');
   }
 
+  @font-face {
+    font-family: 'Old Standard TT';
+    font-style: italic;
+    font-weight: ${weightRegular};
+    src: url(${oldStandardItalicWOFF2}) format('woff2'),
+      url(${oldStandardItalicWOFF}) format('woff'),
+      url(${oldStandardItalicTTF}) format('ttf');
+  }
+
   /* Base Styles */
   html {
     box-sizing: border-box;
@@ -103,6 +115,7 @@ const Layout = ({ children, data }) => (
     />
     <Header />
     {children()}
+    <Footer />
   </div>
 );
 

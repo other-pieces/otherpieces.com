@@ -45,6 +45,11 @@ const StyledLink = styled(Link)`
     color: ${colorPeacockLight};
     text-decoration: underline;
   }
+
+  &:focus {
+    outline: 0.2rem solid ${colorPeacockLight};
+    outline-offset: 0.4rem;
+  }
 `;
 
 export default Nav;

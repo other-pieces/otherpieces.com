@@ -53,6 +53,10 @@ const StyledCard = styled(Link)`
     color: ${colorPeacockLight};
     text-decoration: underline;
   }
+
+  &:focus {
+    outline: 0.4rem solid ${colorPeacockLight};
+  }
 `;
 
 const HiddenLinkText = styled.span`

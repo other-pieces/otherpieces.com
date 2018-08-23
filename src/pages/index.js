@@ -1,15 +1,15 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import HiddenTitle from '../components/HiddenTitle';
+import TypeHiddenTitle from '../components/Typography/TypeHiddenTitle';
 import CardGrid from '../components/CardGrid';
 import Card from '../components/Card';
 
 const IndexPage = ({ data }) => (
   <main>
-    <HiddenTitle>
+    <TypeHiddenTitle>
       {data.site.siteMetadata.title}
-    </HiddenTitle>
+    </TypeHiddenTitle>
     <CardGrid>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Card
