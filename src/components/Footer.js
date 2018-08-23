@@ -19,7 +19,7 @@ const StyledFooter = styled.footer`
   text-align: center;
 `;
 
-const StyledCopyright = TypeCaption.extend`
+const StyledCopyright = TypeCaption.withComponent('small').extend`
   color: ${colorCharcoal};
 `;
 
