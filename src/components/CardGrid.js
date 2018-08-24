@@ -13,13 +13,12 @@ const CardGrid = ({ children }) => (
 );
 
 const StyledCardGrid = styled.div`
-  margin-right: auto;
   margin-bottom: ${spaceQuad};
-  margin-left: auto;
-  max-width: 120.8rem;
+  width: 100%;
   display: grid;
-  grid-template-columns: 36rem 36rem 36rem;
+  grid-template-columns: repeat(auto-fill, 36rem);
   grid-gap: ${spaceQuad};
+  justify-content: center;
 `;
 
 CardGrid.propTypes = {

@@ -16,6 +16,7 @@ const Footer = () => (
 
 const StyledFooter = styled.footer`
   padding: ${spaceInsetDouble};
+  grid-column: 2 / 3;
   text-align: center;
 `;
 

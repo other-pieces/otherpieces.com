@@ -21,6 +21,7 @@ const StyledHeader = styled.header`
   margin: ${spaceStackOct};
   padding-top: ${spaceQuad};
   padding-bottom: ${spaceDouble};
+  grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
   align-items: center;

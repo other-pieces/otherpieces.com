@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { injectGlobal } from 'styled-components';
@@ -31,6 +30,7 @@ import oldStandardItalicWOFF from '../assets/fonts/old-standard-tt/OldStandard-I
 import oldStandardItalicWOFF2 from '../assets/fonts/old-standard-tt/OldStandard-Italic.woff2';
 
 // Components
+import GlobalLayout from '../components/GlobalLayout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -153,7 +153,7 @@ injectGlobal`
 `
 
 const Layout = ({ children, data }) => (
-  <div>
+  <GlobalLayout>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -164,7 +164,7 @@ const Layout = ({ children, data }) => (
     <Header />
     {children()}
     <Footer />
-  </div>
+  </GlobalLayout>
 );
 
 Layout.propTypes = {

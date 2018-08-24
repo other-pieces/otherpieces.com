@@ -18,7 +18,6 @@ const Nav = () => (
 );
 
 const StyledNav = styled.nav`
-  max-width: 120.8rem;
   width: 100%;
   display: flex;
   flex-flow: row wrap;

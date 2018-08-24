@@ -9,10 +9,7 @@ const Main = ({ children }) => (
 );
 
 const StyledMain = styled.main`
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 120.8rem;
-  width: 100%;
+  grid-column: 2 / 3;
 `;
 
 StyledMain.propTypes = {

@@ -12,8 +12,6 @@ import {
 const Logo = () => (
   <StyledLogo to="/">
     <StyledLogoIcon
-      width="1208"
-      height="72"
       viewBox="0 0 1208 72"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -24,7 +22,6 @@ const Logo = () => (
 
 const StyledLogo = styled(Link)`
   margin: ${spaceStackQuad};
-  max-width: 120.8rem;
   width: 100%;
   display: block;
   text-decoration: none;

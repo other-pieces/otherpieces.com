@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Main from '../components/Main';
+
 const AboutPage = ({ data }) => (
-  <div>
+  <Main>
     <h1>About {data.site.siteMetadata.title}</h1>
-  </div>
+  </Main>
 );
 
 export const query = graphql`
