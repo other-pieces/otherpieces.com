@@ -8,10 +8,9 @@ import {
 
 const TypeHeadingSecondary = styled.span`
   font-family: ${fontFamilySerif};
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: ${weightRegular};
   color: ${colorCharcoal};
-  line-height: 1.167;
 `;
 
 export default TypeHeadingSecondary;
