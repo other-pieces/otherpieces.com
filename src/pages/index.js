@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
+import Main from '../components/Main';
 import TypeHiddenTitle from '../components/Typography/TypeHiddenTitle';
 import CardGrid from '../components/CardGrid';
 import Card from '../components/Card';
 
 const IndexPage = ({ data }) => (
-  <main>
+  <Main>
     <TypeHiddenTitle>
       {data.site.siteMetadata.title}
     </TypeHiddenTitle>
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
         />
       ))}
     </CardGrid>
-  </main>
+  </Main>
 )
 
 export const query = graphql`

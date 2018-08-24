@@ -1,11 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+
+import Main from '../components/Main';
 
 const SearchPage = ({ data }) => (
-  <div>
+  <Main>
     <h1>Search {data.site.siteMetadata.title}</h1>
-  </div>
-)
+  </Main>
+);
 
 export const query = graphql`
   query SearchQuery {

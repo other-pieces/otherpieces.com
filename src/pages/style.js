@@ -1,11 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+
+import Main from '../components/Main';
 
 const StylePage = ({ data }) => (
-  <div>
+  <Main>
     <h1>Style {data.site.siteMetadata.title}</h1>
-  </div>
-)
+  </Main>
+);
 
 export const query = graphql`
   query StyleQuery {
