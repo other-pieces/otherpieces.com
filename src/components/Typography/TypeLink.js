@@ -8,14 +8,12 @@ import {
   weightSemiBold
 } from '../../theme/settings';
 
-const TypeNavLink = styled(Link)`
+const TypeLink = styled(Link)`
   font-family: ${fontFamilySans};
   font-size: 1.8rem;
   font-weight: ${weightSemiBold};
   color: ${colorCharcoal};
-  line-height: 1.111;
-  letter-spacing: 0.4rem;
-  text-transform: uppercase;
+  line-height: 1.778;
   text-decoration: none;
 
   &:hover {
@@ -29,4 +27,4 @@ const TypeNavLink = styled(Link)`
   }
 `;
 
-export default TypeNavLink;
+export default TypeLink;

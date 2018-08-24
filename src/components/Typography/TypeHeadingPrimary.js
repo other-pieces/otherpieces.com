@@ -6,12 +6,12 @@ import {
   weightRegular
 } from '../../theme/settings';
 
-const TypeHeadline = styled.span`
+const TypeHeadingPrimary = styled.span`
   font-family: ${fontFamilySerif};
-  font-size: 7.2rem;
+  font-size: 3.2rem;
   font-weight: ${weightRegular};
   color: ${colorCharcoal};
-  line-height: 1;
+  line-height: 1.125;
 `;
 
-export default TypeHeadline;
+export default TypeHeadingPrimary;

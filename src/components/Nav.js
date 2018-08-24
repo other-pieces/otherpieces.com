@@ -29,19 +29,8 @@ const StyledNav = styled.nav`
 `;
 
 const StyledLink = TypeNavLink.extend`
-  color: ${colorCharcoal};
-
   &:not(:last-child) {
     margin: ${spaceInlineDefault};
-  }
-
-  &:hover {
-    color: ${colorPeacockLight};
-  }
-
-  &:focus {
-    outline: 0.2rem solid ${colorPeacockLight};
-    outline-offset: 0.4rem;
   }
 `;
 
