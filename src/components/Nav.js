@@ -1,12 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 
+import TypeNavLink from './Typography/TypeNavLink';
+
 import {
-  colorCharcoal,
-  colorPeacockLight,
-  spaceInlineDefault,
-  weightSemiBold
+  spaceInlineDefault
 } from '../theme/settings';
 
 const Nav = () => (
@@ -28,27 +26,9 @@ const StyledNav = styled.nav`
   justify-content: space-between;
 `;
 
-const StyledLink = styled(Link)`
-  font-size: 1.8rem;
-  font-weight: ${weightSemiBold};
-  line-height: 2rem;
-  letter-spacing: 0.4rem;
-  color: ${colorCharcoal};
-  text-transform: uppercase;
-  text-decoration: none;
-
+const StyledLink = TypeNavLink.extend`
   &:not(:last-child) {
     margin: ${spaceInlineDefault};
-  }
-
-  &:hover {
-    color: ${colorPeacockLight};
-    text-decoration: underline;
-  }
-
-  &:focus {
-    outline: 0.2rem solid ${colorPeacockLight};
-    outline-offset: 0.4rem;
   }
 `;
 

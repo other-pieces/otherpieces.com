@@ -3,13 +3,13 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import TypeHeadingPrimary from './Typography/TypeHeadingPrimary';
+import TypeBylineHeading from './Typography/TypeBylineHeading';
+
 import {
-  colorCharcoal,
   colorPeacockLight,
-  fontFamilySerif,
   spaceStackDouble,
-  weightRegular,
-  spaceNone,
+  spaceNone
 } from '../theme/settings';
 
 const Card = ({
@@ -76,23 +76,12 @@ const StyledCardContent = styled.div`
   justify-content: space-between;
 `;
 
-const StyledCardHeading = styled.h2`
+const StyledCardHeading = TypeHeadingPrimary.withComponent('h2').extend`
   margin: ${spaceStackDouble};
-  font-family: ${fontFamilySerif};
-  font-size: 3.6rem;
-  font-weight: ${weightRegular};
-  color: ${colorCharcoal};
-  line-height: 1.222;
 `;
 
-const StyledCardSubhead = styled.p`
+const StyledCardSubhead = TypeBylineHeading.withComponent('p').extend`
   margin: ${spaceNone};
-  font-size: 1.4rem;
-  font-weight: ${weightRegular};
-  line-height: 1.429;
-  color: ${colorCharcoal};
-  letter-spacing: 0.4rem;
-  text-transform: uppercase;
 `;
 
 Card.propTypes = {
