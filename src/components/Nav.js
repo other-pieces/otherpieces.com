@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 import {
@@ -8,6 +7,7 @@ import {
   spaceInlineDefault,
   weightSemiBold
 } from '../theme/settings';
+import TypeNavLink from './Typography/TypeNavLink';
 
 const Nav = () => (
   <StyledNav>
@@ -28,14 +28,8 @@ const StyledNav = styled.nav`
   justify-content: space-between;
 `;
 
-const StyledLink = styled(Link)`
-  font-size: 1.8rem;
-  font-weight: ${weightSemiBold};
-  line-height: 2rem;
-  letter-spacing: 0.4rem;
+const StyledLink = TypeNavLink.extend`
   color: ${colorCharcoal};
-  text-transform: uppercase;
-  text-decoration: none;
 
   &:not(:last-child) {
     margin: ${spaceInlineDefault};
@@ -43,7 +37,6 @@ const StyledLink = styled(Link)`
 
   &:hover {
     color: ${colorPeacockLight};
-    text-decoration: underline;
   }
 
   &:focus {
