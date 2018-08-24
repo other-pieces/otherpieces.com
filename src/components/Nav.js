@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-  colorCharcoal,
-  colorPeacockLight,
-  spaceInlineDefault,
-  weightSemiBold
-} from '../theme/settings';
 import TypeNavLink from './Typography/TypeNavLink';
+
+import {
+  spaceInlineDefault
+} from '../theme/settings';
 
 const Nav = () => (
   <StyledNav>
