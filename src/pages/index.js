@@ -4,6 +4,8 @@ import Main from '../components/Main';
 import TypeHiddenTitle from '../components/Typography/TypeHiddenTitle';
 import CardGrid from '../components/CardGrid';
 import Card from '../components/Card';
+import CardSmallGrid from '../components/CardSmallGrid';
+import CardSmall from '../components/CardSmall';
 
 const IndexPage = ({ data }) => (
   <Main>
@@ -22,6 +24,34 @@ const IndexPage = ({ data }) => (
         />
       ))}
     </CardGrid>
+    <section>
+      <CardSmallGrid>
+        <CardSmall
+          key="cardSmall1"
+          path="/style"
+          linkText="View all style posts"
+          image="https://source.unsplash.com/random/256x192"
+          heading="Style"
+          caption="Super cute ’fits"
+        />
+        <CardSmall
+          key="cardSmall2"
+          path="/lifestyle"
+          linkText="View all lifestyle posts"
+          image="https://source.unsplash.com/random/256x192"
+          heading="Lifestyle"
+          caption="Living your best life"
+        />
+        <CardSmall
+          key="cardSmall3"
+          path="/travel"
+          linkText="View all travel posts"
+          image="https://source.unsplash.com/random/256x192"
+          heading="Travel"
+          caption="Literally skipping town"
+        />
+      </CardSmallGrid>
+    </section>
   </Main>
 )
 
