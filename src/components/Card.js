@@ -16,6 +16,7 @@ const Card = ({
   heading,
   linkText,
   image,
+  imageAlt,
   path,
   subhead
 }) => (
@@ -23,7 +24,7 @@ const Card = ({
     <HiddenLinkText>
       {linkText}
     </HiddenLinkText>
-    <StyledCardImage src={image} />
+    <StyledCardImage src={image} alt={imageAlt} />
     <StyledCardContent>
       {heading &&
         <StyledCardHeading>

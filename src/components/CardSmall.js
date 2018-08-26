@@ -17,6 +17,7 @@ const CardSmall = ({
   caption,
   heading,
   image,
+  imageAlt,
   linkText,
   path
 }) => (
@@ -24,7 +25,7 @@ const CardSmall = ({
     <HiddenLinkText>
       {linkText}
     </HiddenLinkText>
-    <StyledCardSmallImage src={image} />
+    <StyledCardSmallImage src={image} alt={imageAlt} />
     <StyledCardSmallContent>
       {heading &&
         <StyledCardSmallHeading>
