@@ -17,6 +17,7 @@ const CardSmall = ({
   caption,
   heading,
   image,
+  imageAlt,
   linkText,
   path
 }) => (

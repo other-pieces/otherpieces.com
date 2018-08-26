@@ -14,11 +14,13 @@ const CalloutSection = ({ children }) => (
       Things that are better than work/laundry/calling your mom:
     </StyledTypeSectionHeading>
     <CardSmallGrid>
+      {/* TODO: Replace with final image and alt text */}
       <CardSmall
         key="cardSmall1"
         path="/style"
         linkText="View all style posts"
         image="https://source.unsplash.com/random/256x192"
+        imageAlt=""
         heading="Style"
         caption="Super cute ’fits"
       />
@@ -27,6 +29,7 @@ const CalloutSection = ({ children }) => (
         path="/lifestyle"
         linkText="View all lifestyle posts"
         image="https://source.unsplash.com/random/256x192"
+        imageAlt=""
         heading="Lifestyle"
         caption="Living your best life"
       />
@@ -35,6 +38,7 @@ const CalloutSection = ({ children }) => (
         path="/travel"
         linkText="View all travel posts"
         image="https://source.unsplash.com/random/256x192"
+        imageAlt=""
         heading="Travel"
         caption="Literally skipping town"
       />

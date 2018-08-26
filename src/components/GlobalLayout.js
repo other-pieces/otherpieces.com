@@ -1,19 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 import {
   spaceDouble,
   spaceQuad
 } from '../theme/settings';
 
-const GlobalLayout = ({ children }) => (
-  <StyledGlobalLayout>
-    {children}
-  </StyledGlobalLayout>
-);
-
-const StyledGlobalLayout = styled.div`
+const GlobalLayout = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
 
@@ -29,9 +21,5 @@ const StyledGlobalLayout = styled.div`
     grid-template-columns: 1fr 120.8rem 1fr;
   }
 `;
-
-StyledGlobalLayout.propTypes = {
-  children: PropTypes.array,
-};
 
 export default GlobalLayout;

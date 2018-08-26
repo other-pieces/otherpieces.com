@@ -17,7 +17,8 @@ const IndexPage = ({ data }) => (
           key={node.id}
           path={node.fields.slug}
           linkText={`Read ${node.frontmatter.title}`}
-          image={node.frontmatter.image}
+          image={node.frontmatter.imageCard}
+          imageAlt={node.frontmatter.imageCardAlt}
           heading={node.frontmatter.title}
           subhead={`By ${node.frontmatter.author}`}
         />
@@ -43,7 +44,8 @@ export const query = graphql`
           id
           frontmatter {
             author
-            image
+            imageCard
+            imageCardAlt
             title
           }
           fields {
