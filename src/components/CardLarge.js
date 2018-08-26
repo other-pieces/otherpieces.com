@@ -40,9 +40,19 @@ const Card = ({
 );
 
 const StyledCard = styled(Link)`
+  max-width: 36rem;
   display: flex;
   flex-direction: column;
   text-decoration: none;
+
+  &:hover img {
+    filter: brightness(1.02);
+  }
+
+  &:hover h2 {
+    color: ${colorPeacockLight};
+    text-decoration: underline;
+  }
 
   &:focus {
     outline: 0.4rem solid ${colorPeacockLight};
@@ -57,10 +67,6 @@ const HiddenLinkText = styled.span`
 const StyledCardImage = styled.img`
   margin: ${spaceStackDouble};
   width: 100%;
-
-  ${StyledCard}:hover & {
-    filter: brightness(1.02);
-  }
 `;
 
 const StyledCardContent = styled.div`
@@ -72,11 +78,6 @@ const StyledCardContent = styled.div`
 
 const StyledCardHeading = TypeHeadingPrimary.withComponent('h2').extend`
   margin: ${spaceStackDouble};
-
-  ${StyledCard}:hover & {
-    color: ${colorPeacockLight};
-    text-decoration: underline;
-  }
 `;
 
 const StyledCardSubhead = TypeBylineHeading.withComponent('p').extend`

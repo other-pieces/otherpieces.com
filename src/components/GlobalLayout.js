@@ -31,7 +31,7 @@ const StyledGlobalLayout = styled.div`
 `;
 
 StyledGlobalLayout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.array,
 };
 
 export default GlobalLayout;

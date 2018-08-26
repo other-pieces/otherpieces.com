@@ -13,7 +13,7 @@ const StyledMain = styled.main`
 `;
 
 StyledMain.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.array,
 };
 
 export default Main;
