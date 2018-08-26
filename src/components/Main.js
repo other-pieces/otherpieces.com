@@ -12,7 +12,7 @@ const StyledMain = styled.main`
   grid-column: 2 / 3;
 `;
 
-StyledMain.propTypes = {
+Main.propTypes = {
   children: PropTypes.array,
 };
 

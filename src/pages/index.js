@@ -1,17 +1,16 @@
 import React from 'react';
 
 import Main from '../components/Main';
-import TypeHiddenTitle from '../components/Typography/TypeHiddenTitle';
+import TypeHiddenText from '../components/Typography/TypeHiddenText';
 import CardGrid from '../components/CardGrid';
 import Card from '../components/Card';
-import CardSmallGrid from '../components/CardSmallGrid';
-import CardSmall from '../components/CardSmall';
+import CategoryCalloutSection from '../components/CategoryCalloutSection';
 
 const IndexPage = ({ data }) => (
   <Main>
-    <TypeHiddenTitle>
+    <StyledTypeHiddenTitle>
       {data.site.siteMetadata.title}
-    </TypeHiddenTitle>
+    </StyledTypeHiddenTitle>
     <CardGrid>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Card
@@ -24,36 +23,11 @@ const IndexPage = ({ data }) => (
         />
       ))}
     </CardGrid>
-    <section>
-      <CardSmallGrid>
-        <CardSmall
-          key="cardSmall1"
-          path="/style"
-          linkText="View all style posts"
-          image="https://source.unsplash.com/random/256x192"
-          heading="Style"
-          caption="Super cute ’fits"
-        />
-        <CardSmall
-          key="cardSmall2"
-          path="/lifestyle"
-          linkText="View all lifestyle posts"
-          image="https://source.unsplash.com/random/256x192"
-          heading="Lifestyle"
-          caption="Living your best life"
-        />
-        <CardSmall
-          key="cardSmall3"
-          path="/travel"
-          linkText="View all travel posts"
-          image="https://source.unsplash.com/random/256x192"
-          heading="Travel"
-          caption="Literally skipping town"
-        />
-      </CardSmallGrid>
-    </section>
+    <CategoryCalloutSection />
   </Main>
-)
+);
+
+const StyledTypeHiddenTitle = TypeHiddenText.withComponent('h1');
 
 export const query = graphql`
   query IndexQuery {
