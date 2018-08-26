@@ -15,9 +15,16 @@ const CardSmallGrid = ({ children }) => (
 const StyledCardGrid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 25.6rem);
   grid-gap: ${spaceDouble};
   justify-content: center;
+
+  @media (max-width: 959px) {
+    grid-template-columns: 25.6rem;
+  }
+
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(auto-fit, 25.6rem);
+  }
 `;
 
 CardSmallGrid.propTypes = {

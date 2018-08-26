@@ -2,15 +2,19 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
+import TypeHiddenText from './Typography/TypeHiddenText';
+
 import {
   colorPeacock,
   colorPeacockLight,
-  spaceStackQuad,
-  transition
+  spaceStackQuad
 } from '../theme/settings';
 
 const Logo = () => (
   <StyledLogo to="/">
+    <TypeHiddenText>
+      Visit Other Pieces home page
+    </TypeHiddenText>
     <StyledLogoIcon
       viewBox="0 0 1208 72"
       xmlns="http://www.w3.org/2000/svg"
