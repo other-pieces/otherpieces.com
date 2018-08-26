@@ -3,9 +3,9 @@ title: 'Yes, I Love Bucket Hats and Fanny Packs'
 date: '2018-07-13'
 author: 'Jacqueline Dobbins'
 imageCard: 'https://source.unsplash.com/random/720x960'
-imageCardAlt: ''
+imageCardAlt: 'Card alt text'
 imageHero: 'https://source.unsplash.com/random/786x1048'
-imageHeroAlt: ''
+imageHeroAlt: 'Hero alt text'
 ---
 
 ## Lorem ipsum dolor

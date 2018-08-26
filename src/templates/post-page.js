@@ -116,6 +116,7 @@ export const query = graphql`
         author
         title
         imageHero
+        imageHeroAlt
       }
     }
   }

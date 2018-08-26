@@ -3,9 +3,9 @@ title: 'Being a Boss Bitch'
 date: '2018-08-20'
 author: 'Jacqueline Dobbins'
 imageCard: 'https://source.unsplash.com/random/720x960'
-imageCardAlt: ''
+imageCardAlt: 'Card alt text'
 imageHero: 'https://source.unsplash.com/random/1208x604'
-imageHeroAlt: ''
+imageHeroAlt: 'Hero alt text'
 ---
 
 ## Lorem ipsum dolor

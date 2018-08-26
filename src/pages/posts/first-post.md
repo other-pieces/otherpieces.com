@@ -3,9 +3,9 @@ title: 'I Want to Be the Hottest Bridesmaid at My Friend’s Wedding'
 date: '2018-07-12'
 author: 'Sara McCaskey'
 imageCard: 'https://source.unsplash.com/random/720x960'
-imageCardAlt: ''
+imageCardAlt: 'Card alt text'
 imageHero: 'https://source.unsplash.com/random/1208x604'
-imageHeroAlt: ''
+imageHeroAlt: 'Hero alt text'
 ---
 
 ## The situation
