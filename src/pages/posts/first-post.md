@@ -1,7 +1,9 @@
 ---
 title: 'I Want to Be the Hottest Bridesmaid at My Friend’s Wedding'
+path: 'the-hottest-bridesmaid'
 date: '2018-07-12'
 author: 'Sara McCaskey'
+category: 'lifestyle'
 imageCard: 'https://source.unsplash.com/random/720x960'
 imageCardAlt: 'Card alt text'
 imageHero: 'https://source.unsplash.com/random/1208x604'
