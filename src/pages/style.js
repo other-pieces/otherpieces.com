@@ -26,20 +26,7 @@ const StylePage = ({ data }) => (
 
 export const query = graphql`
   query StyleQuery {
-    allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          category: {
-            eq: "style"
-          }
-        }
-      }
-      sort: {
-        fields: [frontmatter___date],
-        order: DESC
-      }
-    ) {
-      totalCount
+    allMarkdownRemark(filter: {frontmatter: {category: {eq: "style"}}}, sort: {fields: [frontmatter___date], order: DESC}) {
       edges {
         node {
           id

@@ -26,20 +26,7 @@ const TravelPage = ({ data }) => (
 
 export const query = graphql`
   query TravelQuery {
-    allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          category: {
-            eq: "travel"
-          }
-        }
-      }
-      sort: {
-        fields: [frontmatter___date],
-        order: DESC
-      }
-    ) {
-      totalCount
+    allMarkdownRemark(filter: {frontmatter: {category: {eq: "travel"}}}, sort: {fields: [frontmatter___date], order: DESC}) {
       edges {
         node {
           id
