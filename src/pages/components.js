@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Main from '../components/Main';
+import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
 import TypeHeadline from '../components/Typography/TypeHeadline';
 import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 import TypeNavLink from '../components/Typography/TypeNavLink';
@@ -14,6 +15,7 @@ import TypeLink from '../components/Typography/TypeLink';
 const ComponentsPage = ({ data }) => (
   <Main>
     <h1>Components</h1>
+    <StyledMastheadHeadline>Masthead Headline</StyledMastheadHeadline>
     <StyledHeadline>Article Headline</StyledHeadline>
     <StyledSectionHeading>Section Heading</StyledSectionHeading>
     <StyledNavLink to="#0">Navigation Link</StyledNavLink>
@@ -25,6 +27,8 @@ const ComponentsPage = ({ data }) => (
     <TypeLink>Text Link</TypeLink>
   </Main>
 );
+
+const StyledMastheadHeadline = TypeMastheadHeadline.withComponent('h2');
 
 const StyledHeadline = TypeHeadline.withComponent('h2');
 
