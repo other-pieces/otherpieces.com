@@ -14,11 +14,9 @@ const TypeLink = styled(Link)`
   font-weight: ${weightSemiBold};
   color: ${colorCharcoal};
   line-height: 1.778;
-  text-decoration: none;
 
   &:hover {
     color: ${colorPeacockLight};
-    text-decoration: underline;
   }
 
   &:focus {

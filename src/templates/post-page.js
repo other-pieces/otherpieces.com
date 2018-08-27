@@ -7,14 +7,17 @@ import TypeBylineHeading from '../components/Typography/TypeBylineHeading';
 
 import {
   colorCharcoal,
+  colorPeacockLight,
   fontFamilySans,
   fontFamilySerif,
   spaceStackDefault,
   spaceStackDouble,
   spaceStackQuad,
   spaceStackOct,
+  weightBold,
   weightLight,
-  weightRegular
+  weightRegular,
+  weightSemiBold
 } from '../theme/settings';
 
 export default ({ data }) => {
@@ -105,6 +108,31 @@ const StyledArticleBody = styled.div`
     font-weight: ${weightLight};
     color: ${colorCharcoal};
     line-height: 1.778;
+
+    em {
+      font-style: italic;
+    }
+
+    strong {
+      font-weight: ${weightBold};
+    }
+  }
+
+  a {
+    font-family: ${fontFamilySans};
+    font-size: 1.8rem;
+    font-weight: ${weightSemiBold};
+    color: ${colorCharcoal};
+    line-height: 1.778;
+
+    &:hover {
+      color: ${colorPeacockLight};
+    }
+
+    &:focus {
+      outline: 0.2rem solid ${colorPeacockLight};
+      outline-offset: 0.4rem;
+    }
   }
 `;
 

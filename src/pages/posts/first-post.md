@@ -18,7 +18,7 @@ Some stuff here.
 
 #### The dress to rule them all
 
-Lorem ipsum dolor amet whatever mustache nar * whal DIY, fanny pack roof p * arty fam small batch taxidermy woke cardigan. Lo-fi kickstarter succulents glossier brunch slow-carb. You probably haven't heard of them kickstarter raw denim plaid meditation microdosing. Normcore kickstarter iceland vexillologist skateboard, enamel pin plaid cliche retro tumblr craft beer XOXO mumblecore.
+Lorem ipsum dolor amet whatever mustache nar * whal DIY, fanny pack roof p * arty fam small batch taxidermy woke cardigan. Lo-fi kickstarter succulents glossier brunch slow-carb. *You probably haven't heard of them* kickstarter raw denim plaid meditation microdosing. **Normcore kickstarter** iceland vexillologist skateboard, [enamel pin plaid cliche](https://google.com) retro tumblr craft beer XOXO mumblecore.
 
 Waistcoat gentrify cold-pressed chambray raw denim subway tile locavore. Farm-to-table pabst shaman, squid cloud bread tumblr hell of lyft letterpress bicycle rights art party. Banjo tacos kitsch quinoa, sartorial whatever occupy chartreuse stumptown austin poke flexitarian tofu. Man bun chia farm-to-table twee shaman +1 90's.
 
@@ -30,4 +30,4 @@ Direct trade taiyaki flexitarian letterpress, franzen venmo sriracha adaptogen Y
 
 Oh. You need a little dummy text for your mockup? How quaint.
 
-I bet you’re still using Bootstrap too
+I bet you’re still using Bootstrap too.
