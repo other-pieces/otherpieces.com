@@ -1,9 +1,9 @@
 ---
-title: 'Being a Boss Bitch'
-path: 'being-a-boss-bitch'
-date: '2018-08-20'
-author: 'Jacqueline Dobbins'
-category: 'lifestyle'
+title: 'Why Japan Will Always Have My Heart'
+path: 'why-japan-will-always-have-my-heart'
+date: '2018-08-27'
+author: 'Sara McCaskey'
+category: 'travel'
 imageCard: 'https://source.unsplash.com/random/720x960'
 imageCardAlt: 'Card alt text'
 imageHero: 'https://source.unsplash.com/random/1208x604'
@@ -12,7 +12,7 @@ imageHeroAlt: 'Hero alt text'
 
 ## Lorem ipsum dolor
 
-This is the third post for Other Pieces.
+This is the fourth post for Other Pieces.
 
 Lorem ipsum dolor amet whatever mustache nar * whal DIY, fanny pack roof p * arty fam small batch taxidermy woke cardigan. Lo-fi kickstarter succulents glossier brunch slow-carb. *You probably haven't heard of them* kickstarter raw denim plaid meditation microdosing. **Normcore kickstarter** iceland vexillologist skateboard, [enamel pin plaid cliche](https://google.com) retro tumblr craft beer XOXO mumblecore.
 

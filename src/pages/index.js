@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Card
           key={node.id}
-          path={node.fields.slug}
+          path={node.frontmatter.path}
           linkText={`Read ${node.frontmatter.title}`}
           image={node.frontmatter.imageCard}
           imageAlt={node.frontmatter.imageCardAlt}
@@ -37,7 +37,13 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(
+      limit: 6
+      sort: {
+        fields: [frontmatter___date],
+        order: DESC
+      }
+    ) {
       totalCount
       edges {
         node {
@@ -46,10 +52,8 @@ export const query = graphql`
             author
             imageCard
             imageCardAlt
+            path
             title
-          }
-          fields {
-            slug
           }
         }
       }
