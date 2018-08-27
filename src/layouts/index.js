@@ -5,22 +5,25 @@ import { injectGlobal } from 'styled-components';
 
 import {
   fontFamilySans,
-  weightExtraBold,
+  weightLight,
   weightRegular,
   weightSemiBold
 } from '../theme/settings';
 
 // Typography
 // Open Sans
+import openSansLightTTF from '../assets/fonts/open-sans/OpenSans-Light.ttf';
+import openSansLightWOFF from '../assets/fonts/open-sans/OpenSans-Light.woff';
+import openSansLightWOFF2 from '../assets/fonts/open-sans/OpenSans-Light.woff2';
+import openSansLightItalicTTF from '../assets/fonts/open-sans/OpenSans-LightItalic.ttf';
+import openSansLightItalicWOFF from '../assets/fonts/open-sans/OpenSans-LightItalic.woff';
+import openSansLightItalicWOFF2 from '../assets/fonts/open-sans/OpenSans-LightItalic.woff2';
 import openSansRegularTTF from '../assets/fonts/open-sans/OpenSans-Regular.ttf';
 import openSansRegularWOFF from '../assets/fonts/open-sans/OpenSans-Regular.woff';
 import openSansRegularWOFF2 from '../assets/fonts/open-sans/OpenSans-Regular.woff2';
 import openSansSemiBoldTTF from '../assets/fonts/open-sans/OpenSans-SemiBold.ttf';
 import openSansSemiBoldWOFF from '../assets/fonts/open-sans/OpenSans-SemiBold.woff';
 import openSansSemiBoldWOFF2 from '../assets/fonts/open-sans/OpenSans-SemiBold.woff2';
-import openSansExtraBoldTTF from '../assets/fonts/open-sans/OpenSans-ExtraBold.ttf';
-import openSansExtraBoldWOFF from '../assets/fonts/open-sans/OpenSans-ExtraBold.woff';
-import openSansExtraBoldWOFF2 from '../assets/fonts/open-sans/OpenSans-ExtraBold.woff2';
 // Old Standard TT
 import oldStandardRegularTTF from '../assets/fonts/old-standard-tt/OldStandard-Regular.ttf';
 import oldStandardRegularWOFF from '../assets/fonts/old-standard-tt/OldStandard-Regular.woff';
@@ -40,6 +43,24 @@ injectGlobal`
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;
+    font-weight: ${weightLight};
+    src: url(${openSansLightWOFF2}) format('woff2'),
+      url(${openSansLightWOFF}) format('woff'),
+      url(${openSansLightTTF}) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: ${weightLight};
+    src: url(${openSansLightItalicWOFF2}) format('woff2'),
+      url(${openSansLightItalicWOFF}) format('woff'),
+      url(${openSansLightItalicTTF}) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
     font-weight: ${weightRegular};
     src: url(${openSansRegularWOFF2}) format('woff2'),
       url(${openSansRegularWOFF}) format('woff'),
@@ -53,15 +74,6 @@ injectGlobal`
     src: url(${openSansSemiBoldWOFF2}) format('woff2'),
       url(${openSansSemiBoldWOFF}) format('woff'),
       url(${openSansSemiBoldTTF}) format('ttf');
-  }
-
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: ${weightExtraBold};
-    src: url(${openSansExtraBoldWOFF2}) format('woff2'),
-      url(${openSansExtraBoldWOFF}) format('woff'),
-      url(${openSansExtraBoldTTF}) format('ttf');
   }
 
   /* Old Standard TT */
