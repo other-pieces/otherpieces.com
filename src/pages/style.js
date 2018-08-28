@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Main from '../components/Main';
-import CardGrid from '../components/CardGrid';
-import Card from '../components/Card';
-import CategoryCalloutSection from '../components/CategoryCalloutSection';
+import Main from '../components/Layout/Main';
+import CardGrid from '../components/UI/Cards/CardGrid';
+import Card from '../components/UI/Cards/Card';
 
 const StylePage = ({ data }) => (
   <Main>
@@ -20,7 +19,6 @@ const StylePage = ({ data }) => (
         />
       ))}
     </CardGrid>
-    <CategoryCalloutSection />
   </Main>
 );
 

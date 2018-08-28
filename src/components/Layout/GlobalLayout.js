@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
   spaceDouble,
   spaceQuad
-} from '../theme/settings';
+} from '../../theme/settings';
 
 const GlobalLayout = styled.div`
   display: grid;

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import TypeCaption from './Typography/TypeCaption';
+import TypeCaption from '../Typography/TypeCaption';
 
 import {
   colorCharcoal,
   spaceInsetDouble
-} from '../theme/settings';
+} from '../../theme/settings';
 
 const Footer = () => (
   <StyledFooter>

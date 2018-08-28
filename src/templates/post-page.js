@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Main from '../components/Main';
+import Main from '../components/Layout/Main';
 import TypeHeadline from '../components/Typography/TypeHeadline';
 import TypeBylineHeading from '../components/Typography/TypeBylineHeading';
 

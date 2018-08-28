@@ -1,7 +1,11 @@
 // Colorbook
 // Brand
 export const colorCharcoal = '#1f1f1f';
+export const colorCharcoalLight = '#525252';
+export const colorCharcoalLighter = '#8a8a8a';
+
 export const colorLinen = '#f2efe9';
+export const colorLinenLight = '#faf8f5';
 
 export const colorPeacock = '#2c4747';
 export const colorPeacockLight = '#4c7a7a';
@@ -17,6 +21,9 @@ export const colorElectricDark = '#315db2';
 
 // State
 export const colorStateDisabled = '#999';
+export const colorStateDisabledLight = '#dbdbdb';
+
+export const colorStateError = '#c44848';
 
 
 // Typography

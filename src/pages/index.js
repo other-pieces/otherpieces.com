@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Main from '../components/Main';
+import Main from '../components/Layout/Main';
 import TypeHiddenText from '../components/Typography/TypeHiddenText';
-import CardGrid from '../components/CardGrid';
-import Card from '../components/Card';
-import CategoryCalloutSection from '../components/CategoryCalloutSection';
+import CardGrid from '../components/UI/Cards/CardGrid';
+import Card from '../components/UI/Cards/Card';
+import CategoryCalloutSection from '../components/Layout/CategoryCalloutSection';
 
 const IndexPage = ({ data }) => (
   <Main>

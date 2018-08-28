@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Main from '../components/Main';
+import Main from '../components/Layout/Main';
 import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
 import TypeHeadline from '../components/Typography/TypeHeadline';
 import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
@@ -11,6 +11,9 @@ import TypeHeadingPrimary from '../components/Typography/TypeHeadingPrimary';
 import TypeHeadingSecondary from '../components/Typography/TypeHeadingSecondary';
 import TypeHeadingTertiary from '../components/Typography/TypeHeadingTertiary';
 import TypeLink from '../components/Typography/TypeLink';
+import TypeLabel from '../components/Typography/TypeLabel';
+import TypePlaceholder from '../components/Typography/TypePlaceholder';
+import TypeInput from '../components/Typography/TypeInput';
 
 const ComponentsPage = ({ data }) => (
   <Main>
@@ -25,6 +28,9 @@ const ComponentsPage = ({ data }) => (
     <StyledHeadingSecondary>Secondary Heading</StyledHeadingSecondary>
     <StyledHeadingTertiary>Tertiary Heading</StyledHeadingTertiary>
     <TypeLink>Text Link</TypeLink>
+    <TypeLabel>Label</TypeLabel>
+    <TypePlaceholder>Placeholder</TypePlaceholder>
+    <TypeInput>Input</TypeInput>
   </Main>
 );
 
