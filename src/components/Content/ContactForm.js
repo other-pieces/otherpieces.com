@@ -41,7 +41,7 @@ const ContactForm = () => (
   </Form>
 );
 
-const StyledFormLayout = styled(Form)`
+const StyledFormLayout = styled('div')`
   display: grid;
   grid-gap: ${spaceDouble};
 

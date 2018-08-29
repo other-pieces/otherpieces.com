@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Form = ({
@@ -12,14 +13,13 @@ const Form = ({
     method="POST"
     data-netlify
   >
-    {/* <input
+    <StyledHoneyPot
       type="checkbox"
       name="contact_me_by_fax_only"
-      style="display:none !important"
       tabIndex="-1"
       autoComplete="off"
       data-netlify-honeypot
-    /> */}
+    />
     {children}
     <div data-netlify-recaptcha></div>
   </form>
@@ -29,5 +29,9 @@ Form.propTypes = {
   children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired
 };
+
+const StyledHoneyPot = styled('input')`
+  display: none !important;
+`;
 
 export default Form;
