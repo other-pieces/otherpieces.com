@@ -42,6 +42,7 @@ const ContactForm = () => (
 );
 
 const StyledFormLayout = styled('div')`
+  margin: ${spaceStackDouble};
   display: grid;
   grid-gap: ${spaceDouble};
 
