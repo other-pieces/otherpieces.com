@@ -33,9 +33,9 @@ import oldStandardItalicWOFF from '../assets/fonts/old-standard-tt/OldStandard-I
 import oldStandardItalicWOFF2 from '../assets/fonts/old-standard-tt/OldStandard-Italic.woff2';
 
 // Components
-import GlobalLayout from '../components/GlobalLayout';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import GlobalLayout from '../components/Layout/GlobalLayout';
+import Header from '../components/Layout/GlobalHeader/Header';
+import Footer from '../components/Layout/Footer';
 
 injectGlobal`
   /* Typography */

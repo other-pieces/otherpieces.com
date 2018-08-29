@@ -3,15 +3,15 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import TypeNavLink from './Typography/TypeNavLink';
-import TypeCaption from './Typography/TypeCaption';
+import TypeNavLink from '../../Typography/TypeNavLink';
+import TypeCaption from '../../Typography/TypeCaption';
 
 import {
   colorPeacockLight,
   spaceStackHalf,
   spaceStackDefault,
   spaceNone
-} from '../theme/settings';
+} from '../../../theme/settings';
 
 const CardSmall = ({
   caption,

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {
   spaceQuad
-} from '../theme/settings';
+} from '../../../theme/settings';
 
 const CardGrid = ({ children }) => (
   <StyledCardGrid>

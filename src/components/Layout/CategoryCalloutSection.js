@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import TypeSectionHeading from './Typography/TypeSectionHeading';
-import CardSmallGrid from './CardSmallGrid';
-import CardSmall from './CardSmall';
+import TypeSectionHeading from '../Typography/TypeSectionHeading';
+import CardSmallGrid from '../UI/Cards/CardSmallGrid';
+import CardSmall from '../UI/Cards/CardSmall';
 
-import { spaceStackDouble } from '../theme/settings';
+import { spaceStackDouble } from '../../theme/settings';
 
 const CalloutSection = ({ children }) => (
   <StyledCalloutSection>

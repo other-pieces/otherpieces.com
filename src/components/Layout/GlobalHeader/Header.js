@@ -8,7 +8,7 @@ import {
   spaceDouble,
   spaceStackOct,
   spaceQuad
-} from '../theme/settings';
+} from '../../../theme/settings';
 
 const Header = () => (
   <StyledHeader>

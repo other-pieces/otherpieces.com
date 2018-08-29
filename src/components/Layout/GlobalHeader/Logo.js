@@ -2,13 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
-import TypeHiddenText from './Typography/TypeHiddenText';
+import TypeHiddenText from '../../Typography/TypeHiddenText';
 
 import {
   colorPeacock,
   colorPeacockLight,
   spaceStackQuad
-} from '../theme/settings';
+} from '../../../theme/settings';
 
 const Logo = () => (
   <StyledLogo to="/">

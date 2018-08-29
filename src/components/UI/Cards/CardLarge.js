@@ -3,14 +3,14 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import TypeHeadingPrimary from './Typography/TypeHeadingPrimary';
-import TypeBylineHeading from './Typography/TypeBylineHeading';
+import TypeHeadingPrimary from '../../Typography/TypeHeadingPrimary';
+import TypeBylineHeading from '../../Typography/TypeBylineHeading';
 
 import {
   colorPeacockLight,
   spaceStackDouble,
   spaceNone
-} from '../theme/settings';
+} from '../../../theme/settings';
 
 const Card = ({
   heading,
