@@ -11,7 +11,6 @@ import {
 const FormField = TypeInput.withComponent('div').extend`
   padding: ${spaceInsetDefault};
   box-sizing: border-box;
-  min-height: 6.4rem;
   background-color: ${colorLinenLight};
   border: none;
 

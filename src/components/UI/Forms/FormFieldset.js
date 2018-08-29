@@ -20,8 +20,7 @@ const StyledFieldset = styled.fieldset`
 `;
 
 FormFieldset.propTypes = {
-  children: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default FormFieldset;

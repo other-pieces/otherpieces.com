@@ -24,13 +24,13 @@ const FormInput = ({
 );
 
 const StyledInput = FormField.withComponent('input').extend`
-  max-width: 25.6rem;
+  min-height: 6.4rem;
 `;
 
 FormInput.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired
+  placeholder: PropTypes.string
 };
 
 export default FormInput;

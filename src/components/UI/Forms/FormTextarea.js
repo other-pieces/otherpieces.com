@@ -1,11 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const FormTextarea = () => (
-  <fieldset>
-    <label htmlFor=""></label>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-  </fieldset>
+import FormFieldset from './FormFieldset';
+import FormField from './FormField';
+import FormLabel from './FormLabel';
+
+const FormTextarea = ({
+  label,
+  name,
+  placeholder
+}) => (
+  <FormFieldset>
+    <FormLabel name={name}>
+      {label}
+    </FormLabel>
+    <StyledTextarea
+      type="text"
+      name={name}
+      id={name}
+      placeholder={placeholder}
+    />
+  </FormFieldset>
 );
 
+const StyledTextarea = FormField.withComponent('textarea').extend`
+  width: 100%;
+  min-height: 12.8rem;
+  resize: vertical;
+`;
+
+FormTextarea.propTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired
+};
+
 export default FormTextarea;
+
