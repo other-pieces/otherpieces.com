@@ -6,11 +6,12 @@ import FormField from './FormField';
 import FormLabel from './FormLabel';
 
 const FormTextarea = ({
+  className,
   label,
   name,
   placeholder
 }) => (
-  <FormFieldset>
+  <FormFieldset className={className}>
     <FormLabel name={name}>
       {label}
     </FormLabel>

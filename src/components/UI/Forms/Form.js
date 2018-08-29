@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 const Form = ({
   children,
+  className,
   name
 }) => (
   <form
+    className={className}
     name={name}
     method="POST"
     data-netlify

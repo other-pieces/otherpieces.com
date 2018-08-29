@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {
@@ -9,15 +8,12 @@ import {
 // TODO: Style form labels when fieldset is disabled
 const FormFieldset = ({
   children,
+  className
 }) => (
-  <StyledFieldset>
+  <fieldset className={className}>
     {children}
-  </StyledFieldset>
+  </fieldset>
 );
-
-const StyledFieldset = styled.fieldset`
-  margin: ${spaceStackDouble};
-`;
 
 FormFieldset.propTypes = {
   children: PropTypes.node.isRequired
