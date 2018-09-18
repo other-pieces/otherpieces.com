@@ -1,7 +1,8 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
+import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 import TypeHeadline from '../components/Typography/TypeHeadline';
 import TypeBylineHeading from '../components/Typography/TypeBylineHeading';
@@ -21,36 +22,21 @@ import {
   weightSemiBold
 } from '../theme/settings';
 
-const PostPage = () => (
-  <StaticQuery
-    query={graphql`
-      query BlogPostQuery($slug: String!) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-          html
-          frontmatter {
-            author
-            title
-            imageHero
-            imageHeroAlt
-          }
-        }
+const PostPage = ({ data }) => (
+  <GlobalLayout>
+    <StyledArticle>
+      <StyledTypeHeadline>
+        {data.markdownRemark.frontmatter.title}
+      </StyledTypeHeadline>
+      {data.markdownRemark.frontmatter.imageHero &&
+        <StyledImageHero src={data.markdownRemark.frontmatter.imageHero} alt={data.markdownRemark.frontmatter.imageHeroAlt} />
       }
-    `}
-    render={data => (
-      <StyledArticle>
-        <StyledTypeHeadline>
-          {data.markdownRemark.frontmatter.title}
-        </StyledTypeHeadline>
-        {data.markdownRemark.frontmatter.imageHero &&
-          <StyledImageHero src={data.markdownRemark.frontmatter.imageHero} alt={data.markdownRemark.frontmatter.imageHeroAlt} />
-        }
-        <StyledByline>
-          By {data.markdownRemark.frontmatter.author}
-        </StyledByline>
-        <StyledArticleBody dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      </StyledArticle>
-    )}
-  />
+      <StyledByline>
+        By {data.markdownRemark.frontmatter.author}
+      </StyledByline>
+      <StyledArticleBody dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    </StyledArticle>
+  </GlobalLayout>
 );
 
 const StyledArticle = Main.withComponent('article').extend`
@@ -147,6 +133,20 @@ const StyledArticleBody = styled.div`
     &:focus {
       outline: 0.2rem solid ${colorPeacockLight};
       outline-offset: 0.4rem;
+    }
+  }
+`;
+
+export const postPageQuery = graphql`
+  query PostPageQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        author
+        title
+        imageHero
+        imageHeroAlt
+      }
     }
   }
 `;
