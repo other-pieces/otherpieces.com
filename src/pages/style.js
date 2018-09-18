@@ -1,25 +1,28 @@
 import React from 'react';
 
+import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 import CardGrid from '../components/UI/Cards/CardGrid';
 import Card from '../components/UI/Cards/Card';
 
 const StylePage = ({ data }) => (
-  <Main>
-    <CardGrid>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Card
-          key={node.id}
-          path={node.frontmatter.path}
-          linkText={`Read ${node.frontmatter.title}`}
-          image={node.frontmatter.imageCard}
-          imageAlt={node.frontmatter.imageCardAlt}
-          heading={node.frontmatter.title}
-          subhead={`By ${node.frontmatter.author}`}
-        />
-      ))}
-    </CardGrid>
-  </Main>
+  <GlobalLayout>
+    <Main>
+      <CardGrid>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Card
+            key={node.id}
+            path={node.frontmatter.path}
+            linkText={`Read ${node.frontmatter.title}`}
+            image={node.frontmatter.imageCard}
+            imageAlt={node.frontmatter.imageCardAlt}
+            heading={node.frontmatter.title}
+            subhead={`By ${node.frontmatter.author}`}
+          />
+        ))}
+      </CardGrid>
+    </Main>
+  </GlobalLayout>
 );
 
 export const query = graphql`

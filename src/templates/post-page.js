@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Main from '../components/Layout/Main';
@@ -20,23 +21,37 @@ import {
   weightSemiBold
 } from '../theme/settings';
 
-export default ({ data }) => {
-  const post = data.markdownRemark;
-  return (
-    <StyledArticle>
-      <StyledTypeHeadline>
-        {post.frontmatter.title}
-      </StyledTypeHeadline>
-      {post.frontmatter.imageHero &&
-        <StyledImageHero src={post.frontmatter.imageHero} alt={post.frontmatter.imageHeroAlt} />
+const PostPage = () => (
+  <StaticQuery
+    query={graphql`
+      query BlogPostQuery($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+          html
+          frontmatter {
+            author
+            title
+            imageHero
+            imageHeroAlt
+          }
+        }
       }
-      <StyledByline>
-        By {post.frontmatter.author}
-      </StyledByline>
-      <StyledArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />
-    </StyledArticle>
-  );
-};
+    `}
+    render={data => (
+      <StyledArticle>
+        <StyledTypeHeadline>
+          {data.markdownRemark.frontmatter.title}
+        </StyledTypeHeadline>
+        {data.markdownRemark.frontmatter.imageHero &&
+          <StyledImageHero src={data.markdownRemark.frontmatter.imageHero} alt={data.markdownRemark.frontmatter.imageHeroAlt} />
+        }
+        <StyledByline>
+          By {data.markdownRemark.frontmatter.author}
+        </StyledByline>
+        <StyledArticleBody dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      </StyledArticle>
+    )}
+  />
+);
 
 const StyledArticle = Main.withComponent('article').extend`
   margin: ${spaceStackOct};
@@ -136,16 +151,4 @@ const StyledArticleBody = styled.div`
   }
 `;
 
-export const query = graphql`
-  query BlogPostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        author
-        title
-        imageHero
-        imageHeroAlt
-      }
-    }
-  }
-`;
+export default PostPage;
