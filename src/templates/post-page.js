@@ -1,6 +1,8 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
+import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 import TypeHeadline from '../components/Typography/TypeHeadline';
 import TypeBylineHeading from '../components/Typography/TypeBylineHeading';
@@ -20,23 +22,22 @@ import {
   weightSemiBold
 } from '../theme/settings';
 
-export default ({ data }) => {
-  const post = data.markdownRemark;
-  return (
+const PostPage = ({ data }) => (
+  <GlobalLayout>
     <StyledArticle>
       <StyledTypeHeadline>
-        {post.frontmatter.title}
+        {data.markdownRemark.frontmatter.title}
       </StyledTypeHeadline>
-      {post.frontmatter.imageHero &&
-        <StyledImageHero src={post.frontmatter.imageHero} alt={post.frontmatter.imageHeroAlt} />
+      {data.markdownRemark.frontmatter.imageHero &&
+        <StyledImageHero src={data.markdownRemark.frontmatter.imageHero} alt={data.markdownRemark.frontmatter.imageHeroAlt} />
       }
       <StyledByline>
-        By {post.frontmatter.author}
+        By {data.markdownRemark.frontmatter.author}
       </StyledByline>
-      <StyledArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />
+      <StyledArticleBody dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </StyledArticle>
-  );
-};
+  </GlobalLayout>
+);
 
 const StyledArticle = Main.withComponent('article').extend`
   margin: ${spaceStackOct};
@@ -136,8 +137,8 @@ const StyledArticleBody = styled.div`
   }
 `;
 
-export const query = graphql`
-  query BlogPostQuery($slug: String!) {
+export const postPageQuery = graphql`
+  query PostPageQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -149,3 +150,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default PostPage;

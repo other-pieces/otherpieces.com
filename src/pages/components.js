@@ -1,5 +1,6 @@
 import React from 'react';
 
+import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
 import TypeHeadline from '../components/Typography/TypeHeadline';
@@ -15,21 +16,23 @@ import TypeLabel from '../components/Typography/TypeLabel';
 import TypeInput from '../components/Typography/TypeInput';
 
 const ComponentsPage = ({ data }) => (
-  <Main>
-    <h1>Components</h1>
-    <StyledMastheadHeadline>Masthead Headline</StyledMastheadHeadline>
-    <StyledHeadline>Article Headline</StyledHeadline>
-    <StyledSectionHeading>Section Heading</StyledSectionHeading>
-    <StyledNavLink to="#0">Navigation Link</StyledNavLink>
-    <StyledBylineHeading>Byline Heading</StyledBylineHeading>
-    <StyledBody>Lorem ipsum dolor amet whatever mustache narw*hal DIY, fanny pack roof par*ty fam small batch taxidermy woke cardigan. Lo-fi kickstarter succulents glossier brunch slow-carb. <TypeLink to="#0">You probably haven't heard</TypeLink> of them kickstarter raw denim plaid meditation microdosing. Normcore kickstarter iceland vexillologist skateboard, enamel pin plaid cliche retro tumblr craft beer XOXO mumblecore.</StyledBody>
-    <StyledHeadingPrimary>Primary Heading</StyledHeadingPrimary>
-    <StyledHeadingSecondary>Secondary Heading</StyledHeadingSecondary>
-    <StyledHeadingTertiary>Tertiary Heading</StyledHeadingTertiary>
-    <TypeLink to="#0">Text Link</TypeLink>
-    <TypeLabel>Label</TypeLabel>
-    <TypeInput>Input</TypeInput>
-  </Main>
+  <GlobalLayout>
+    <Main>
+      <h1>Components</h1>
+      <StyledMastheadHeadline>Masthead Headline</StyledMastheadHeadline>
+      <StyledHeadline>Article Headline</StyledHeadline>
+      <StyledSectionHeading>Section Heading</StyledSectionHeading>
+      <StyledNavLink to="#0">Navigation Link</StyledNavLink>
+      <StyledBylineHeading>Byline Heading</StyledBylineHeading>
+      <StyledBody>Lorem ipsum dolor amet whatever mustache narw*hal DIY, fanny pack roof par*ty fam small batch taxidermy woke cardigan. Lo-fi kickstarter succulents glossier brunch slow-carb. <TypeLink to="#0">You probably haven't heard</TypeLink> of them kickstarter raw denim plaid meditation microdosing. Normcore kickstarter iceland vexillologist skateboard, enamel pin plaid cliche retro tumblr craft beer XOXO mumblecore.</StyledBody>
+      <StyledHeadingPrimary>Primary Heading</StyledHeadingPrimary>
+      <StyledHeadingSecondary>Secondary Heading</StyledHeadingSecondary>
+      <StyledHeadingTertiary>Tertiary Heading</StyledHeadingTertiary>
+      <TypeLink to="#0">Text Link</TypeLink>
+      <TypeLabel>Label</TypeLabel>
+      <TypeInput>Input</TypeInput>
+    </Main>
+  </GlobalLayout>
 );
 
 const StyledMastheadHeadline = TypeMastheadHeadline.withComponent('h2');
