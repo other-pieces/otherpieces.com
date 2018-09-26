@@ -22,6 +22,7 @@ const AboutPage = () => (
           <h1>About {data.site.siteMetadata.title}</h1>
           {/* <ContactForm /> */}
           <form name="test" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>Your Name: <input type="text" name="name" /></label>
             </p>
