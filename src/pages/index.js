@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
-import TypeHiddenText from '../components/Typography/TypeHiddenText';
+import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
 import CardGrid from '../components/UI/Cards/CardGrid';
 import Card from '../components/UI/Cards/Card';
 import CategoryCalloutSection from '../components/Layout/CategoryCalloutSection';
@@ -36,9 +36,9 @@ const IndexPage = () => (
     render={data => (
       <GlobalLayout>
         <Main>
-          <StyledTypeHiddenTitle>
+          <StyledHiddenTitle>
             {data.site.siteMetadata.title}
-          </StyledTypeHiddenTitle>
+          </StyledHiddenTitle>
           <CardGrid>
             {data.allMarkdownRemark.edges.map(({ node }) => (
               <Card
@@ -59,6 +59,6 @@ const IndexPage = () => (
   />
 );
 
-const StyledTypeHiddenTitle = TypeHiddenText.withComponent('h1');
+const StyledHiddenTitle = ScreenReaderOnly.withComponent('h1');
 
 export default IndexPage;

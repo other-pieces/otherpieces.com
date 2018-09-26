@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
-import TypeHiddenText from '../../Typography/TypeHiddenText';
+import ScreenReaderOnly from '../../A11y/ScreenReaderOnly';
 
 import {
   colorPeacock,
@@ -12,9 +12,9 @@ import {
 
 const Logo = () => (
   <StyledLogo to="/">
-    <TypeHiddenText>
+    <ScreenReaderOnly>
       Visit Other Pieces home page
-    </TypeHiddenText>
+    </ScreenReaderOnly>
     <StyledLogoIcon
       viewBox="0 0 1208 72"
       xmlns="http://www.w3.org/2000/svg"
