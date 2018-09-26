@@ -22,8 +22,8 @@ const Form = ({
       tabIndex="-1"
       autoComplete="off"
     />
-    {children}
     <div data-netlify-recaptcha></div>
+    {children}
   </form>
 );
 
