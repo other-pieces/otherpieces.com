@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Form = ({
+  action,
   children,
   className,
   name
@@ -10,22 +11,25 @@ const Form = ({
   <form
     className={className}
     name={name}
-    method="POST"
-    data-netlify
+    action={action}
+    method="post"
+    data-netlify="true"
+    netlify-honeypot="contact_me_by_fax_only"
   >
+    <input type="hidden" name="form-name" value={name} />
     <StyledHoneyPot
       type="checkbox"
       name="contact_me_by_fax_only"
       tabIndex="-1"
       autoComplete="off"
-      data-netlify-honeypot
     />
+     <div data-netlify-recaptcha></div>
     {children}
-    <div data-netlify-recaptcha></div>
   </form>
 );
 
 Form.propTypes = {
+  action: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired
 };

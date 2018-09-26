@@ -8,15 +8,26 @@ import {
 // TODO: Style form labels when fieldset is disabled
 const FormFieldset = ({
   children,
-  className
+  className,
+  isTrueFieldset
 }) => (
-  <fieldset className={className}>
-    {children}
-  </fieldset>
+  <>
+    {isTrueFieldset ?
+      <fieldset className={className}>
+        {children}
+      </fieldset>
+      :
+      <div className={className}>
+        {children}
+      </div>
+    }
+  </>
 );
 
 FormFieldset.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  isTrueFieldset: PropTypes.bool
 };
 
 export default FormFieldset;
