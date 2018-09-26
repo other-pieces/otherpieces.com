@@ -11,14 +11,14 @@ const Form = ({
     className={className}
     name={name}
     method="POST"
-    data-netlify
+    data-netlify="true"
+    netlify-honeypot="contact_me_by_fax_only"
   >
     <StyledHoneyPot
       type="checkbox"
       name="contact_me_by_fax_only"
       tabIndex="-1"
       autoComplete="off"
-      data-netlify-honeypot
     />
     {children}
     <div data-netlify-recaptcha></div>
