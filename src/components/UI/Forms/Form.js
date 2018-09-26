@@ -12,7 +12,7 @@ const Form = ({
     className={className}
     name={name}
     action={action}
-    method="POST"
+    method="post"
     data-netlify="true"
     netlify-honeypot="contact_me_by_fax_only"
   >
@@ -22,7 +22,6 @@ const Form = ({
       tabIndex="-1"
       autoComplete="off"
     />
-    <div data-netlify-recaptcha></div>
     {children}
   </form>
 );
