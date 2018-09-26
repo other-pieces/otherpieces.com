@@ -16,6 +16,7 @@ const Form = ({
     data-netlify="true"
     netlify-honeypot="contact_me_by_fax_only"
   >
+    <input type="hidden" name="form-name" value={name} />
     <StyledHoneyPot
       type="checkbox"
       name="contact_me_by_fax_only"
