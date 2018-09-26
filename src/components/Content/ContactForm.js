@@ -12,7 +12,7 @@ import {
 } from '../../theme/settings';
 
 const ContactForm = () => (
-  <Form name="contact">
+  <Form name="contact" action="/thank-you">
     <StyledFormLayout>
       <FormInput
         label="First Name"

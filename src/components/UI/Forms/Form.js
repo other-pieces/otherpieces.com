@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Form = ({
+  action,
   children,
   className,
   name
@@ -10,6 +11,7 @@ const Form = ({
   <form
     className={className}
     name={name}
+    action={action}
     method="POST"
     data-netlify="true"
     netlify-honeypot="contact_me_by_fax_only"
@@ -26,6 +28,7 @@ const Form = ({
 );
 
 Form.propTypes = {
+  action: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired
 };
