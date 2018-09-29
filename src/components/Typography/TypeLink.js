@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 import {
+  breakpointDesktop,
+  breakpointMobile,
   colorCharcoal,
   colorPeacockLight,
   fontFamilySans,
@@ -10,10 +12,18 @@ import {
 
 const TypeLink = styled(Link)`
   font-family: ${fontFamilySans};
-  font-size: 1.8rem;
   font-weight: ${weightSemiBold};
   color: ${colorCharcoal};
-  line-height: 1.778;
+
+  @media (max-width: ${breakpointMobile}) {
+    font-size: 1.6rem;
+    line-height: 1.625;
+  }
+
+  @media (min-width: ${breakpointDesktop}) {
+    font-size: 1.8rem;
+    line-height: 1.778;
+  }
 
   &:hover {
     color: ${colorPeacockLight};

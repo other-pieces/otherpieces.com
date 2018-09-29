@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 import {
+  breakpointDesktop,
+  breakpointMobile,
   colorCharcoal,
   fontFamilySerif,
   weightRegular
@@ -8,10 +10,18 @@ import {
 
 const TypeMastheadHeadline = styled.span`
   font-family: ${fontFamilySerif};
-  font-size: 9.6rem;
   font-weight: ${weightRegular};
   color: ${colorCharcoal};
-  line-height: 1.167;
+
+  @media (max-width: ${breakpointMobile}) {
+    font-size: 6.4rem;
+    line-height: 1.125;
+  }
+
+  @media (min-width: ${breakpointDesktop}) {
+    font-size: 9.6rem;
+    line-height: 1.167;
+  }
 `;
 
 export default TypeMastheadHeadline;

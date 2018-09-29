@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import TypeHeadingPrimary from '../../Typography/TypeHeadingPrimary';
+import TypeTitle1 from '../../Typography/TypeTitle1';
 import TypeBylineHeading from '../../Typography/TypeBylineHeading';
 
 import {
@@ -76,7 +76,7 @@ const StyledCardContent = styled.div`
   justify-content: space-between;
 `;
 
-const StyledCardHeading = TypeHeadingPrimary.withComponent('h2').extend`
+const StyledCardHeading = TypeTitle1.withComponent('h2').extend`
   margin: ${spaceStackDouble};
 `;
 
