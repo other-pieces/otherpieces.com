@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 import {
+  breakpointDesktop,
+  breakpointMobile,
   colorCharcoal,
   fontFamilySans,
   weightLight
@@ -8,10 +10,18 @@ import {
 
 const TypeBody = styled.span`
   font-family: ${fontFamilySans};
-  font-size: 1.8rem;
   font-weight: ${weightLight};
   color: ${colorCharcoal};
-  line-height: 1.778;
+
+  @media (max-width: ${breakpointMobile}) {
+    font-size: 1.6rem;
+    line-height: 1.625;
+  }
+
+  @media (min-width: ${breakpointDesktop}) {
+    font-size: 1.8rem;
+    line-height: 1.778;
+  }
 `;
 
 export default TypeBody;
