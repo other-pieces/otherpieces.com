@@ -5,14 +5,22 @@ import {
   colorLinenLight,
   colorStateDisabledLight,
   colorPeacockLight,
+  spaceDefault,
   spaceInsetDefault
 } from '../../../theme/settings';
 
 const FormField = TypeInput.withComponent('div').extend`
-  padding: ${spaceInsetDefault};
   box-sizing: border-box;
   background-color: ${colorLinenLight};
   border: none;
+
+  @media (max-width: 575px) {
+    padding: 1.1rem ${spaceDefault};
+  }
+
+  @media (min-width: 576px) {
+    padding: ${spaceInsetDefault};
+  }
 
   &:focus {
     outline: 2px solid ${colorPeacockLight};

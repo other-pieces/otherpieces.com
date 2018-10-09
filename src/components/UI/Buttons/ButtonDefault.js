@@ -10,7 +10,7 @@ import {
   colorPeacockLight,
   colorPeacockDark,
   colorStateDisabled,
-  spaceInsetSquishDouble
+  spaceDefault
 } from '../../../theme/settings';
 
 const ButtonDefault = ({
@@ -23,11 +23,18 @@ const ButtonDefault = ({
 );
 
 const StyledButtonDefault = TypeButton.withComponent('button').extend`
-  padding: ${spaceInsetSquishDouble};
   color: ${colorLinen};
   background-color: ${colorPeacock};
   border: none;
   cursor: pointer;
+
+  @media (max-width: 575px) {
+    padding: 1.3rem 2.4rem;
+  }
+
+  @media (min-width: 576px) {
+    padding: ${spaceDefault} 2.4rem;
+  }
 
   &:hover {
     background-color: ${colorPeacockLight};
