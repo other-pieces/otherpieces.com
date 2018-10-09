@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 import {
-  breakpointDesktop,
-  breakpointMobile,
   colorCharcoal,
   fontFamilySans,
   weightRegular
@@ -14,13 +12,13 @@ const TypeBylineHeading = styled.span`
   color: ${colorCharcoal};
   text-transform: uppercase;
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     font-size: 1.2rem;
     line-height: 1.333;
     letter-spacing: 0.2rem;
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     font-size: 1.4rem;
     line-height: 1.429;
     letter-spacing: 0.4rem;

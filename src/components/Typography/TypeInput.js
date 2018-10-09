@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 import {
-  breakpointDesktop,
-  breakpointMobile,
   colorCharcoal,
   colorCharcoalLight,
   fontFamilySans,
@@ -15,12 +13,12 @@ const TypeInput = styled.span`
   font-weight: ${weightRegular};
   color: ${colorCharcoal};
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     font-size: 1.6rem;
     line-height: 1.625;
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     font-size: 1.8rem;
     line-height: 1.778;
   }

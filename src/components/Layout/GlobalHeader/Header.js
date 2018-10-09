@@ -6,6 +6,7 @@ import Nav from './Nav';
 
 import {
   spaceDouble,
+  spaceStackDouble,
   spaceStackOct,
   spaceQuad
 } from '../../../theme/settings';
@@ -18,13 +19,22 @@ const Header = () => (
 );
 
 const StyledHeader = styled.header`
-  margin: ${spaceStackOct};
-  padding-top: ${spaceQuad};
-  padding-bottom: ${spaceDouble};
   grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 575px) {
+    margin: ${spaceStackDouble};
+    padding-top: ${spaceDouble};
+    padding-bottom: ${spaceDouble};
+  }
+
+  @media (min-width: 576px) {
+    margin: ${spaceStackOct};
+    padding-top: ${spaceQuad};
+    padding-bottom: ${spaceDouble};
+  }
 `;
 
 export default Header;

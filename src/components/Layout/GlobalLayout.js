@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import {
   fontFamilySans,
-  spaceDouble,
+  spaceDefault,
   spaceQuad,
   weightLight,
   weightRegular,
@@ -199,7 +199,7 @@ const StyledGlobalLayout = styled.div`
   grid-template-rows: auto 1fr auto;
 
   @media (max-width: 575px) {
-    grid-template-columns: ${spaceDouble} 1fr ${spaceDouble};
+    grid-template-columns: ${spaceDefault} 1fr ${spaceDefault};
   }
 
   @media (min-width: 576px) and (max-width: 1336px) {

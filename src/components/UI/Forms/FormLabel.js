@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import TypeLabel from '../../Typography/TypeLabel';
 
 import {
-  colorCharcoalLighter,
   spaceStackHalf
 } from '../../../theme/settings';
 

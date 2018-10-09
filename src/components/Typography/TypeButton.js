@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 import {
-  breakpointDesktop,
-  breakpointMobile,
   fontFamilySans,
   weightSemiBold
 } from '../../theme/settings';
@@ -14,11 +12,11 @@ const TypeButton = styled.span`
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     font-size: 1.4rem;
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     font-size: 1.6rem;
   }
 `;

@@ -25,7 +25,6 @@ const FormInput = ({
 
 const StyledInput = FormField.withComponent('input').extend`
   width: 100%;
-  min-height: 6.4rem;
 `;
 
 FormInput.propTypes = {
