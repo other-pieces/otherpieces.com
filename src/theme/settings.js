@@ -119,5 +119,5 @@ export const elevation2 = '0 2rem 4rem rgba(44, 71, 71, 0.1), 0 1.2rem 3.2rem rg
 export const transition = '300ms ease-in-out';
 
 // Breakpoints
-export const breakpointMobile = '500px';
-export const breakpointDesktop = '501px';
+export const breakpointMobile = '575px';
+export const breakpointDesktop = '576px';

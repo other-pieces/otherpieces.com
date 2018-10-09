@@ -8,9 +8,8 @@ import {
   breakpointMobile,
   breakpointDesktop,
   spaceDouble,
-  spaceInsetStretchDouble,
+  spaceStackDouble,
   spaceStackOct,
-  spaceStackQuad,
   spaceQuad
 } from '../../../theme/settings';
 
@@ -28,8 +27,9 @@ const StyledHeader = styled.header`
   align-items: center;
 
   @media (max-width: ${breakpointMobile}) {
-    margin: ${spaceStackQuad};
-    padding: ${spaceInsetStretchDouble};
+    margin: ${spaceStackDouble};
+    padding-top: ${spaceDouble};
+    padding-bottom: ${spaceDouble};
   }
 
   @media (min-width: ${breakpointDesktop}) {
