@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 import {
-  breakpointDesktop,
-  breakpointMobile,
+  breakpointMediumFloor,
+  breakpointSmallCeiling,
   colorCharcoal,
   colorPeacockLight,
   fontFamilySans,
@@ -18,12 +18,12 @@ const TypeNavLink = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     font-size: 1.6rem;
     line-height: 1.25;
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     font-size: 1.8rem;
     line-height: 1.111;
   }

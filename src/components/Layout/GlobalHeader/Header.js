@@ -5,8 +5,8 @@ import Logo from './Logo';
 import Nav from './Nav';
 
 import {
-  breakpointMobile,
-  breakpointDesktop,
+  breakpointSmallCeiling,
+  breakpointMediumFloor,
   spaceDouble,
   spaceStackDouble,
   spaceStackOct,
@@ -26,13 +26,13 @@ const StyledHeader = styled.header`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     margin: ${spaceStackDouble};
     padding-top: ${spaceDouble};
     padding-bottom: ${spaceDouble};
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     margin: ${spaceStackOct};
     padding-top: ${spaceQuad};
     padding-bottom: ${spaceDouble};

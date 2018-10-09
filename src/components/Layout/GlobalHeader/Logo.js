@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import ScreenReaderOnly from '../../A11y/ScreenReaderOnly';
 
 import {
-  breakpointMobile,
-  breakpointDesktop,
+  breakpointSmallCeiling,
+  breakpointMediumFloor,
   colorPeacock,
   colorPeacockLight,
   spaceStackDefault,
@@ -32,11 +32,11 @@ const StyledLogo = styled(Link)`
   display: block;
   text-decoration: none;
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     margin: ${spaceStackDefault};
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     margin: ${spaceStackQuad};
   }
 

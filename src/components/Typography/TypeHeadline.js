@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import {
-  breakpointDesktop,
-  breakpointMobile,
+  breakpointMediumFloor,
+  breakpointSmallCeiling,
   colorCharcoal,
   fontFamilySerif,
   weightRegular
@@ -14,11 +14,11 @@ const TypeHeadline = styled.span`
   color: ${colorCharcoal};
   line-height: 1;
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     font-size: 4.8rem;
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     font-size: 7.2rem;
   }
 `;

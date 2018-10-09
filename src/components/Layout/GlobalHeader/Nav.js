@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import TypeNavLink from '../../Typography/TypeNavLink';
 
 import {
-  breakpointDesktop,
-  breakpointMobile,
+  breakpointMediumFloor,
+  breakpointSmallCeiling,
   spaceDefault
 } from '../../../theme/settings';
 
@@ -26,11 +26,11 @@ const StyledNav = styled.nav`
   flex-flow: row wrap;
   align-items: center;
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     justify-content: center;
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     justify-content: space-between;
   }
 `;

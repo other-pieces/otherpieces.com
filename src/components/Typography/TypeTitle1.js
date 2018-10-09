@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import {
-  breakpointDesktop,
-  breakpointMobile,
+  breakpointMediumFloor,
+  breakpointSmallCeiling,
   colorCharcoal,
   fontFamilySerif,
   weightRegular
@@ -13,12 +13,12 @@ const TypeTitle1 = styled.span`
   font-weight: ${weightRegular};
   color: ${colorCharcoal};
 
-  @media (max-width: ${breakpointMobile}) {
+  @media (max-width: 575px) {
     font-size: 2.6rem;
     line-height: 1.231;
   }
 
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: 576px) {
     font-size: 3.6rem;
     line-height: 1.222;
   }
