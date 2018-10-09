@@ -5,10 +5,6 @@ import styled, { injectGlobal } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
 import {
-  breakpointLargeFloor,
-  breakpointMediumCeiling,
-  breakpointMediumFloor,
-  breakpointSmallCeiling,
   fontFamilySans,
   spaceDefault,
   spaceQuad,

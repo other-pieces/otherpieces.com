@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 import {
-  breakpointMediumFloor,
-  breakpointSmallCeiling,
   colorCharcoal,
   fontFamilySerif,
   weightRegular

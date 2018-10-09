@@ -5,8 +5,6 @@ import Logo from './Logo';
 import Nav from './Nav';
 
 import {
-  breakpointSmallCeiling,
-  breakpointMediumFloor,
   spaceDouble,
   spaceStackDouble,
   spaceStackOct,

@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import TypeNavLink from '../../Typography/TypeNavLink';
 
 import {
-  breakpointMediumFloor,
-  breakpointSmallCeiling,
   spaceDefault
 } from '../../../theme/settings';
 

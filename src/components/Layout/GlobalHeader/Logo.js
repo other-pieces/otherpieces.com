@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import ScreenReaderOnly from '../../A11y/ScreenReaderOnly';
 
 import {
-  breakpointSmallCeiling,
-  breakpointMediumFloor,
   colorPeacock,
   colorPeacockLight,
   spaceStackDefault,
