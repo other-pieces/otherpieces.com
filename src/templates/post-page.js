@@ -40,28 +40,56 @@ const PostPage = ({ data }) => (
 );
 
 const StyledArticle = Main.withComponent('article').extend`
-  margin: ${spaceStackOct};
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 575px) {
+    margin: ${spaceStackQuad};
+  }
+
+  @media (max-width: 576px) {
+    margin: ${spaceStackOct};
+  }
 `;
 
 const StyledTypeHeadline = TypeHeadline.withComponent('h1').extend`
-  margin: ${spaceStackQuad};
   max-width: 104.8rem;
   width: 100%;
   text-align: center;
+
+  @media (min-width: 575px) {
+    margin: ${spaceStackDouble};
+  }
+
+  @media (max-width: 576px) {
+    margin: ${spaceStackQuad};
+  }
 `;
 
 const StyledImageHero = styled.img`
-  margin: ${spaceStackDouble};
   max-width: 100%;
   display: block;
+
+  @media (min-width: 575px) {
+    margin: ${spaceStackDefault};
+  }
+
+  @media (max-width: 576px) {
+    margin: ${spaceStackDouble};
+  }
 `;
 
 const StyledByline = TypeBylineHeading.withComponent('p').extend`
-  margin: ${spaceStackQuad};
   text-align: center;
+
+  @media (min-width: 575px) {
+    margin: ${spaceStackDouble};
+  }
+
+  @media (max-width: 576px) {
+    margin: ${spaceStackQuad};
+  }
 `;
 
 // TODO: Look into extending type specs instead of hardcoding properties
@@ -72,10 +100,18 @@ const StyledArticleBody = styled.div`
     max-width: 60.4rem;
     width: 100%;
     font-family: ${fontFamilySerif};
-    font-size: 3.6rem;
     font-weight: ${weightRegular};
     color: ${colorCharcoal};
-    line-height: 1.222;
+
+    @media (max-width: 575px) {
+      font-size: 2.6rem;
+      line-height: 1.231;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 3.6rem;
+      line-height: 1.222;
+    }
   }
 
   h3 {
@@ -83,21 +119,37 @@ const StyledArticleBody = styled.div`
     max-width: 60.4rem;
     width: 100%;
     font-family: ${fontFamilySerif};
-    font-size: 3.2rem;
     font-weight: ${weightRegular};
     color: ${colorCharcoal};
+
+    @media (max-width: 575px) {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 3.2rem;
+      line-height: 1.125;
+    }
   }
 
   h4 {
     margin: ${spaceStackDefault};
     max-width: 60.4rem;
     width: 100%;
-    line-height: 1.125;
     font-family: ${fontFamilySerif};
-    font-size: 2.4rem;
     font-weight: ${weightRegular};
     color: ${colorCharcoal};
-    line-height: 1.167;
+
+    @media (max-width: 575px) {
+      font-size: 1.6rem;
+      line-height: 1.125;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 2.4rem;
+      line-height: 1.167;
+    }
   }
 
   p {
@@ -105,10 +157,18 @@ const StyledArticleBody = styled.div`
     max-width: 60.4rem;
     width: 100%;
     font-family: ${fontFamilySans};
-    font-size: 1.8rem;
     font-weight: ${weightLight};
     color: ${colorCharcoal};
-    line-height: 1.778;
+
+    @media (max-width: 575px) {
+      font-size: 1.6rem;
+      line-height: 1.625;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 1.8rem;
+      line-height: 1.778;
+    }
 
     em {
       font-style: italic;
@@ -121,10 +181,18 @@ const StyledArticleBody = styled.div`
 
   a {
     font-family: ${fontFamilySans};
-    font-size: 1.8rem;
     font-weight: ${weightSemiBold};
     color: ${colorCharcoal};
-    line-height: 1.778;
+
+    @media (max-width: 575px) {
+      font-size: 1.6rem;
+      line-height: 1.625;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 1.8rem;
+      line-height: 1.778;
+    }
 
     &:hover {
       color: ${colorPeacockLight};
