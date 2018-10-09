@@ -59,6 +59,7 @@ export const spaceInsetSquishDouble = `1.6rem 3.2rem`;
 // Space Inset Stretch
 export const spaceInsetStretchDefault = `2.4rem 1.6rem`;
 export const spaceInsetStretchHalf = `1.2rem 0.8rem`;
+export const spaceInsetStretchDouble = `3.2rem 1.6rem`;
 
 // Space Stack
 export const spaceStackDefault = `0 0 1.6rem 0`;
@@ -118,5 +119,5 @@ export const elevation2 = '0 2rem 4rem rgba(44, 71, 71, 0.1), 0 1.2rem 3.2rem rg
 export const transition = '300ms ease-in-out';
 
 // Breakpoints
-export const breakpointMobile = '480px';
-export const breakpointDesktop = '481px';
+export const breakpointMobile = '500px';
+export const breakpointDesktop = '501px';

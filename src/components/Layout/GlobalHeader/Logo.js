@@ -5,8 +5,11 @@ import styled from 'styled-components';
 import ScreenReaderOnly from '../../A11y/ScreenReaderOnly';
 
 import {
+  breakpointMobile,
+  breakpointDesktop,
   colorPeacock,
   colorPeacockLight,
+  spaceStackDefault,
   spaceStackQuad
 } from '../../../theme/settings';
 
@@ -25,10 +28,17 @@ const Logo = () => (
 );
 
 const StyledLogo = styled(Link)`
-  margin: ${spaceStackQuad};
   width: 100%;
   display: block;
   text-decoration: none;
+
+  @media (max-width: ${breakpointMobile}) {
+    margin: ${spaceStackDefault};
+  }
+
+  @media (min-width: ${breakpointDesktop}) {
+    margin: ${spaceStackQuad};
+  }
 
   &:hover svg {
     fill: ${colorPeacockLight};

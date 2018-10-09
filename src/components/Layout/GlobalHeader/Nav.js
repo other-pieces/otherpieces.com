@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import TypeNavLink from '../../Typography/TypeNavLink';
 
 import {
-  spaceInlineDefault
+  breakpointDesktop,
+  breakpointMobile,
+  spaceDefault
 } from '../../../theme/settings';
 
 const Nav = () => (
@@ -18,16 +20,26 @@ const Nav = () => (
 );
 
 const StyledNav = styled.nav`
+  margin-top: -${spaceDefault};
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+
+  @media (max-width: ${breakpointMobile}) {
+    justify-content: center;
+  }
+
+  @media (min-width: ${breakpointDesktop}) {
+    justify-content: space-between;
+  }
 `;
 
 const StyledLink = TypeNavLink.extend`
+  margin-top: ${spaceDefault};
+
   &:not(:last-child) {
-    margin: ${spaceInlineDefault};
+    margin-right: ${spaceDefault};
   }
 `;
 
