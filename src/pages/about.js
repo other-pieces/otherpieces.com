@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import {
   spaceStackDouble,
-  spaceStackCenterOct,
+  spaceStackOct,
   spaceStackQuad
 } from '../theme/settings';
 
@@ -68,9 +68,16 @@ const AboutPage = () => (
 const StyledHiddenTitle = ScreenReaderOnly.withComponent('h1');
 
 const StyledIntro = styled.div`
-  margin: ${spaceStackCenterOct};
   max-width: 104.8rem;
   width: 100%;
+
+  @media (max-width: 575px) {
+    margin: ${spaceStackQuad};
+  }
+
+  @media (min-width: 576px) {
+    margin: ${spaceStackOct};
+  }
 `;
 
 const StyledIntroCopy = TypeBody.withComponent('p').extend`

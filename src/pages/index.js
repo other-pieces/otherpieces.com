@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components';
 
 import {
@@ -12,6 +13,7 @@ import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
 import CardGrid from '../components/UI/Cards/CardGrid';
 import Card from '../components/UI/Cards/Card';
 import CategoryCalloutSection from '../components/Layout/CategoryCalloutSection';
+import Divider from '../components/UI/Decoration/Divider';
 import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 
 const IndexPage = () => (
@@ -59,6 +61,7 @@ const IndexPage = () => (
             ))}
           </CardGrid>
           <CategoryCalloutSection />
+          <Divider />
           <StyledInstagramFeed>
             <StyledInstagramLink href="https://instagram.com/otherpieces/">
               <ScreenReaderOnly>Follow </ScreenReaderOnly> @otherpieces <ScreenReaderOnly>on Instagram</ScreenReaderOnly>
@@ -79,7 +82,7 @@ const StyledInstagramFeed = styled.section`
   align-items: center;
 `;
 
-const StyledInstagramLink = TypeSectionHeading.withComponent('a').extend`
+const StyledInstagramLink = TypeSectionHeading.withComponent(OutboundLink).extend`
   text-decoration: none;
 
   &:hover,

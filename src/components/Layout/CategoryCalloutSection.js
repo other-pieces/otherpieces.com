@@ -6,7 +6,11 @@ import TypeSectionHeading from '../Typography/TypeSectionHeading';
 import CardSmallGrid from '../UI/Cards/CardSmallGrid';
 import CardSmall from '../UI/Cards/CardSmall';
 
-import { spaceStackDouble } from '../../theme/settings';
+import {
+  spaceStackDouble,
+  spaceStackOct,
+  spaceStackQuad
+} from '../../theme/settings';
 
 const CalloutSection = ({ children }) => (
   <StyledCalloutSection>
@@ -47,12 +51,19 @@ const CalloutSection = ({ children }) => (
 );
 
 const StyledCalloutSection = styled.section`
-  margin: ${spaceStackDouble};
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 575px) {
+    margin: ${spaceStackQuad};
+  }
+
+  @media (min-width: 576px) {
+    margin: ${spaceStackOct};
+  }
 `;
 
 const StyledTypeSectionHeading = TypeSectionHeading.withComponent('h2').extend`
