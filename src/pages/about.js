@@ -71,7 +71,6 @@ const StyledIntro = styled.div`
   margin: ${spaceStackCenterOct};
   max-width: 104.8rem;
   width: 100%;
-  display: block;
 `;
 
 const StyledIntroCopy = TypeBody.withComponent('p').extend`

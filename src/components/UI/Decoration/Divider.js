@@ -29,6 +29,7 @@ const StyledDivider = styled.svg`
   margin: ${spaceStackCenterOct};
   max-width: 91rem;
   width: 100%;
+  display: block;
 `;
 
 export default Divider;
