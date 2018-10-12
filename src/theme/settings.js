@@ -33,7 +33,6 @@ export const weightLight = 300;
 export const weightRegular = 400;
 export const weightSemiBold = 600;
 export const weightBold = 700;
-export const weightExtraBold = 800;
 export const fontStyleItalic = 'italic';
 
 
