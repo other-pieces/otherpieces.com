@@ -59,7 +59,8 @@ const StyledCardImage = styled.img`
   margin: ${spaceStackDouble};
   width: 100%;
 
-  ${StyledCard}:hover & {
+  ${StyledCard}:hover &,
+  ${StyledCard}:focus & {
     filter: brightness(1.02);
   }
 `;
@@ -74,7 +75,8 @@ const StyledCardContent = styled.div`
 const StyledCardHeading = TypeTitle1.withComponent('h2').extend`
   margin: ${spaceStackDouble};
 
-  ${StyledCard}:hover & {
+  ${StyledCard}:hover &,
+  ${StyledCard}:focus & {
     color: ${colorPeacockLight};
     text-decoration: underline;
   }

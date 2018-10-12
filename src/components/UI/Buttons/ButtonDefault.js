@@ -36,7 +36,8 @@ const StyledButtonDefault = TypeButton.withComponent('button').extend`
     padding: ${spaceDefault} 2.4rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${colorPeacockLight};
   }
 

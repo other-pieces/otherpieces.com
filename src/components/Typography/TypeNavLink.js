@@ -26,7 +26,8 @@ const TypeNavLink = styled(Link)`
     line-height: 1.111;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: ${colorPeacockLight};
     text-decoration: underline;
   }

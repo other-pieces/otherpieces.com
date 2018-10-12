@@ -38,8 +38,11 @@ const StyledLogo = styled(Link)`
     margin: ${spaceStackQuad};
   }
 
-  &:hover svg {
-    fill: ${colorPeacockLight};
+  &:hover,
+  &:focus {
+    svg {
+      fill: ${colorPeacockLight};
+    }
   }
 
   &:focus {

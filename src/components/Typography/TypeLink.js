@@ -23,7 +23,8 @@ const TypeLink = styled(Link)`
     line-height: 1.778;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: ${colorPeacockLight};
   }
 
