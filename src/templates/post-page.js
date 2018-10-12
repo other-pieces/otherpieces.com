@@ -194,7 +194,8 @@ const StyledArticleBody = styled.div`
       line-height: 1.778;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: ${colorPeacockLight};
     }
 

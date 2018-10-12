@@ -12,6 +12,8 @@ import {
   spaceNone
 } from '../../../theme/settings';
 
+// TODO: Implement redundant click event pattern: https://inclusive-components.design/cards/
+
 const Card = ({
   heading,
   linkText,
@@ -45,13 +47,19 @@ const StyledCard = styled(Link)`
   flex-direction: column;
   text-decoration: none;
 
-  &:hover img {
-    filter: brightness(1.02);
+  &:hover,
+  &:focus {
+    img {
+      filter: brightness(1.02);
+    }
   }
 
-  &:hover h2 {
-    color: ${colorPeacockLight};
-    text-decoration: underline;
+  &:hover,
+  &:focus {
+    h2 {
+      color: ${colorPeacockLight};
+      text-decoration: underline;
+    }
   }
 
   &:focus {

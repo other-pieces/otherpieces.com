@@ -1,5 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+
+import {
+  colorPeacockLight
+} from '../theme/settings';
 
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
@@ -7,6 +12,7 @@ import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
 import CardGrid from '../components/UI/Cards/CardGrid';
 import Card from '../components/UI/Cards/Card';
 import CategoryCalloutSection from '../components/Layout/CategoryCalloutSection';
+import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 
 const IndexPage = () => (
   <StaticQuery
@@ -53,6 +59,11 @@ const IndexPage = () => (
             ))}
           </CardGrid>
           <CategoryCalloutSection />
+          <StyledInstagramFeed>
+            <StyledInstagramLink href="https://instagram.com/otherpieces/">
+              <ScreenReaderOnly>Follow </ScreenReaderOnly> @otherpieces <ScreenReaderOnly>on Instagram</ScreenReaderOnly>
+            </StyledInstagramLink>
+          </StyledInstagramFeed>
         </Main>
       </GlobalLayout>
     )}
@@ -60,5 +71,27 @@ const IndexPage = () => (
 );
 
 const StyledHiddenTitle = ScreenReaderOnly.withComponent('h1');
+
+const StyledInstagramFeed = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const StyledInstagramLink = TypeSectionHeading.withComponent('a').extend`
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: ${colorPeacockLight};
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 0.2rem solid ${colorPeacockLight};
+    outline-offset: 0.4rem;
+  }
+`;
 
 export default IndexPage;

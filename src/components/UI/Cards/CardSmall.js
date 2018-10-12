@@ -13,6 +13,8 @@ import {
   spaceNone
 } from '../../../theme/settings';
 
+// TODO: Implement redundant click event pattern: https://inclusive-components.design/cards/
+
 const CardSmall = ({
   caption,
   heading,
@@ -60,7 +62,8 @@ const StyledCardSmallImage = styled.img`
   margin: ${spaceStackDefault};
   width: 100%;
 
-  ${StyledCardSmall}:hover & {
+  ${StyledCardSmall}:hover &,
+  ${StyledCardSmall}:focus & {
     filter: brightness(1.02);
   }
 `;
@@ -76,7 +79,8 @@ const StyledCardSmallContent = styled.div`
 const StyledCardSmallHeading = TypeNavLink.withComponent('h3').extend`
   margin: ${spaceStackHalf};
 
-  ${StyledCardSmall}:hover & {
+  ${StyledCardSmall}:hover &,
+  ${StyledCardSmall}:focus & {
     color: ${colorPeacockLight};
     text-decoration: underline;
   }
