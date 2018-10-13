@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import styled, { injectGlobal } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
@@ -170,34 +169,14 @@ injectGlobal`
 `
 
 const GlobalLayout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <SkipNav anchor="mainContent">Skip to main content</SkipNav>
-        <StyledGlobalLayout>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
-          />
-          <Header />
-          {children}
-          <Footer />
-        </StyledGlobalLayout>
-      </>
-    )}
-  />
+  <>
+    <SkipNav anchor="mainContent">Skip to main content</SkipNav>
+    <StyledGlobalLayout>
+      <Header />
+      {children}
+      <Footer />
+    </StyledGlobalLayout>
+  </>
 );
 
 const StyledGlobalLayout = styled.div`
