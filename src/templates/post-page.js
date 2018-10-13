@@ -216,6 +216,9 @@ export const postPageQuery = graphql`
         imageHero
         imageHeroAlt
       }
+      fields {
+        slug
+      }
     }
   }
 `;
