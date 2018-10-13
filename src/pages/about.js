@@ -31,7 +31,7 @@ const AboutPage = () => (
     `}
     render={data => (
       <GlobalLayout>
-        <Main>
+        <Main id="mainContent">
           <StyledHiddenTitle>About {data.site.siteMetadata.title}</StyledHiddenTitle>
           <section>
             <HeroineGrid

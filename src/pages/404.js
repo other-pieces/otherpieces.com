@@ -5,7 +5,7 @@ import Main from '../components/Layout/Main';
 
 const NotFoundPage = () => (
   <GlobalLayout>
-    <Main>
+    <Main id="mainContent">
       <h1>NOT FOUND</h1>
       <p>You just hit a route that doesn&#39;t exist&hellip;the sadness.</p>
     </Main>

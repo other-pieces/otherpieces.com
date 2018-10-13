@@ -36,6 +36,7 @@ import oldStandardItalicWOFF from '../../assets/fonts/old-standard-tt/OldStandar
 import oldStandardItalicWOFF2 from '../../assets/fonts/old-standard-tt/OldStandard-Italic.woff2';
 
 // Components
+import SkipNav from '../A11y/SkipNav';
 import Header from './GlobalHeader/Header';
 import Footer from './Footer';
 
@@ -178,18 +179,21 @@ const GlobalLayout = ({ children }) => (
       }
     `}
     render={data => (
-      <StyledGlobalLayout>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
-        <Header />
-        {children}
-        <Footer />
-      </StyledGlobalLayout>
+      <>
+        <SkipNav anchor="mainContent">Skip to main content</SkipNav>
+        <StyledGlobalLayout>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          />
+          <Header />
+          {children}
+          <Footer />
+        </StyledGlobalLayout>
+      </>
     )}
   />
 );

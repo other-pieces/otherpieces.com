@@ -17,7 +17,7 @@ import TypeInput from '../components/Typography/TypeInput';
 
 const ComponentsPage = ({ data }) => (
   <GlobalLayout>
-    <Main>
+    <Main id="mainContent">
       <h1>Components</h1>
       <StyledMastheadHeadline>Masthead Headline</StyledMastheadHeadline>
       <StyledHeadline>Article Headline</StyledHeadline>

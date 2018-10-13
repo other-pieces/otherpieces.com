@@ -8,7 +8,7 @@ import Card from '../components/UI/Cards/Card';
 
 const StylePage = ({ data }) => (
   <GlobalLayout>
-    <Main>
+    <Main id="mainContent">
       <CardGrid>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Card

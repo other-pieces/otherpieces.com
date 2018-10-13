@@ -43,7 +43,7 @@ const IndexPage = () => (
     `}
     render={data => (
       <GlobalLayout>
-        <Main>
+        <Main id="mainContent">
           <StyledHiddenTitle>
             {data.site.siteMetadata.title}
           </StyledHiddenTitle>

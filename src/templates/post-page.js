@@ -24,7 +24,7 @@ import {
 
 const PostPage = ({ data }) => (
   <GlobalLayout>
-    <StyledArticle>
+    <StyledArticle id="mainContent">
       <StyledTypeHeadline>
         {data.markdownRemark.frontmatter.title}
       </StyledTypeHeadline>
