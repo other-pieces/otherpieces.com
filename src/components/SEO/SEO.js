@@ -84,14 +84,19 @@ const SEO = ({
   const postMeta = postData.frontmatter || {};
   const postFields = postData.fields || {};
 
-  // TODO: Finalize logic for fallback values
   const title = postMeta.title || seoTitle || config.title;
   const description =
     postMeta.description || seoDescription || config.description;
-  const image = `${config.url}${postImage}` || `${config.url}${seoImage}` || config.image;
+  const image = postImage
+    ? `${config.url}${postImage}`
+    : seoImage
+    ? `${config.url}${seoImage}`
+    : config.image;
   const url = postFields.slug
     ? `${config.url}${postFields.slug}`
-    : `${config.url}${pagePath || null}`;
+    : pagePath
+    ? `${config.url}${pagePath || null}`
+    : config.url;
   const datePublished = isBlogPost ? postMeta.datePublished : false;
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
