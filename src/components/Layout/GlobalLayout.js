@@ -5,6 +5,7 @@ import styled, { injectGlobal } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
 import {
+  colorWhite,
   fontFamilySans,
   spaceDefault,
   spaceQuad,
@@ -164,6 +165,7 @@ injectGlobal`
   body {
     font-family: ${fontFamilySans};
     font-size: 1.6rem;
+    background-color: ${colorWhite};
   }
 `
 
