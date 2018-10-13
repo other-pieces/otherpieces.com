@@ -17,7 +17,7 @@ const SearchPage = ({ data }) => (
     `}
     render={data => (
       <GlobalLayout>
-        <Main>
+        <Main id="mainContent">
           <h1>Search {data.site.siteMetadata.title}</h1>
         </Main>
       </GlobalLayout>

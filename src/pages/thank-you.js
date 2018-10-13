@@ -17,7 +17,7 @@ const ThankYouPage = ({ data }) => (
     `}
     render={data => (
       <GlobalLayout>
-        <Main>
+        <Main id="mainContent">
           <h1>Search {data.site.siteMetadata.title}</h1>
           <h2>Thank you</h2>
         </Main>
