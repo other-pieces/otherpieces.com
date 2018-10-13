@@ -7,6 +7,7 @@ const getSchemaOrgJSONLD = ({
   isBlogPost,
   url,
   title,
+  author,
   image,
   description,
   datePublished,
@@ -51,10 +52,9 @@ const getSchemaOrgJSONLD = ({
             url: image,
           },
           description,
-          // TODO: Get author from postData
           author: {
             '@type': 'Person',
-            name: 'Other Pieces',
+            name: author,
           },
           publisher: {
             '@type': 'Organization',

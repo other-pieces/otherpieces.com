@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { injectGlobal } from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
 
 import {
   colorWhite,
