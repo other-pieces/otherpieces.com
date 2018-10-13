@@ -1,5 +1,6 @@
 // Colorbook
 // Brand
+export const colorWhite = '#fff';
 export const colorCharcoal = '#1f1f1f';
 export const colorCharcoalLight = '#525252';
 export const colorCharcoalLighter = '#8a8a8a';

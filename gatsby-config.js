@@ -31,5 +31,18 @@ module.exports = {
         respectDNT: true,
       },
     },
+    // PWA
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Other Pieces",
+        short_name: "Other Pieces",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#ffffff",
+        display: "minimal-ui",
+        icon: "src/assets/favicon/other-pieces-icon.png",
+      },
+    },
   ],
 }
