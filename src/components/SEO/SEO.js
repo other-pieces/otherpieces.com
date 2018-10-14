@@ -10,7 +10,7 @@ const getSchemaOrgJSONLD = ({
   author,
   image,
   description,
-  datePublished,
+  date,
 }) => {
   const schemaOrgJSONLD = [
     {
@@ -66,7 +66,7 @@ const getSchemaOrgJSONLD = ({
             '@type': 'WebSite',
             '@id': config.url,
           },
-          datePublished,
+          date,
         },
       ]
     : schemaOrgJSONLD;
@@ -78,7 +78,8 @@ const SEO = ({
   seoDescription,
   seoImage,
   pagePath,
-  isBlogPost
+  isBlogPost,
+  datePublished
 }) => {
   const title = seoTitle || config.title;
   const description = seoDescription || config.description;
@@ -88,7 +89,7 @@ const SEO = ({
   const url = pagePath
     ? `${config.url}${pagePath}`
     : config.url;
-  const datePublished = isBlogPost ? datePublished : false;
+  const date = isBlogPost ? datePublished : false;
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
@@ -97,7 +98,7 @@ const SEO = ({
     title,
     image,
     description,
-    datePublished,
+    date
   });
 
   return (
