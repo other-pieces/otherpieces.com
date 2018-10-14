@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Other Pieces',
+    siteUrl: 'https://www.otherpieces.com',
   },
   plugins: [
     // Head
@@ -18,6 +19,8 @@ module.exports = {
     },
     // JavaScript Pages
     'gatsby-transformer-javascript-frontmatter',
+    // SEO
+    'gatsby-plugin-sitemap',
     // Analytics
     {
       resolve: `gatsby-plugin-google-analytics`,
