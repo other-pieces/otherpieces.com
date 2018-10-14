@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
+import SEO from '../components/SEO/SEO';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 import TypeHeadline from '../components/Typography/TypeHeadline';
@@ -22,21 +23,51 @@ import {
   weightSemiBold
 } from '../theme/settings';
 
-const PostPage = ({ data }) => (
-  <GlobalLayout>
-    <StyledArticle id="mainContent">
-      <StyledTypeHeadline>
-        {data.markdownRemark.frontmatter.title}
-      </StyledTypeHeadline>
-      {data.markdownRemark.frontmatter.imageHero &&
-        <StyledImageHero src={data.markdownRemark.frontmatter.imageHero} alt={data.markdownRemark.frontmatter.imageHeroAlt} />
+const PostPage = ({
+  data: {
+    markdownRemark: {
+      html,
+      frontmatter: {
+        author,
+        date,
+        title,
+        seoTitle,
+        seoDescription,
+        seoImage,
+        imageHero,
+        imageHeroAlt
+      },
+      fields: {
+        slug
       }
-      <StyledByline>
-        By {data.markdownRemark.frontmatter.author}
-      </StyledByline>
-      <StyledArticleBody dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    </StyledArticle>
-  </GlobalLayout>
+    }
+  }
+}) => (
+  <>
+    <SEO
+      author={author}
+      datePublished={date}
+      seoTitle={seoTitle}
+      seoDescription={seoDescription}
+      seoImage={seoImage}
+      pagePage={slug}
+      isBlogPost
+    />
+    <GlobalLayout>
+      <StyledArticle id="mainContent">
+        <StyledTypeHeadline>
+          {title}
+        </StyledTypeHeadline>
+        {imageHero &&
+          <StyledImageHero src={imageHero} alt={imageHeroAlt} />
+        }
+        <StyledByline>
+          By {author}
+        </StyledByline>
+        <StyledArticleBody dangerouslySetInnerHTML={{ __html: html }} />
+      </StyledArticle>
+    </GlobalLayout>
+  </>
 );
 
 const StyledArticle = Main.withComponent('article').extend`
@@ -212,7 +243,11 @@ export const postPageQuery = graphql`
       html
       frontmatter {
         author
+        date
         title
+        seoTitle
+        seoDescription
+        seoImage
         imageHero
         imageHeroAlt
       }

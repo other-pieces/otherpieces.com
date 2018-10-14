@@ -73,34 +73,26 @@ const getSchemaOrgJSONLD = ({
 };
 
 const SEO = ({
+  author,
   seoTitle,
   seoDescription,
   seoImage,
   pagePath,
-  postData,
-  postImage,
   isBlogPost
 }) => {
-  const postMeta = postData.frontmatter || {};
-  const postFields = postData.fields || {};
-
-  const title = postMeta.title || seoTitle || config.title;
-  const description =
-    postMeta.description || seoDescription || config.description;
-  const image = postImage
-    ? `${config.url}${postImage}`
-    : seoImage
+  const title = seoTitle || config.title;
+  const description = seoDescription || config.description;
+  const image = seoImage
     ? `${config.url}${seoImage}`
     : config.image;
-  const url = postFields.slug
-    ? `${config.url}${postFields.slug}`
-    : pagePath
-    ? `${config.url}${pagePath || null}`
+  const url = pagePath
+    ? `${config.url}${pagePath}`
     : config.url;
-  const datePublished = isBlogPost ? postMeta.datePublished : false;
+  const datePublished = isBlogPost ? datePublished : false;
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
+    author,
     url,
     title,
     image,
@@ -143,12 +135,7 @@ SEO.propTypes = {
   seoDescription: PropTypes.string,
   seoImage: PropTypes.string,
   pagePath: PropTypes.string,
-  isBlogPost: PropTypes.bool,
-  postData: PropTypes.shape({
-    frontmatter: PropTypes.any,
-    fields: PropTypes.any
-  }),
-  postImage: PropTypes.string,
+  isBlogPost: PropTypes.bool
 };
 
 SEO.defaultProps = {
@@ -156,9 +143,7 @@ SEO.defaultProps = {
   seoDescription: null,
   seoImage: null,
   pagePath: null,
-  isBlogPost: false,
-  postData: {},
-  postImage: null,
+  isBlogPost: false
 };
 
 export default SEO;

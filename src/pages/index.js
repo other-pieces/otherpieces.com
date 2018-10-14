@@ -17,6 +17,10 @@ import CategoryCalloutSection from '../components/Layout/CategoryCalloutSection'
 import Divider from '../components/UI/Decoration/Divider';
 import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 
+const seoTitle = 'Other Pieces | HOMEPAGE TITLE';
+const seoDescription = 'Other Pieces HOMEPAGE DESCRIPTION';
+const seoImage = '/homepage-image';
+
 const IndexPage = (props) => (
   <StaticQuery
     query={graphql`
@@ -45,7 +49,10 @@ const IndexPage = (props) => (
     render={data => (
       <>
         <SEO
-
+          seoTitle={seoTitle}
+          seoDescription={seoDescription}
+          seoImage={seoImage}
+          pagePath={props.location.pathname}
         />
         <GlobalLayout>
           <Main id="mainContent">
