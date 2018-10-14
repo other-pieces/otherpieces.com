@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -13,9 +14,9 @@ import TypeHeadline from '../../Typography/TypeHeadline';
 
 const HeroineGrid = ({
   headline,
-  imageEndSrc,
+  imageEnd,
   imageEndAlt,
-  imageStartSrc,
+  imageStart,
   imageStartAlt
 }) => {
   return (
@@ -23,8 +24,8 @@ const HeroineGrid = ({
       <StyledHeadline>
         {headline}
       </StyledHeadline>
-      <StyledHeroineImageStart src={imageStartSrc} alt={imageStartAlt}/>
-      <StyledHeroineImageEnd src={imageEndSrc} alt={imageEndAlt}/>
+      <StyledHeroineImageStart fluid={imageStart} alt={imageStartAlt}/>
+      <StyledHeroineImageEnd fluid={imageEnd} alt={imageEndAlt}/>
     </StyledHeroineGrid>
   )
 };
@@ -53,7 +54,7 @@ const StyledHeadline = TypeHeadline.withComponent('h2').extend`
   }
 `;
 
-const StyledHeroineImageStart = styled.img`
+const StyledHeroineImageStart = styled(Img)`
   max-width: 70.5rem;
   width: 100%;
 
@@ -69,7 +70,7 @@ const StyledHeroineImageStart = styled.img`
   }
 `;
 
-const StyledHeroineImageEnd = styled.img`
+const StyledHeroineImageEnd = styled(Img)`
   max-width: 42rem;
   width: 100%;
 
@@ -87,9 +88,9 @@ const StyledHeroineImageEnd = styled.img`
 
 HeroineGrid.propTypes = {
   headline: PropTypes.string.isRequired,
-  imageEndSrc: PropTypes.string.isRequired,
+  imageEnd: PropTypes.object.isRequired,
   imageEndAlt: PropTypes.string.isRequired,
-  imageStartSrc: PropTypes.string.isRequired,
+  imageStart: PropTypes.object.isRequired,
   imageStartAlt: PropTypes.string.isRequired
 }
 

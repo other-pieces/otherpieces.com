@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import SEO from '../components/SEO/SEO';
@@ -34,8 +35,9 @@ const PostPage = ({
         seoTitle,
         seoDescription,
         seoImage,
-        imageHero,
-        imageHeroAlt
+        imageHeroine,
+        imageHeroineAlt,
+        isImageHeroinePortrait
       },
       fields: {
         slug
@@ -58,8 +60,8 @@ const PostPage = ({
         <StyledTypeHeadline>
           {title}
         </StyledTypeHeadline>
-        {imageHero &&
-          <StyledImageHero src={imageHero} alt={imageHeroAlt} />
+        {imageHeroine &&
+          <StyledImageHeroine fluid={imageHeroine.childImageSharp.fluid} portrait={isImageHeroinePortrait} alt={imageHeroineAlt} />
         }
         <StyledByline>
           By {author}
@@ -98,8 +100,9 @@ const StyledTypeHeadline = TypeHeadline.withComponent('h1').extend`
   }
 `;
 
-const StyledImageHero = styled.img`
-  max-width: 100%;
+const StyledImageHeroine = styled(Img)`
+  ${props => props.portrait ? "max-width: 78.6rem;" : ""};
+  width: 100%;
   display: block;
 
   @media (min-width: 575px) {
@@ -124,7 +127,7 @@ const StyledByline = TypeBylineHeading.withComponent('p').extend`
 `;
 
 // TODO: Look into extending type specs instead of hardcoding properties
-// TODO: Styled images provided in post content
+// TODO: Style images provided in post content
 const StyledArticleBody = styled.div`
   h2 {
     margin: ${spaceStackDefault};
@@ -200,14 +203,6 @@ const StyledArticleBody = styled.div`
       font-size: 1.8rem;
       line-height: 1.778;
     }
-
-    em {
-      font-style: italic;
-    }
-
-    strong {
-      font-weight: ${weightBold};
-    }
   }
 
   a {
@@ -235,6 +230,14 @@ const StyledArticleBody = styled.div`
       outline-offset: 0.4rem;
     }
   }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: ${weightBold};
+  }
 `;
 
 export const postPageQuery = graphql`
@@ -248,8 +251,11 @@ export const postPageQuery = graphql`
         seoTitle
         seoDescription
         seoImage
-        imageHero
-        imageHeroAlt
+        imageHeroine {
+          ...imageFragmentPostHeroine
+        }
+        imageHeroineAlt
+        isImageHeroinePortrait
       }
       fields {
         slug

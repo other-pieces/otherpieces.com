@@ -9,7 +9,6 @@ module.exports = {
     // Styles
     'gatsby-plugin-styled-components',
     // Markdown
-    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -19,6 +18,31 @@ module.exports = {
     },
     // JavaScript Pages
     'gatsby-transformer-javascript-frontmatter',
+    // Images
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 604,
+              linkImagesToOriginal: false,
+              withWebp: true,
+            },
+          },
+        ],
+      },
+    },
     // SEO
     'gatsby-plugin-sitemap',
     // Analytics

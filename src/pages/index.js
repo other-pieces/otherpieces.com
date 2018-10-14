@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components';
 
@@ -36,13 +37,24 @@ const IndexPage = (props) => (
               id
               frontmatter {
                 author
-                imageCard
+                imageCard {
+                  ...imageFragmentCard
+                }
                 imageCardAlt
                 path
                 title
               }
             }
           }
+        }
+        imageCategoryCalloutStart: file(relativePath: { eq: "one.jpg" }) {
+          ...imageFragmentCardSmall
+        }
+        imageCategoryCalloutCenter: file(relativePath: { eq: "two.jpg" }) {
+          ...imageFragmentCardSmall
+        }
+        imageCategoryCalloutEnd: file(relativePath: { eq: "two.jpg" }) {
+          ...imageFragmentCardSmall
         }
       }
     `}
@@ -65,14 +77,18 @@ const IndexPage = (props) => (
                   key={node.id}
                   path={node.frontmatter.path}
                   linkText={`Read ${node.frontmatter.title}`}
-                  image={node.frontmatter.imageCard}
+                  image={node.frontmatter.imageCard.childImageSharp.fixed}
                   imageAlt={node.frontmatter.imageCardAlt}
                   heading={node.frontmatter.title}
                   subhead={`By ${node.frontmatter.author}`}
                 />
               ))}
             </CardGrid>
-            <CategoryCalloutSection />
+            <CategoryCalloutSection
+              calloutImageStart={data.imageCategoryCalloutStart.childImageSharp.fixed}
+              calloutImageCenter={data.imageCategoryCalloutCenter.childImageSharp.fixed}
+              calloutImageEnd={data.imageCategoryCalloutEnd.childImageSharp.fixed}
+            />
             <Divider />
             <StyledInstagramFeed>
               <StyledInstagramLink href="https://instagram.com/otherpieces/">
