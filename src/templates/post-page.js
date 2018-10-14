@@ -203,14 +203,6 @@ const StyledArticleBody = styled.div`
       font-size: 1.8rem;
       line-height: 1.778;
     }
-
-    em {
-      font-style: italic;
-    }
-
-    strong {
-      font-weight: ${weightBold};
-    }
   }
 
   a {
@@ -237,6 +229,14 @@ const StyledArticleBody = styled.div`
       outline: 0.2rem solid ${colorPeacockLight};
       outline-offset: 0.4rem;
     }
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: ${weightBold};
   }
 `;
 
