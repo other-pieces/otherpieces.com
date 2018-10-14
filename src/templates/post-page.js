@@ -35,8 +35,9 @@ const PostPage = ({
         seoTitle,
         seoDescription,
         seoImage,
-        imageHero,
-        imageHeroAlt
+        imageHeroine,
+        imageHeroineAlt,
+        isImageHeroinePortrait
       },
       fields: {
         slug
@@ -59,8 +60,8 @@ const PostPage = ({
         <StyledTypeHeadline>
           {title}
         </StyledTypeHeadline>
-        {imageHero &&
-          <StyledImageHero sizes={imageHero} alt={imageHeroAlt} />
+        {imageHeroine &&
+          <StyledImageHeroine fluid={imageHeroine.childImageSharp.fluid} portrait={isImageHeroinePortrait} alt={imageHeroineAlt} />
         }
         <StyledByline>
           By {author}
@@ -99,8 +100,9 @@ const StyledTypeHeadline = TypeHeadline.withComponent('h1').extend`
   }
 `;
 
-const StyledImageHero = styled(Img)`
-  max-width: 100%;
+const StyledImageHeroine = styled(Img)`
+  ${props => props.portrait ? "max-width: 78.6rem;" : ""};
+  width: 100%;
   display: block;
 
   @media (min-width: 575px) {
@@ -125,7 +127,7 @@ const StyledByline = TypeBylineHeading.withComponent('p').extend`
 `;
 
 // TODO: Look into extending type specs instead of hardcoding properties
-// TODO: Styled images provided in post content
+// TODO: Style images provided in post content
 const StyledArticleBody = styled.div`
   h2 {
     margin: ${spaceStackDefault};
@@ -249,10 +251,11 @@ export const postPageQuery = graphql`
         seoTitle
         seoDescription
         seoImage
-        imageHero {
+        imageHeroine {
           ...imageFragmentPostHeroine
         }
-        imageHeroAlt
+        imageHeroineAlt
+        isImageHeroinePortrait
       }
       fields {
         slug

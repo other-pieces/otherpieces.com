@@ -9,8 +9,9 @@ seoImage: '/post-3-seo-image'
 category: 'lifestyle'
 imageCard: './three.jpg'
 imageCardAlt: 'Card alt text'
-imageHero: './three.jpg'
-imageHeroAlt: 'Hero alt text'
+imageHeroine: './three.jpg'
+imageHeroineAlt: 'Hero alt text'
+isImageHeroinePortrait: false
 ---
 
 ## Lorem ipsum dolor

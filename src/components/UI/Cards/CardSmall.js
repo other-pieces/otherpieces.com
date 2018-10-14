@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -18,7 +19,7 @@ import {
 const CardSmall = ({
   caption,
   heading,
-  image,
+  fixed,
   imageAlt,
   linkText,
   path
@@ -27,7 +28,7 @@ const CardSmall = ({
     <HiddenLinkText>
       {linkText}
     </HiddenLinkText>
-    <StyledCardSmallImage src={image} alt={imageAlt} />
+    <StyledCardSmallImage fixed={fixed} alt={imageAlt} />
     <StyledCardSmallContent>
       {heading &&
         <StyledCardSmallHeading>
@@ -58,7 +59,7 @@ const HiddenLinkText = styled.span`
   clip: rect(1px, 1px, 1px, 1px);
 `;
 
-const StyledCardSmallImage = styled.img`
+const StyledCardSmallImage = styled(Img)`
   margin: ${spaceStackDefault};
   width: 100%;
 
@@ -94,7 +95,7 @@ const StyledCardSmallCaption = TypeCaption.withComponent('p').extend`
 CardSmall.propTypes = {
   caption: PropTypes.string,
   heading: PropTypes.string,
-  image: PropTypes.string.isRequired,
+  fixed: PropTypes.object.isRequired,
   linkText: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 };

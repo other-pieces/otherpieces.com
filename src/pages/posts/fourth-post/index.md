@@ -9,8 +9,9 @@ seoImage: '/post-4-seo-image'
 category: 'travel'
 imageCard: './two.jpg'
 imageCardAlt: 'Card alt text'
-imageHero: './two.jpg'
-imageHeroAlt: 'Hero alt text'
+imageHeroine: './two.jpg'
+imageHeroineAlt: 'Hero alt text'
+isImageHeroinePortrait: true
 ---
 
 ## Lorem ipsum dolor

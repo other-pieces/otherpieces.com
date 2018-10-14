@@ -12,7 +12,11 @@ import {
   spaceStackQuad
 } from '../../theme/settings';
 
-const CalloutSection = ({ children }) => (
+const CalloutSection = ({
+  calloutImageStart,
+  calloutImageCenter,
+  calloutImageEnd
+}) => (
   <StyledCalloutSection>
     <StyledTypeSectionHeading>
       Things that are better than work/laundry/calling your mom:
@@ -23,7 +27,7 @@ const CalloutSection = ({ children }) => (
         key="cardSmall1"
         path="/style"
         linkText="View all style posts"
-        image="https://source.unsplash.com/random/256x192"
+        fixed={calloutImageStart}
         imageAlt="Card alt text"
         heading="Style"
         caption="Super cute &rsquo;fits"
@@ -32,7 +36,7 @@ const CalloutSection = ({ children }) => (
         key="cardSmall2"
         path="/lifestyle"
         linkText="View all lifestyle posts"
-        image="https://source.unsplash.com/random/256x192"
+        fixed={calloutImageCenter}
         imageAlt="Card alt text"
         heading="Lifestyle"
         caption="Living your best life"
@@ -41,7 +45,7 @@ const CalloutSection = ({ children }) => (
         key="cardSmall3"
         path="/travel"
         linkText="View all travel posts"
-        image="https://source.unsplash.com/random/256x192"
+        fixed={calloutImageEnd}
         imageAlt="Card alt text"
         heading="Travel"
         caption="Literally skipping town"
@@ -74,7 +78,9 @@ const StyledTypeSectionHeading = TypeSectionHeading.withComponent('h2').extend`
 `;
 
 CalloutSection.propTypes = {
-  children: PropTypes.array,
+  calloutImageStart: PropTypes.object.isRequired,
+  calloutImageCenter: PropTypes.object.isRequired,
+  calloutImageEnd: PropTypes.object.isRequired
 };
 
 export default CalloutSection;

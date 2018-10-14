@@ -9,8 +9,9 @@ seoImage: '/post-1-seo-image'
 category: 'lifestyle'
 imageCard: './one.jpg'
 imageCardAlt: 'Card alt text'
-imageHero: './three.jpg'
-imageHeroAlt: 'Hero alt text'
+imageHeroine: './one.jpg'
+imageHeroineAlt: 'Hero alt text'
+isImageHeroinePortrait: true
 ---
 
 ## The situation

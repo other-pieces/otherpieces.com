@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 export const imageFragmentCard = graphql`
   fragment imageFragmentCard on File {
     childImageSharp {
-      resolutions(width: 360) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 360) {
+        ...GatsbyImageSharpFixed
       }
     }
   }
@@ -13,8 +13,8 @@ export const imageFragmentCard = graphql`
 export const imageFragmentCardSmall = graphql`
   fragment imageFragmentCardSmall on File {
     childImageSharp {
-      resolutions(width: 256) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 256) {
+        ...GatsbyImageSharpFixed
       }
     }
   }
@@ -23,8 +23,8 @@ export const imageFragmentCardSmall = graphql`
 export const imageFragmentPostHeroine = graphql`
   fragment imageFragmentPostHeroine on File {
     childImageSharp {
-      sizes(maxWidth: 1208) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 1208) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -33,8 +33,8 @@ export const imageFragmentPostHeroine = graphql`
 export const imageFragmentHeroineStart = graphql`
   fragment imageFragmentHeroineStart on File {
     childImageSharp {
-      sizes(maxWidth: 692) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 692) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -43,8 +43,8 @@ export const imageFragmentHeroineStart = graphql`
 export const imageFragmentHeroineEnd = graphql`
   fragment imageFragmentHeroineEnd on File {
     childImageSharp {
-      sizes(maxWidth: 420) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 420) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
