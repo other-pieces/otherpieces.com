@@ -33,6 +33,12 @@ const AboutPage = (props) => (
             title
           }
         }
+        imageHeroineStart: file(relativePath: { eq: "three.jpg" }) {
+          ...imageFragmentHeroineStart
+        }
+        imageHeroineEnd: file(relativePath: { eq: "one.jpg" }) {
+          ...imageFragmentHeroineEnd
+        }
       }
     `}
     render={data => (
@@ -49,9 +55,9 @@ const AboutPage = (props) => (
             <section>
               <HeroineGrid
                 headline="Oh, Hello There"
-                imageStartSrc="https://source.unsplash.com/random/1410x1058"
+                imageStart={data.imageHeroineStart.childImageSharp.fluid}
                 imageStartAlt="Jacque and Sara sitting together"
-                imageEndSrc="https://source.unsplash.com/random/840x1120"
+                imageEnd={data.imageHeroineEnd.childImageSharp.fluid}
                 imageEndAlt="Jacque and Sara walking down stairs"
               />
               <StyledIntro>

@@ -37,7 +37,7 @@ const TravelPage = () => (
                 key={node.id}
                 path={node.frontmatter.path}
                 linkText={`Read ${node.frontmatter.title}`}
-                image={node.frontmatter.imageCard.childImageSharp.resolutions}
+                image={node.frontmatter.imageCard.childImageSharp.fixed}
                 imageAlt={node.frontmatter.imageCardAlt}
                 heading={node.frontmatter.title}
                 subhead={`By ${node.frontmatter.author}`}

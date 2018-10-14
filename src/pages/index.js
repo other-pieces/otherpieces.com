@@ -47,13 +47,13 @@ const IndexPage = (props) => (
             }
           }
         }
-        categoryCalloutImage1: file(relativePath: { eq: "one.jpg" }) {
+        imageCategoryCalloutStart: file(relativePath: { eq: "one.jpg" }) {
           ...imageFragmentCardSmall
         }
-        categoryCalloutImage2: file(relativePath: { eq: "two.jpg" }) {
+        imageCategoryCalloutCenter: file(relativePath: { eq: "two.jpg" }) {
           ...imageFragmentCardSmall
         }
-        categoryCalloutImage3: file(relativePath: { eq: "two.jpg" }) {
+        imageCategoryCalloutEnd: file(relativePath: { eq: "two.jpg" }) {
           ...imageFragmentCardSmall
         }
       }
@@ -85,9 +85,9 @@ const IndexPage = (props) => (
               ))}
             </CardGrid>
             <CategoryCalloutSection
-              calloutImageStart={data.categoryCalloutImage1.childImageSharp.fixed}
-              calloutImageCenter={data.categoryCalloutImage2.childImageSharp.fixed}
-              calloutImageEnd={data.categoryCalloutImage3.childImageSharp.fixed}
+              calloutImageStart={data.imageCategoryCalloutStart.childImageSharp.fixed}
+              calloutImageCenter={data.imageCategoryCalloutCenter.childImageSharp.fixed}
+              calloutImageEnd={data.imageCategoryCalloutEnd.childImageSharp.fixed}
             />
             <Divider />
             <StyledInstagramFeed>
