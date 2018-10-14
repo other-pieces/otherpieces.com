@@ -7,6 +7,7 @@ import {
   colorPeacockLight
 } from '../theme/settings';
 
+import SEO from '../components/SEO/SEO';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
@@ -16,7 +17,11 @@ import CategoryCalloutSection from '../components/Layout/CategoryCalloutSection'
 import Divider from '../components/UI/Decoration/Divider';
 import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 
-const IndexPage = () => (
+const seoTitle = 'Other Pieces | HOMEPAGE TITLE';
+const seoDescription = 'Other Pieces HOMEPAGE DESCRIPTION';
+const seoImage = '/homepage-image';
+
+const IndexPage = (props) => (
   <StaticQuery
     query={graphql`
       query IndexQuery {
@@ -42,33 +47,41 @@ const IndexPage = () => (
       }
     `}
     render={data => (
-      <GlobalLayout>
-        <Main id="mainContent">
-          <StyledHiddenTitle>
-            {data.site.siteMetadata.title}
-          </StyledHiddenTitle>
-          <CardGrid>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card
-                key={node.id}
-                path={node.frontmatter.path}
-                linkText={`Read ${node.frontmatter.title}`}
-                image={node.frontmatter.imageCard}
-                imageAlt={node.frontmatter.imageCardAlt}
-                heading={node.frontmatter.title}
-                subhead={`By ${node.frontmatter.author}`}
-              />
-            ))}
-          </CardGrid>
-          <CategoryCalloutSection />
-          <Divider />
-          <StyledInstagramFeed>
-            <StyledInstagramLink href="https://instagram.com/otherpieces/">
-              <ScreenReaderOnly>Follow </ScreenReaderOnly> @otherpieces <ScreenReaderOnly>on Instagram</ScreenReaderOnly>
-            </StyledInstagramLink>
-          </StyledInstagramFeed>
-        </Main>
-      </GlobalLayout>
+      <>
+        <SEO
+          seoTitle={seoTitle}
+          seoDescription={seoDescription}
+          seoImage={seoImage}
+          pagePath={props.location.pathname}
+        />
+        <GlobalLayout>
+          <Main id="mainContent">
+            <StyledHiddenTitle>
+              {data.site.siteMetadata.title}
+            </StyledHiddenTitle>
+            <CardGrid>
+              {data.allMarkdownRemark.edges.map(({ node }) => (
+                <Card
+                  key={node.id}
+                  path={node.frontmatter.path}
+                  linkText={`Read ${node.frontmatter.title}`}
+                  image={node.frontmatter.imageCard}
+                  imageAlt={node.frontmatter.imageCardAlt}
+                  heading={node.frontmatter.title}
+                  subhead={`By ${node.frontmatter.author}`}
+                />
+              ))}
+            </CardGrid>
+            <CategoryCalloutSection />
+            <Divider />
+            <StyledInstagramFeed>
+              <StyledInstagramLink href="https://instagram.com/otherpieces/">
+                <ScreenReaderOnly>Follow </ScreenReaderOnly> @otherpieces <ScreenReaderOnly>on Instagram</ScreenReaderOnly>
+              </StyledInstagramLink>
+            </StyledInstagramFeed>
+          </Main>
+        </GlobalLayout>
+      </>
     )}
   />
 );
