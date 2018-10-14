@@ -26,7 +26,6 @@ export const colorStateDisabledLight = '#dbdbdb';
 
 export const colorStateError = '#c44848';
 
-
 // Typography
 export const fontFamilySans = `'Open Sans', sans-serif`;
 export const fontFamilySerif = `'Old Standard TT', serif`;
@@ -35,7 +34,6 @@ export const weightRegular = 400;
 export const weightSemiBold = 600;
 export const weightBold = 700;
 export const fontStyleItalic = 'italic';
-
 
 // Spacing
 export const spaceNone = '0 0 0 0';
@@ -110,7 +108,6 @@ export const spaceValueQuarter = 0.4;
 export const spaceValueHalf = 0.8;
 export const spaceValueDouble = 3.2;
 export const spaceValueQuad = 6.4;
-
 
 // Design Elements
 export const borderRadius = '0.2rem';

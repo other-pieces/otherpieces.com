@@ -7,36 +7,15 @@ import PropTypes from 'prop-types';
 import TypeTitle1 from '../../Typography/TypeTitle1';
 import TypeBylineHeading from '../../Typography/TypeBylineHeading';
 
-import {
-  colorPeacockLight,
-  spaceStackDouble,
-  spaceNone
-} from '../../../theme/settings';
+import { colorPeacockLight, spaceStackDouble, spaceNone } from '../../../theme/settings';
 
-const Card = ({
-  heading,
-  linkText,
-  image,
-  imageAlt,
-  path,
-  subhead
-}) => (
+const Card = ({ heading, linkText, image, imageAlt, path, subhead }) => (
   <StyledCard to={path}>
-    <HiddenLinkText>
-      {linkText}
-    </HiddenLinkText>
+    <HiddenLinkText>{linkText}</HiddenLinkText>
     <StyledCardImage resolutions={image} alt={imageAlt} />
     <StyledCardContent>
-      {heading &&
-        <StyledCardHeading>
-          {heading}
-        </StyledCardHeading>
-      }
-      {subhead &&
-        <StyledCardSubhead>
-          {subhead}
-        </StyledCardSubhead>
-      }
+      {heading && <StyledCardHeading>{heading}</StyledCardHeading>}
+      {subhead && <StyledCardSubhead>{subhead}</StyledCardSubhead>}
     </StyledCardContent>
   </StyledCard>
 );
@@ -91,8 +70,14 @@ Card.propTypes = {
   heading: PropTypes.string,
   linkText: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
+  imageAlt: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
-  subhead: PropTypes.string
+  subhead: PropTypes.string,
+};
+
+Card.defaultProps = {
+  heading: null,
+  subhead: null,
 };
 
 export default Card;

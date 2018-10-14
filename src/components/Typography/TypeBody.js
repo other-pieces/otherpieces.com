@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  colorCharcoal,
-  fontFamilySans,
-  weightLight
-} from '../../theme/settings';
+import { colorCharcoal, fontFamilySans, weightLight } from '../../theme/settings';
 
 const TypeBody = styled.span`
   font-family: ${fontFamilySans};

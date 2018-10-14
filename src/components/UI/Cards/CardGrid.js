@@ -2,15 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {
-  spaceQuad
-} from '../../../theme/settings';
+import { spaceQuad } from '../../../theme/settings';
 
-const CardGrid = ({ children }) => (
-  <StyledCardGrid>
-    {children}
-  </StyledCardGrid>
-);
+const CardGrid = ({ children }) => <StyledCardGrid>{children}</StyledCardGrid>;
 
 const StyledCardGrid = styled.div`
   margin-bottom: ${spaceQuad};
@@ -29,7 +23,7 @@ const StyledCardGrid = styled.div`
 `;
 
 CardGrid.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default CardGrid;

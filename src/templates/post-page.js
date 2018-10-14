@@ -21,7 +21,7 @@ import {
   weightBold,
   weightLight,
   weightRegular,
-  weightSemiBold
+  weightSemiBold,
 } from '../theme/settings';
 
 const PostPage = ({
@@ -37,13 +37,11 @@ const PostPage = ({
         seoImage,
         imageHeroine,
         imageHeroineAlt,
-        isImageHeroinePortrait
+        isImageHeroinePortrait,
       },
-      fields: {
-        slug
-      }
-    }
-  }
+      fields: { slug },
+    },
+  },
 }) => (
   <>
     <SEO
@@ -57,15 +55,15 @@ const PostPage = ({
     />
     <GlobalLayout>
       <StyledArticle id="mainContent">
-        <StyledTypeHeadline>
-          {title}
-        </StyledTypeHeadline>
-        {imageHeroine &&
-          <StyledImageHeroine fluid={imageHeroine.childImageSharp.fluid} portrait={isImageHeroinePortrait} alt={imageHeroineAlt} />
-        }
-        <StyledByline>
-          By {author}
-        </StyledByline>
+        <StyledTypeHeadline>{title}</StyledTypeHeadline>
+        {imageHeroine && (
+          <StyledImageHeroine
+            fluid={imageHeroine.childImageSharp.fluid}
+            portrait={isImageHeroinePortrait}
+            alt={imageHeroineAlt}
+          />
+        )}
+        <StyledByline>By {author}</StyledByline>
         <StyledArticleBody dangerouslySetInnerHTML={{ __html: html }} />
       </StyledArticle>
     </GlobalLayout>
@@ -101,7 +99,7 @@ const StyledTypeHeadline = TypeHeadline.withComponent('h1').extend`
 `;
 
 const StyledImageHeroine = styled(Img)`
-  ${props => props.portrait ? "max-width: 78.6rem;" : ""};
+  ${props => (props.portrait ? 'max-width: 78.6rem;' : '')};
   width: 100%;
   display: block;
 

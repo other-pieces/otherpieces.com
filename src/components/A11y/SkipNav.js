@@ -1,20 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  colorLinen,
-  colorPeacockLight,
-  spaceDefault,
-  spaceHalf
-} from '../../theme/settings';
+import { colorLinen, colorPeacockLight, spaceDefault, spaceHalf } from '../../theme/settings';
 
 import TypeButton from '../Typography/TypeButton';
 
-const SkipNav = ({ children, anchor }) => (
-  <StyledSkipNav href={`#${anchor}`}>
-    {children}
-  </StyledSkipNav>
-);
+const SkipNav = ({ children, anchor }) => <StyledSkipNav href={`#${anchor}`}>{children}</StyledSkipNav>;
 
 const StyledSkipNav = TypeButton.withComponent('a').extend`
   text-decoration: none;
@@ -57,7 +48,7 @@ const StyledSkipNav = TypeButton.withComponent('a').extend`
 
 SkipNav.propTypes = {
   children: PropTypes.node.isRequired,
-  anchor: PropTypes.string.isRequired
-}
+  anchor: PropTypes.string.isRequired,
+};
 
 export default SkipNav;

@@ -6,21 +6,11 @@ import TypeSectionHeading from '../Typography/TypeSectionHeading';
 import CardSmallGrid from '../UI/Cards/CardSmallGrid';
 import CardSmall from '../UI/Cards/CardSmall';
 
-import {
-  spaceStackDouble,
-  spaceStackOct,
-  spaceStackQuad
-} from '../../theme/settings';
+import { spaceStackDouble, spaceStackOct, spaceStackQuad } from '../../theme/settings';
 
-const CalloutSection = ({
-  calloutImageStart,
-  calloutImageCenter,
-  calloutImageEnd
-}) => (
+const CalloutSection = ({ calloutImageStart, calloutImageCenter, calloutImageEnd }) => (
   <StyledCalloutSection>
-    <StyledTypeSectionHeading>
-      Things that are better than work/laundry/calling your mom:
-    </StyledTypeSectionHeading>
+    <StyledTypeSectionHeading>Things that are better than work/laundry/calling your mom:</StyledTypeSectionHeading>
     <CardSmallGrid>
       {/* TODO: Replace with final image and alt text */}
       <CardSmall
@@ -80,7 +70,7 @@ const StyledTypeSectionHeading = TypeSectionHeading.withComponent('h2').extend`
 CalloutSection.propTypes = {
   calloutImageStart: PropTypes.object.isRequired,
   calloutImageCenter: PropTypes.object.isRequired,
-  calloutImageEnd: PropTypes.object.isRequired
+  calloutImageEnd: PropTypes.object.isRequired,
 };
 
 export default CalloutSection;

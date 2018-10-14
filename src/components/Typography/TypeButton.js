@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  fontFamilySans,
-  weightSemiBold
-} from '../../theme/settings';
+import { fontFamilySans, weightSemiBold } from '../../theme/settings';
 
 const TypeButton = styled.span`
   font-family: ${fontFamilySans};

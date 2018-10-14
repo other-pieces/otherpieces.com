@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  colorCharcoal,
-  fontFamilySerif
-} from '../../theme/settings';
+import { colorCharcoal, fontFamilySerif } from '../../theme/settings';
 
 const TypeCaption = styled.span`
   font-family: ${fontFamilySerif};

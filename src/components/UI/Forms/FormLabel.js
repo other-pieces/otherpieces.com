@@ -3,18 +3,9 @@ import PropTypes from 'prop-types';
 
 import TypeLabel from '../../Typography/TypeLabel';
 
-import {
-  spaceStackHalf
-} from '../../../theme/settings';
+import { spaceStackHalf } from '../../../theme/settings';
 
-const FormLabel = ({
-  children,
-  name,
-}) => (
-  <StyledLabel htmlFor={name}>
-    {children}
-  </StyledLabel>
-);
+const FormLabel = ({ children, name }) => <StyledLabel htmlFor={name}>{children}</StyledLabel>;
 
 const StyledLabel = TypeLabel.withComponent('label').extend`
   margin: ${spaceStackHalf};
@@ -23,7 +14,7 @@ const StyledLabel = TypeLabel.withComponent('label').extend`
 
 FormLabel.propTypes = {
   children: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 export default FormLabel;

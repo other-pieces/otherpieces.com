@@ -6,7 +6,7 @@ import {
   colorStateDisabledLight,
   colorPeacockLight,
   spaceDefault,
-  spaceInsetDefault
+  spaceInsetDefault,
 } from '../../../theme/settings';
 
 const FormField = TypeInput.withComponent('div').extend`
