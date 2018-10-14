@@ -71,5 +71,6 @@ module.exports = {
         icon: "src/assets/favicon/other-pieces-icon.png",
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }
