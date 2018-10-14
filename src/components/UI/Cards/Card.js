@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -24,7 +25,7 @@ const Card = ({
     <HiddenLinkText>
       {linkText}
     </HiddenLinkText>
-    <StyledCardImage src={image} alt={imageAlt} />
+    <StyledCardImage resolutions={image} alt={imageAlt} />
     <StyledCardContent>
       {heading &&
         <StyledCardHeading>
@@ -55,7 +56,7 @@ const HiddenLinkText = styled.span`
   clip: rect(1px, 1px, 1px, 1px);
 `;
 
-const StyledCardImage = styled.img`
+const StyledCardImage = styled(Img)`
   margin: ${spaceStackDouble};
   width: 100%;
 

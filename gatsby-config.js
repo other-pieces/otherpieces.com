@@ -19,6 +19,23 @@ module.exports = {
     },
     // JavaScript Pages
     'gatsby-transformer-javascript-frontmatter',
+    // Images
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'images',
+    //     path: `${__dirname}/static/assets`,
+    //   },
+    // },
     // SEO
     'gatsby-plugin-sitemap',
     // Analytics

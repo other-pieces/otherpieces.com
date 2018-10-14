@@ -10,13 +10,19 @@ const TravelPage = () => (
   <StaticQuery
     query={graphql`
       query TravelQuery {
-        allMarkdownRemark(filter: {frontmatter: {category: {eq: "travel"}}}, sort: {fields: [frontmatter___date], order: DESC}) {
+        allMarkdownRemark(filter: {frontmatter: {category: {eq: "style"}}}, sort: {fields: [frontmatter___date], order: DESC}) {
           edges {
             node {
               id
               frontmatter {
                 author
-                imageCard
+                imageCard {
+                  childImageSharp {
+                    resolutions(width: 360) {
+                      ...GatsbyImageSharpResolutions
+                    }
+                  }
+                }
                 imageCardAlt
                 path
                 title
@@ -35,7 +41,7 @@ const TravelPage = () => (
                 key={node.id}
                 path={node.frontmatter.path}
                 linkText={`Read ${node.frontmatter.title}`}
-                image={node.frontmatter.imageCard}
+                image={node.frontmatter.imageCard.childImageSharp.resolutions}
                 imageAlt={node.frontmatter.imageCardAlt}
                 heading={node.frontmatter.title}
                 subhead={`By ${node.frontmatter.author}`}

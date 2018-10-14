@@ -16,7 +16,13 @@ const LifestylePage = () => (
               id
               frontmatter {
                 author
-                imageCard
+                imageCard {
+                  childImageSharp {
+                    resolutions(width: 360) {
+                      ...GatsbyImageSharpResolutions
+                    }
+                  }
+                }
                 imageCardAlt
                 path
                 title
@@ -35,7 +41,7 @@ const LifestylePage = () => (
                 key={node.id}
                 path={node.frontmatter.path}
                 linkText={`Read ${node.frontmatter.title}`}
-                image={node.frontmatter.imageCard}
+                image={node.frontmatter.imageCard.childImageSharp.resolutions}
                 imageAlt={node.frontmatter.imageCardAlt}
                 heading={node.frontmatter.title}
                 subhead={`By ${node.frontmatter.author}`}
