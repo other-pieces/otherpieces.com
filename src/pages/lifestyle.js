@@ -10,7 +10,10 @@ const LifestylePage = () => (
   <StaticQuery
     query={graphql`
       query LifestyleQuery {
-        allMarkdownRemark(filter: {frontmatter: {category: {eq: "lifestyle"}}}, sort: {fields: [frontmatter___date], order: DESC}) {
+        allMarkdownRemark(
+          filter: { frontmatter: { category: { eq: "lifestyle" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
           edges {
             node {
               id

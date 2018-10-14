@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  colorCharcoal,
-  fontFamilySans,
-  weightRegular
-} from '../../theme/settings';
+import { colorCharcoal, fontFamilySans, weightRegular } from '../../theme/settings';
 
 const TypeBylineHeading = styled.span`
   font-family: ${fontFamilySans};

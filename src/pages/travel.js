@@ -10,7 +10,10 @@ const TravelPage = () => (
   <StaticQuery
     query={graphql`
       query TravelQuery {
-        allMarkdownRemark(filter: {frontmatter: {category: {eq: "style"}}}, sort: {fields: [frontmatter___date], order: DESC}) {
+        allMarkdownRemark(
+          filter: { frontmatter: { category: { eq: "style" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
           edges {
             node {
               id

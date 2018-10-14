@@ -3,32 +3,17 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {
-  spaceDefault,
-  spaceDouble,
-  spaceStackCenterQuad,
-  spaceQuad
-} from '../../../theme/settings';
+import { spaceDefault, spaceDouble, spaceStackCenterQuad, spaceQuad } from '../../../theme/settings';
 
 import TypeHeadline from '../../Typography/TypeHeadline';
 
-const HeroineGrid = ({
-  headline,
-  imageEnd,
-  imageEndAlt,
-  imageStart,
-  imageStartAlt
-}) => {
-  return (
-    <StyledHeroineGrid>
-      <StyledHeadline>
-        {headline}
-      </StyledHeadline>
-      <StyledHeroineImageStart fluid={imageStart} alt={imageStartAlt}/>
-      <StyledHeroineImageEnd fluid={imageEnd} alt={imageEndAlt}/>
-    </StyledHeroineGrid>
-  )
-};
+const HeroineGrid = ({ headline, imageEnd, imageEndAlt, imageStart, imageStartAlt }) => (
+  <StyledHeroineGrid>
+    <StyledHeadline>{headline}</StyledHeadline>
+    <StyledHeroineImageStart fluid={imageStart} alt={imageStartAlt} />
+    <StyledHeroineImageEnd fluid={imageEnd} alt={imageEndAlt} />
+  </StyledHeroineGrid>
+);
 
 const StyledHeroineGrid = styled.div`
   margin: ${spaceStackCenterQuad};
@@ -81,7 +66,7 @@ const StyledHeroineImageEnd = styled(Img)`
   }
 
   @media (min-width: 787px) {
-    grid-row:  1 / span 3;
+    grid-row: 1 / span 3;
     grid-column: 3 / span 2;
   }
 `;
@@ -91,7 +76,7 @@ HeroineGrid.propTypes = {
   imageEnd: PropTypes.object.isRequired,
   imageEndAlt: PropTypes.string.isRequired,
   imageStart: PropTypes.object.isRequired,
-  imageStartAlt: PropTypes.string.isRequired
-}
+  imageStartAlt: PropTypes.string.isRequired,
+};
 
 export default HeroineGrid;

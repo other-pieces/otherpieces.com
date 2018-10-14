@@ -4,10 +4,10 @@ import { StaticQuery, graphql } from 'gatsby';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 
-const ThankYouPage = ({ data }) => (
+const ThankYouPage = () => (
   <StaticQuery
     query={graphql`
-        query ThankYouQuery {
+      query ThankYouQuery {
         site {
           siteMetadata {
             title

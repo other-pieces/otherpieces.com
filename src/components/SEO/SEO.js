@@ -3,15 +3,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import config from '../../config/config';
 
-const getSchemaOrgJSONLD = ({
-  isBlogPost,
-  url,
-  title,
-  author,
-  image,
-  description,
-  date,
-}) => {
+const getSchemaOrgJSONLD = ({ isBlogPost, url, title, author, image, description, date }) => {
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
@@ -72,23 +64,11 @@ const getSchemaOrgJSONLD = ({
     : schemaOrgJSONLD;
 };
 
-const SEO = ({
-  author,
-  seoTitle,
-  seoDescription,
-  seoImage,
-  pagePath,
-  isBlogPost,
-  datePublished
-}) => {
+const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost, datePublished }) => {
   const title = seoTitle || config.title;
   const description = seoDescription || config.description;
-  const image = seoImage
-    ? `${config.url}${seoImage}`
-    : config.image;
-  const url = pagePath
-    ? `${config.url}${pagePath}`
-    : config.url;
+  const image = seoImage ? `${config.url}${seoImage}` : config.image;
+  const url = pagePath ? `${config.url}${pagePath}` : config.url;
   const date = isBlogPost ? datePublished : false;
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
@@ -98,7 +78,7 @@ const SEO = ({
     title,
     image,
     description,
-    date
+    date,
   });
 
   return (
@@ -109,9 +89,7 @@ const SEO = ({
       <meta name="image" content={image} />
 
       {/* Schema.org tags */}
-      <script type="application/ld+json">
-        {JSON.stringify(schemaOrgJSONLD)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
@@ -136,7 +114,7 @@ SEO.propTypes = {
   seoDescription: PropTypes.string,
   seoImage: PropTypes.string,
   pagePath: PropTypes.string,
-  isBlogPost: PropTypes.bool
+  isBlogPost: PropTypes.bool,
 };
 
 SEO.defaultProps = {
@@ -144,7 +122,7 @@ SEO.defaultProps = {
   seoDescription: null,
   seoImage: null,
   pagePath: null,
-  isBlogPost: false
+  isBlogPost: false,
 };
 
 export default SEO;

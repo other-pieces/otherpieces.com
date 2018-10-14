@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 
-import {
-  colorCharcoal,
-  colorPeacockLight,
-  fontFamilySans,
-  weightSemiBold
-} from '../../theme/settings';
+import { colorCharcoal, colorPeacockLight, fontFamilySans, weightSemiBold } from '../../theme/settings';
 
 const TypeNavLink = styled(Link)`
   font-family: ${fontFamilySans};

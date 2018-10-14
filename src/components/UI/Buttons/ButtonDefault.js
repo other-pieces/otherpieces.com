@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import TypeButton from '../../Typography/TypeButton';
@@ -10,16 +9,11 @@ import {
   colorPeacockLight,
   colorPeacockDark,
   colorStateDisabled,
-  spaceDefault
+  spaceDefault,
 } from '../../../theme/settings';
 
-const ButtonDefault = ({
-  children,
-  className
-}) => (
-  <StyledButtonDefault className={className}>
-    {children}
-  </StyledButtonDefault>
+const ButtonDefault = ({ children, className }) => (
+  <StyledButtonDefault className={className}>{children}</StyledButtonDefault>
 );
 
 const StyledButtonDefault = TypeButton.withComponent('button').extend`
@@ -57,7 +51,8 @@ const StyledButtonDefault = TypeButton.withComponent('button').extend`
 `;
 
 ButtonDefault.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default ButtonDefault;

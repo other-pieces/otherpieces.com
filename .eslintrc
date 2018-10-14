@@ -95,7 +95,6 @@
     ]
   },
   "plugins": [
-    "html",
     "prettier"
   ]
 }

@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  colorCharcoal,
-  fontFamilySerif,
-  weightRegular
-} from '../../theme/settings';
+import { colorCharcoal, fontFamilySerif, weightRegular } from '../../theme/settings';
 
 const TypeTitle1 = styled.span`
   font-family: ${fontFamilySerif};

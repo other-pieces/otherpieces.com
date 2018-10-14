@@ -4,12 +4,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import Nav from './Nav';
 
-import {
-  spaceDouble,
-  spaceStackDouble,
-  spaceStackOct,
-  spaceQuad
-} from '../../../theme/settings';
+import { spaceDouble, spaceStackDouble, spaceStackOct, spaceQuad } from '../../../theme/settings';
 
 const Header = () => (
   <StyledHeader>

@@ -1,12 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import {
-  colorPeacockLight
-} from '../theme/settings';
+import { colorPeacockLight } from '../theme/settings';
 
 import SEO from '../components/SEO/SEO';
 import GlobalLayout from '../components/Layout/GlobalLayout';
@@ -22,7 +20,7 @@ const seoTitle = 'Other Pieces | HOMEPAGE TITLE';
 const seoDescription = 'Other Pieces HOMEPAGE DESCRIPTION';
 const seoImage = '/homepage-image';
 
-const IndexPage = (props) => (
+const IndexPage = props => (
   <StaticQuery
     query={graphql`
       query IndexQuery {
@@ -31,7 +29,7 @@ const IndexPage = (props) => (
             title
           }
         }
-        allMarkdownRemark(limit: 6, sort: {fields: [frontmatter___date], order: DESC}) {
+        allMarkdownRemark(limit: 6, sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
               id
@@ -68,9 +66,7 @@ const IndexPage = (props) => (
         />
         <GlobalLayout>
           <Main id="mainContent">
-            <StyledHiddenTitle>
-              {data.site.siteMetadata.title}
-            </StyledHiddenTitle>
+            <StyledHiddenTitle>{data.site.siteMetadata.title}</StyledHiddenTitle>
             <CardGrid>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Card
@@ -92,7 +88,8 @@ const IndexPage = (props) => (
             <Divider />
             <StyledInstagramFeed>
               <StyledInstagramLink href="https://instagram.com/otherpieces/">
-                <ScreenReaderOnly>Follow </ScreenReaderOnly> @otherpieces <ScreenReaderOnly>on Instagram</ScreenReaderOnly>
+                <ScreenReaderOnly>Follow </ScreenReaderOnly> @otherpieces{' '}
+                <ScreenReaderOnly>on Instagram</ScreenReaderOnly>
               </StyledInstagramLink>
             </StyledInstagramFeed>
           </Main>
@@ -125,5 +122,9 @@ const StyledInstagramLink = TypeSectionHeading.withComponent(OutboundLink).exten
     outline-offset: 0.4rem;
   }
 `;
+
+IndexPage.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
 export default IndexPage;

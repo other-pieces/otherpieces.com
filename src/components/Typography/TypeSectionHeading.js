@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  colorCharcoal,
-  fontFamilySans,
-  weightSemiBold
-} from '../../theme/settings';
+import { colorCharcoal, fontFamilySans, weightSemiBold } from '../../theme/settings';
 
 const TypeSectionHeading = styled.span`
   font-family: ${fontFamilySans};

@@ -7,39 +7,17 @@ import PropTypes from 'prop-types';
 import TypeNavLink from '../../Typography/TypeNavLink';
 import TypeCaption from '../../Typography/TypeCaption';
 
-import {
-  colorPeacockLight,
-  spaceStackHalf,
-  spaceStackDefault,
-  spaceNone
-} from '../../../theme/settings';
+import { colorPeacockLight, spaceStackHalf, spaceStackDefault, spaceNone } from '../../../theme/settings';
 
 // TODO: Implement redundant click event pattern: https://inclusive-components.design/cards/
 
-const CardSmall = ({
-  caption,
-  heading,
-  fixed,
-  imageAlt,
-  linkText,
-  path
-}) => (
+const CardSmall = ({ caption, heading, fixed, imageAlt, linkText, path }) => (
   <StyledCardSmall to={path}>
-    <HiddenLinkText>
-      {linkText}
-    </HiddenLinkText>
+    <HiddenLinkText>{linkText}</HiddenLinkText>
     <StyledCardSmallImage fixed={fixed} alt={imageAlt} />
     <StyledCardSmallContent>
-      {heading &&
-        <StyledCardSmallHeading>
-          {heading}
-        </StyledCardSmallHeading>
-      }
-      {caption &&
-        <StyledCardSmallCaption>
-          {caption}
-        </StyledCardSmallCaption>
-      }
+      {heading && <StyledCardSmallHeading>{heading}</StyledCardSmallHeading>}
+      {caption && <StyledCardSmallCaption>{caption}</StyledCardSmallCaption>}
     </StyledCardSmallContent>
   </StyledCardSmall>
 );
@@ -96,8 +74,14 @@ CardSmall.propTypes = {
   caption: PropTypes.string,
   heading: PropTypes.string,
   fixed: PropTypes.object.isRequired,
+  imageAlt: PropTypes.string.isRequired,
   linkText: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
+};
+
+CardSmall.defaultProps = {
+  caption: null,
+  heading: null,
 };
 
 export default CardSmall;

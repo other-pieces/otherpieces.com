@@ -4,10 +4,10 @@ import { StaticQuery, graphql } from 'gatsby';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 
-const SearchPage = ({ data }) => (
+const SearchPage = () => (
   <StaticQuery
     query={graphql`
-        query SearchQuery {
+      query SearchQuery {
         site {
           siteMetadata {
             title

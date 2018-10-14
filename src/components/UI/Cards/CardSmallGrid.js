@@ -2,15 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {
-  spaceDouble
-} from '../../../theme/settings';
+import { spaceDouble } from '../../../theme/settings';
 
-const CardSmallGrid = ({ children }) => (
-  <StyledCardGrid>
-    {children}
-  </StyledCardGrid>
-);
+const CardSmallGrid = ({ children }) => <StyledCardGrid>{children}</StyledCardGrid>;
 
 const StyledCardGrid = styled.div`
   width: 100%;
@@ -28,7 +22,7 @@ const StyledCardGrid = styled.div`
 `;
 
 CardSmallGrid.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default CardSmallGrid;

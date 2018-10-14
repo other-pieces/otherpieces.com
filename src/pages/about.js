@@ -1,13 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import {
-  spaceStackDouble,
-  spaceStackQuad,
-  spaceStackCenterOct,
-  spaceStackCenterQuad
-} from '../theme/settings';
+import { spaceStackDouble, spaceStackQuad, spaceStackCenterOct, spaceStackCenterQuad } from '../theme/settings';
 
 import SEO from '../components/SEO/SEO';
 import GlobalLayout from '../components/Layout/GlobalLayout';
@@ -24,7 +20,7 @@ const seoTitle = 'Other Pieces | ABOUT TITLE';
 const seoDescription = 'Other Pieces ABOUT DESCRIPTION';
 const seoImage = '/about-image';
 
-const AboutPage = (props) => (
+const AboutPage = props => (
   <StaticQuery
     query={graphql`
       query AboutQuery {
@@ -62,13 +58,20 @@ const AboutPage = (props) => (
               />
               <StyledIntro>
                 <StyledIntroCopy>
-                  We&rsquo;re Jacqs and Sara, the founders and creatives behind Other Pieces. By day, we work as writers/editors/content strategists. By night, we spend our time scouring the internet for beautiful pieces&mdash;for our wardrobes, our homes, or just a bit of inspiration.
+                  We&rsquo;re Jacqs and Sara, the founders and creatives behind Other Pieces. By day, we work as
+                  writers/editors/content strategists. By night, we spend our time scouring the internet for beautiful
+                  pieces&mdash;for our wardrobes, our homes, or just a bit of inspiration.
                 </StyledIntroCopy>
                 <StyledIntroCopy>
-                  We built Other Pieces as a respite from the banalities of modern life. An escape from nine-to-five jobs, monthly student loan payments, and ads on Instagram. A place where we could share our ideas freely about style, travel, money, food, and all the other stuff we have opinions on&mdash;that list is a large one.
+                  We built Other Pieces as a respite from the banalities of modern life. An escape from nine-to-five
+                  jobs, monthly student loan payments, and ads on Instagram. A place where we could share our ideas
+                  freely about style, travel, money, food, and all the other stuff we have opinions on&mdash;that list
+                  is a large one.
                 </StyledIntroCopy>
                 <StyledIntroCopy>
-                  Think of it as a hideout for interesting, intelligent, badass women. There's no secret password, so come on in and make yourself at home. There's plenty of snacks and cozy places to curl up while we brainstorm how to #smashthepatriarchy and look dope as hell doing it.
+                  Think of it as a hideout for interesting, intelligent, badass women. There's no secret password, so
+                  come on in and make yourself at home. There's plenty of snacks and cozy places to curl up while we
+                  brainstorm how to #smashthepatriarchy and look dope as hell doing it.
                 </StyledIntroCopy>
                 <StyledWelcome>Welcome home, babes.</StyledWelcome>
               </StyledIntro>
@@ -121,5 +124,9 @@ const StyledContactSection = styled.section`
 const StyledFormHeading = TypeSectionHeading.withComponent('h2').extend`
   margin: ${spaceStackQuad};
 `;
+
+AboutPage.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
 export default AboutPage;

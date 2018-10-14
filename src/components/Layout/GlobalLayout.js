@@ -9,7 +9,7 @@ import {
   spaceQuad,
   weightLight,
   weightRegular,
-  weightSemiBold
+  weightSemiBold,
 } from '../../theme/settings';
 
 // Typography
@@ -165,7 +165,7 @@ injectGlobal`
     font-size: 1.6rem;
     background-color: ${colorWhite};
   }
-`
+`;
 
 const GlobalLayout = ({ children }) => (
   <>

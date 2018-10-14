@@ -3,9 +3,7 @@ import styled from 'styled-components';
 
 import TypeNavLink from '../../Typography/TypeNavLink';
 
-import {
-  spaceDefault
-} from '../../../theme/settings';
+import { spaceDefault } from '../../../theme/settings';
 
 const Nav = () => (
   <StyledNav>

@@ -6,11 +6,14 @@ import Main from '../components/Layout/Main';
 import CardGrid from '../components/UI/Cards/CardGrid';
 import Card from '../components/UI/Cards/Card';
 
-const StylePage = ({ data }) => (
+const StylePage = () => (
   <StaticQuery
     query={graphql`
       query StyleQuery {
-        allMarkdownRemark(filter: {frontmatter: {category: {eq: "style"}}}, sort: {fields: [frontmatter___date], order: DESC}) {
+        allMarkdownRemark(
+          filter: { frontmatter: { category: { eq: "style" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
           edges {
             node {
               id

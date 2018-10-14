@@ -3,10 +3,7 @@ import styled from 'styled-components';
 
 import TypeCaption from '../Typography/TypeCaption';
 
-import {
-  colorCharcoal,
-  spaceInsetDouble
-} from '../../theme/settings';
+import { colorCharcoal, spaceInsetDouble } from '../../theme/settings';
 
 const Footer = () => (
   <StyledFooter>

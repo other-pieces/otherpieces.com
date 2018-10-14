@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
-import {
-  colorPeacockLight,
-  spaceStackCenterOct,
-  spaceStackCenterQuad
-} from '../../../theme/settings';
+import { colorPeacockLight, spaceStackCenterOct, spaceStackCenterQuad } from '../../../theme/settings';
 
 const Divider = () => (
   <StyledDivider
@@ -41,5 +37,3 @@ const StyledDivider = styled.svg`
 `;
 
 export default Divider;
-
-
