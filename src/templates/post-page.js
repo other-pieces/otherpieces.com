@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import SEO from '../components/SEO/SEO';
@@ -59,7 +60,7 @@ const PostPage = ({
           {title}
         </StyledTypeHeadline>
         {imageHero &&
-          <StyledImageHero src={imageHero} alt={imageHeroAlt} />
+          <StyledImageHero sizes={imageHero} alt={imageHeroAlt} />
         }
         <StyledByline>
           By {author}
@@ -98,7 +99,7 @@ const StyledTypeHeadline = TypeHeadline.withComponent('h1').extend`
   }
 `;
 
-const StyledImageHero = styled.img`
+const StyledImageHero = styled(Img)`
   max-width: 100%;
   display: block;
 
@@ -248,7 +249,9 @@ export const postPageQuery = graphql`
         seoTitle
         seoDescription
         seoImage
-        imageHero
+        imageHero {
+          ...imageFragmentPostHeroine
+        }
         imageHeroAlt
       }
       fields {

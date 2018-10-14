@@ -90,7 +90,7 @@ const StyledCardSubhead = TypeBylineHeading.withComponent('p').extend`
 Card.propTypes = {
   heading: PropTypes.string,
   linkText: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
   subhead: PropTypes.string
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
@@ -17,11 +17,7 @@ const StylePage = ({ data }) => (
               frontmatter {
                 author
                 imageCard {
-                  childImageSharp {
-                    resolutions(width: 360) {
-                      ...GatsbyImageSharpResolutions
-                    }
-                  }
+                  ...imageFragmentCard
                 }
                 imageCardAlt
                 path

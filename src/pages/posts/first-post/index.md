@@ -9,7 +9,7 @@ seoImage: '/post-1-seo-image'
 category: 'lifestyle'
 imageCard: './one.jpg'
 imageCardAlt: 'Card alt text'
-imageHero: 'https://source.unsplash.com/random/1208x604'
+imageHero: './three.jpg'
 imageHeroAlt: 'Hero alt text'
 ---
 
@@ -20,6 +20,8 @@ This is the first post for Other Pieces.
 ### Bitches be jealous
 
 Some stuff here.
+
+![one](./one.jpg)
 
 #### The dress to rule them all
 

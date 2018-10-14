@@ -1,3 +1,5 @@
+import { graphql } from 'gatsby';
+
 export const imageFragmentCard = graphql`
   fragment imageFragmentCard on File {
     childImageSharp {
@@ -18,20 +20,10 @@ export const imageFragmentCardSmall = graphql`
   }
 `;
 
-export const imageFragmentPostHeroineLandscape = graphql`
-  fragment imageFragmentPostHeroineLandscape on File {
+export const imageFragmentPostHeroine = graphql`
+  fragment imageFragmentPostHeroine on File {
     childImageSharp {
       sizes(maxWidth: 1208) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  }
-`;
-
-export const imageFragmentPostHeroinePortrait = graphql`
-  fragment imageFragmentPostHeroinePortrait on File {
-    childImageSharp {
-      sizes(maxWidth: 786) {
         ...GatsbyImageSharpSizes
       }
     }

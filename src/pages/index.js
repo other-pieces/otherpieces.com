@@ -37,11 +37,7 @@ const IndexPage = (props) => (
               frontmatter {
                 author
                 imageCard {
-                  childImageSharp {
-                    resolutions(width: 360) {
-                      ...GatsbyImageSharpResolutions
-                    }
-                  }
+                  ...imageFragmentCard
                 }
                 imageCardAlt
                 path

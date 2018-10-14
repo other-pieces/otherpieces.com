@@ -9,7 +9,7 @@ seoImage: '/post-3-seo-image'
 category: 'lifestyle'
 imageCard: './three.jpg'
 imageCardAlt: 'Card alt text'
-imageHero: 'https://source.unsplash.com/random/1208x604'
+imageHero: './three.jpg'
 imageHeroAlt: 'Hero alt text'
 ---
 

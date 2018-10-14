@@ -9,7 +9,7 @@ seoImage: '/post-2-seo-image'
 category: 'style'
 imageCard: './two.jpg'
 imageCardAlt: 'Card alt text'
-imageHero: 'https://source.unsplash.com/random/786x1048'
+imageHero: './two.jpg'
 imageHeroAlt: 'Hero alt text'
 ---
 

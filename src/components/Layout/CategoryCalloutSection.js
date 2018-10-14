@@ -26,7 +26,7 @@ const CalloutSection = ({ children }) => (
         image="https://source.unsplash.com/random/256x192"
         imageAlt="Card alt text"
         heading="Style"
-        caption="Super cute ’fits"
+        caption="Super cute &rsquo;fits"
       />
       <CardSmall
         key="cardSmall2"
