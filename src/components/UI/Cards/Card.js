@@ -14,8 +14,8 @@ const Card = ({ heading, linkText, image, imageAlt, path, subhead }) => (
     <HiddenLinkText>{linkText}</HiddenLinkText>
     <StyledCardImage resolutions={image} alt={imageAlt} />
     <StyledCardContent>
-      {heading && <StyledCardHeading>{heading}</StyledCardHeading>}
-      {subhead && <StyledCardSubhead>{subhead}</StyledCardSubhead>}
+      {heading && <StyledCardHeading as="h2">{heading}</StyledCardHeading>}
+      {subhead && <StyledCardSubhead as="p">{subhead}</StyledCardSubhead>}
     </StyledCardContent>
   </StyledCard>
 );
@@ -52,7 +52,7 @@ const StyledCardContent = styled.div`
   justify-content: space-between;
 `;
 
-const StyledCardHeading = TypeTitle1.withComponent('h2').extend`
+const StyledCardHeading = styled(TypeTitle1)`
   margin: ${spaceStackDouble};
 
   ${StyledCard}:hover &,
@@ -62,7 +62,7 @@ const StyledCardHeading = TypeTitle1.withComponent('h2').extend`
   }
 `;
 
-const StyledCardSubhead = TypeBylineHeading.withComponent('p').extend`
+const StyledCardSubhead = styled(TypeBylineHeading)`
   margin: ${spaceNone};
 `;
 

@@ -16,8 +16,8 @@ const CardSmall = ({ caption, heading, fixed, imageAlt, linkText, path }) => (
     <HiddenLinkText>{linkText}</HiddenLinkText>
     <StyledCardSmallImage fixed={fixed} alt={imageAlt} />
     <StyledCardSmallContent>
-      {heading && <StyledCardSmallHeading>{heading}</StyledCardSmallHeading>}
-      {caption && <StyledCardSmallCaption>{caption}</StyledCardSmallCaption>}
+      {heading && <StyledCardSmallHeading as="h3">{heading}</StyledCardSmallHeading>}
+      {caption && <StyledCardSmallCaption as="p">{caption}</StyledCardSmallCaption>}
     </StyledCardSmallContent>
   </StyledCardSmall>
 );
@@ -55,7 +55,7 @@ const StyledCardSmallContent = styled.div`
   text-align: center;
 `;
 
-const StyledCardSmallHeading = TypeNavLink.withComponent('h3').extend`
+const StyledCardSmallHeading = styled(TypeNavLink)`
   margin: ${spaceStackHalf};
 
   ${StyledCardSmall}:hover &,
@@ -65,7 +65,7 @@ const StyledCardSmallHeading = TypeNavLink.withComponent('h3').extend`
   }
 `;
 
-const StyledCardSmallCaption = TypeCaption.withComponent('p').extend`
+const StyledCardSmallCaption = styled(TypeCaption)`
   margin: ${spaceNone};
   text-transform: lowercase;
 `;

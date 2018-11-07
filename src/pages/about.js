@@ -47,7 +47,7 @@ const AboutPage = props => (
         />
         <GlobalLayout>
           <Main id="mainContent">
-            <StyledHiddenTitle>About {data.site.siteMetadata.title}</StyledHiddenTitle>
+            <ScreenReaderOnly as="h1">About {data.site.siteMetadata.title}</ScreenReaderOnly>
             <section>
               <HeroineGrid
                 headline="Oh, Hello There"
@@ -57,28 +57,28 @@ const AboutPage = props => (
                 imageEndAlt="Jacque and Sara walking down stairs"
               />
               <StyledIntro>
-                <StyledIntroCopy>
+                <StyledIntroCopy as="p">
                   We&rsquo;re Jacqs and Sara, the founders and creatives behind Other Pieces. By day, we work as
                   writers/editors/content strategists. By night, we spend our time scouring the internet for beautiful
                   pieces&mdash;for our wardrobes, our homes, or just a bit of inspiration.
                 </StyledIntroCopy>
-                <StyledIntroCopy>
+                <StyledIntroCopy as="p">
                   We built Other Pieces as a respite from the banalities of modern life. An escape from nine-to-five
                   jobs, monthly student loan payments, and ads on Instagram. A place where we could share our ideas
                   freely about style, travel, money, food, and all the other stuff we have opinions on&mdash;that list
                   is a large one.
                 </StyledIntroCopy>
-                <StyledIntroCopy>
+                <StyledIntroCopy as="p">
                   Think of it as a hideout for interesting, intelligent, badass women. There's no secret password, so
                   come on in and make yourself at home. There's plenty of snacks and cozy places to curl up while we
                   brainstorm how to #smashthepatriarchy and look dope as hell doing it.
                 </StyledIntroCopy>
-                <StyledWelcome>Welcome home, babes.</StyledWelcome>
+                <TypeHeadline as="p">Welcome home, babes.</TypeHeadline>
               </StyledIntro>
             </section>
             <Divider />
             <StyledContactSection>
-              <StyledFormHeading>Slide into our DMs.</StyledFormHeading>
+              <StyledFormHeading as="h2">Slide into our DMs.</StyledFormHeading>
               <ContactForm />
             </StyledContactSection>
           </Main>
@@ -87,8 +87,6 @@ const AboutPage = props => (
     )}
   />
 );
-
-const StyledHiddenTitle = ScreenReaderOnly.withComponent('h1');
 
 const StyledIntro = styled.div`
   max-width: 104.8rem;
@@ -103,13 +101,11 @@ const StyledIntro = styled.div`
   }
 `;
 
-const StyledIntroCopy = TypeBody.withComponent('p').extend`
+const StyledIntroCopy = styled(TypeBody)`
   margin: ${spaceStackDouble};
   max-width: 60.4rem;
   width: 100%;
 `;
-
-const StyledWelcome = TypeHeadline.withComponent('p');
 
 const StyledContactSection = styled.section`
   width: 100%;
@@ -121,7 +117,7 @@ const StyledContactSection = styled.section`
   }
 `;
 
-const StyledFormHeading = TypeSectionHeading.withComponent('h2').extend`
+const StyledFormHeading = styled(TypeSectionHeading)`
   margin: ${spaceStackQuad};
 `;
 

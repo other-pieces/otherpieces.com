@@ -9,7 +9,7 @@ import TypeHeadline from '../../Typography/TypeHeadline';
 
 const HeroineGrid = ({ headline, imageEnd, imageEndAlt, imageStart, imageStartAlt }) => (
   <StyledHeroineGrid>
-    <StyledHeadline>{headline}</StyledHeadline>
+    <StyledHeadline as="h2">{headline}</StyledHeadline>
     <StyledHeroineImageStart fluid={imageStart} alt={imageStartAlt} />
     <StyledHeroineImageEnd fluid={imageEnd} alt={imageEndAlt} />
   </StyledHeroineGrid>
@@ -32,7 +32,7 @@ const StyledHeroineGrid = styled.div`
   }
 `;
 
-const StyledHeadline = TypeHeadline.withComponent('h2').extend`
+const StyledHeadline = styled(TypeHeadline)`
   @media (max-width: 786px) {
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;

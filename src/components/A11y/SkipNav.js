@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { colorLinen, colorPeacockLight, spaceDefault, spaceHalf } from '../../theme/settings';
 
 import TypeButton from '../Typography/TypeButton';
 
-const SkipNav = ({ children, anchor }) => <StyledSkipNav href={`#${anchor}`}>{children}</StyledSkipNav>;
+const SkipNav = ({ children, anchor }) => (
+  <StyledSkipNav as="a" href={`#${anchor}`}>
+    {children}
+  </StyledSkipNav>
+);
 
-const StyledSkipNav = TypeButton.withComponent('a').extend`
+const StyledSkipNav = styled(TypeButton)`
   text-decoration: none;
 
   &:not(:focus) {
@@ -18,7 +23,7 @@ const StyledSkipNav = TypeButton.withComponent('a').extend`
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(0px 0px 99.9% 99.9%);
     overflow: hidden;
-    border: 0
+    border: 0;
   }
 
   @media (max-width: 575px) {

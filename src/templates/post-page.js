@@ -54,8 +54,8 @@ const PostPage = ({
       isBlogPost
     />
     <GlobalLayout>
-      <StyledArticle id="mainContent">
-        <StyledTypeHeadline>{title}</StyledTypeHeadline>
+      <StyledArticle as="article" id="mainContent">
+        <StyledTypeHeadline as="h1">{title}</StyledTypeHeadline>
         {imageHeroine && (
           <StyledImageHeroine
             fluid={imageHeroine.childImageSharp.fluid}
@@ -63,14 +63,14 @@ const PostPage = ({
             alt={imageHeroineAlt}
           />
         )}
-        <StyledByline>By {author}</StyledByline>
+        <StyledByline as="p">By {author}</StyledByline>
         <StyledArticleBody dangerouslySetInnerHTML={{ __html: html }} />
       </StyledArticle>
     </GlobalLayout>
   </>
 );
 
-const StyledArticle = Main.withComponent('article').extend`
+const StyledArticle = styled(Main)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +84,7 @@ const StyledArticle = Main.withComponent('article').extend`
   }
 `;
 
-const StyledTypeHeadline = TypeHeadline.withComponent('h1').extend`
+const StyledTypeHeadline = styled(TypeHeadline)`
   max-width: 104.8rem;
   width: 100%;
   text-align: center;
@@ -112,7 +112,7 @@ const StyledImageHeroine = styled(Img)`
   }
 `;
 
-const StyledByline = TypeBylineHeading.withComponent('p').extend`
+const StyledByline = styled(TypeBylineHeading)`
   text-align: center;
 
   @media (min-width: 575px) {

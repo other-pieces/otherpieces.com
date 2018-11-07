@@ -10,7 +10,9 @@ import { spaceStackDouble, spaceStackOct, spaceStackQuad } from '../../theme/set
 
 const CalloutSection = ({ calloutImageStart, calloutImageCenter, calloutImageEnd }) => (
   <StyledCalloutSection>
-    <StyledTypeSectionHeading>Things that are better than work/laundry/calling your mom:</StyledTypeSectionHeading>
+    <StyledTypeSectionHeading as="h2">
+      Things that are better than work/laundry/calling your mom:
+    </StyledTypeSectionHeading>
     <CardSmallGrid>
       {/* TODO: Replace with final image and alt text */}
       <CardSmall
@@ -60,7 +62,7 @@ const StyledCalloutSection = styled.section`
   }
 `;
 
-const StyledTypeSectionHeading = TypeSectionHeading.withComponent('h2').extend`
+const StyledTypeSectionHeading = styled(TypeSectionHeading)`
   margin: ${spaceStackDouble};
   max-width: 57.6rem;
   width: 100%;
