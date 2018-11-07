@@ -7,7 +7,7 @@ import { colorCharcoal, spaceInsetDouble } from '../../theme/settings';
 
 const Footer = () => (
   <StyledFooter>
-    <StyledCopyright>&copy; 2018 Other Pieces. All rights reserved.</StyledCopyright>
+    <StyledCopyright as="small">&copy; 2018 Other Pieces. All rights reserved.</StyledCopyright>
   </StyledFooter>
 );
 
@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
   text-align: center;
 `;
 
-const StyledCopyright = TypeCaption.withComponent('small').extend`
+const StyledCopyright = styled(TypeCaption)`
   color: ${colorCharcoal};
 `;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import FormFieldset from './FormFieldset';
@@ -8,11 +9,11 @@ import FormLabel from './FormLabel';
 const FormInput = ({ label, name, placeholder }) => (
   <FormFieldset>
     <FormLabel name={name}>{label}</FormLabel>
-    <StyledInput type="text" name={name} id={name} placeholder={placeholder} />
+    <StyledInput as="input" type="text" name={name} id={name} placeholder={placeholder} />
   </FormFieldset>
 );
 
-const StyledInput = FormField.withComponent('input').extend`
+const StyledInput = styled(FormField)`
   width: 100%;
 `;
 

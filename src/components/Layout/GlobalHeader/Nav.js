@@ -31,7 +31,7 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledLink = TypeNavLink.extend`
+const StyledLink = styled(TypeNavLink)`
   margin-top: ${spaceDefault};
 
   &:not(:last-child) {

@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 import TypeInput from '../../Typography/TypeInput';
 
 import {
@@ -9,7 +11,7 @@ import {
   spaceInsetDefault,
 } from '../../../theme/settings';
 
-const FormField = TypeInput.withComponent('div').extend`
+const FormField = styled(TypeInput)`
   box-sizing: border-box;
   background-color: ${colorLinenLight};
   border: none;
@@ -31,21 +33,24 @@ const FormField = TypeInput.withComponent('div').extend`
     color: ${colorCharcoalLighter};
     cursor: not-allowed;
 
-      &::placeholder {
-        color: ${colorCharcoalLighter};
-      }
+    &::placeholder {
+      color: ${colorCharcoalLighter};
+    }
 
-      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: ${colorCharcoalLighter};
-      }
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: ${colorCharcoalLighter};
+    }
 
-      &::-moz-placeholder { /* Firefox 19+ */
-        color: ${colorCharcoalLighter};
-      }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: ${colorCharcoalLighter};
+    }
 
-      &:-ms-input-placeholder { /* IE 10+ */
-        color: ${colorCharcoalLighter};
-      }
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: ${colorCharcoalLighter};
+    }
   }
 `;
 

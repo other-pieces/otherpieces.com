@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import {
   colorWhite,
@@ -39,7 +39,7 @@ import SkipNav from '../A11y/SkipNav';
 import Header from './GlobalHeader/Header';
 import Footer from './Footer';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   /* Typography */
   /* Open Sans */
   @font-face {
@@ -146,6 +146,7 @@ injectGlobal`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
   html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -169,6 +170,7 @@ injectGlobal`
 
 const GlobalLayout = ({ children }) => (
   <>
+    <GlobalStyle />
     <SkipNav anchor="mainContent">Skip to main content</SkipNav>
     <StyledGlobalLayout>
       <Header />

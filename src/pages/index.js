@@ -66,7 +66,7 @@ const IndexPage = props => (
         />
         <GlobalLayout>
           <Main id="mainContent">
-            <StyledHiddenTitle>{data.site.siteMetadata.title}</StyledHiddenTitle>
+            <ScreenReaderOnly as="h1">{data.site.siteMetadata.title}</ScreenReaderOnly>
             <CardGrid>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Card
@@ -87,7 +87,7 @@ const IndexPage = props => (
             />
             <Divider />
             <StyledInstagramFeed>
-              <StyledInstagramLink href="https://instagram.com/otherpieces/">
+              <StyledInstagramLink as={OutboundLink} href="https://instagram.com/otherpieces/">
                 <ScreenReaderOnly>Follow </ScreenReaderOnly> @otherpieces{' '}
                 <ScreenReaderOnly>on Instagram</ScreenReaderOnly>
               </StyledInstagramLink>
@@ -99,8 +99,6 @@ const IndexPage = props => (
   />
 );
 
-const StyledHiddenTitle = ScreenReaderOnly.withComponent('h1');
-
 const StyledInstagramFeed = styled.section`
   width: 100%;
   display: flex;
@@ -108,7 +106,7 @@ const StyledInstagramFeed = styled.section`
   align-items: center;
 `;
 
-const StyledInstagramLink = TypeSectionHeading.withComponent(OutboundLink).extend`
+const StyledInstagramLink = styled(TypeSectionHeading)`
   text-decoration: none;
 
   &:hover,
