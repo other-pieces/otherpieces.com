@@ -20,7 +20,7 @@ const CalloutSection = ({ calloutImageStart, calloutImageCenter, calloutImageEnd
         path="/style"
         linkText="View all style posts"
         fixed={calloutImageStart}
-        imageAlt="Card alt text"
+        imageAlt="Detail of Jacqs wearing a cozy sweater and denim jeans"
         heading="Style"
         caption="Super cute &rsquo;fits"
       />
@@ -29,7 +29,7 @@ const CalloutSection = ({ calloutImageStart, calloutImageCenter, calloutImageEnd
         path="/lifestyle"
         linkText="View all lifestyle posts"
         fixed={calloutImageCenter}
-        imageAlt="Card alt text"
+        imageAlt="Jacqs' apartment bedroom decor"
         heading="Lifestyle"
         caption="Living your best life"
       />
@@ -38,7 +38,7 @@ const CalloutSection = ({ calloutImageStart, calloutImageCenter, calloutImageEnd
         path="/travel"
         linkText="View all travel posts"
         fixed={calloutImageEnd}
-        imageAlt="Card alt text"
+        imageAlt="Sara overlooking the Mediterranean sea in Ravello, Italy"
         heading="Travel"
         caption="Literally skipping town"
       />

@@ -45,13 +45,13 @@ const IndexPage = props => (
             }
           }
         }
-        imageCategoryCalloutStart: file(relativePath: { eq: "one.jpg" }) {
+        imageCategoryCalloutStart: file(relativePath: { eq: "jacqs-sweater-and-denim-detail.jpg" }) {
           ...imageFragmentCardSmall
         }
-        imageCategoryCalloutCenter: file(relativePath: { eq: "two.jpg" }) {
+        imageCategoryCalloutCenter: file(relativePath: { eq: "jacqs-apartment-bedroom.jpg" }) {
           ...imageFragmentCardSmall
         }
-        imageCategoryCalloutEnd: file(relativePath: { eq: "two.jpg" }) {
+        imageCategoryCalloutEnd: file(relativePath: { eq: "sara-travel-in-italy.jpg" }) {
           ...imageFragmentCardSmall
         }
       }
