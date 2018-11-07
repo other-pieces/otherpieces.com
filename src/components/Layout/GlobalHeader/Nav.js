@@ -11,7 +11,6 @@ const Nav = () => (
     <StyledLink to="/lifestyle">Lifestyle</StyledLink>
     <StyledLink to="/travel">Travel</StyledLink>
     <StyledLink to="/about">About</StyledLink>
-    <StyledLink to="/search">Search</StyledLink>
   </StyledNav>
 );
 
