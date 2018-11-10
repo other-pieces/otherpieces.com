@@ -16,9 +16,11 @@ import CategoryCalloutSection from '../components/Layout/CategoryCalloutSection'
 import Divider from '../components/UI/Decoration/Divider';
 import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 
-const seoTitle = 'Other Pieces | HOMEPAGE TITLE';
-const seoDescription = 'Other Pieces HOMEPAGE DESCRIPTION';
-const seoImage = '/homepage-image';
+import homeOGImage from '../assets/images/home-og-image.jpg';
+
+const seoTitle = 'Other Pieces | A Hideout for Interesting, Inteligent, Badass Women';
+const seoDescription = 'Where fashion isn’t shallow and our conversations aren’t either. A place where you can talk freely about style, travel, money, and smashing the patriarchy.';
+const seoImage = homeOGImage;
 
 const IndexPage = props => (
   <StaticQuery
