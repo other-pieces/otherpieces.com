@@ -2,17 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import ScreenReaderOnly from '../A11y/ScreenReaderOnly';
 import TypeSectionHeading from '../Typography/TypeSectionHeading';
 import CardSmallGrid from '../UI/Cards/CardSmallGrid';
 import CardSmall from '../UI/Cards/CardSmall';
 
 import { spaceStackDouble, spaceStackOct, spaceStackQuad } from '../../theme/settings';
 
-const CalloutSection = ({ calloutImageStart, calloutImageCenter, calloutImageEnd }) => (
+const calloutSectionTitle = 'Things that are better than work/laundry/calling your mom:';
+
+const CalloutSection = ({ calloutImageStart, calloutImageCenter, calloutImageEnd, hiddenTitle }) => (
   <StyledCalloutSection>
-    <StyledTypeSectionHeading as="h2">
-      Things that are better than work/laundry/calling your mom:
-    </StyledTypeSectionHeading>
+    {hiddenTitle
+      ?
+        <ScreenReaderOnly as="h2">
+          {calloutSectionTitle}
+        </ScreenReaderOnly>
+      :
+        <StyledTypeSectionHeading as="h2">
+          Things that are better than work/laundry/calling your mom:
+        </StyledTypeSectionHeading>
+    }
     <CardSmallGrid>
       {/* TODO: Replace with final image and alt text */}
       <CardSmall
@@ -70,6 +80,7 @@ const StyledTypeSectionHeading = styled(TypeSectionHeading)`
 `;
 
 CalloutSection.propTypes = {
+  hiddenTitle: PropTypes.bool.isRequired,
   calloutImageStart: PropTypes.object.isRequired,
   calloutImageCenter: PropTypes.object.isRequired,
   calloutImageEnd: PropTypes.object.isRequired,
