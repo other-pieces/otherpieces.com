@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { spaceDefault, spaceDouble, spaceStackCenterQuad, spaceQuad } from '../../../theme/settings';
+import { spaceStackCenterQuad, spaceStackDouble, spaceDouble } from '../../../theme/settings';
 
 import TypeHeadline from '../../Typography/TypeHeadline';
 
@@ -16,58 +16,51 @@ const HeroineGrid = ({ headline, imageEnd, imageEndAlt, imageStart, imageStartAl
 );
 
 const StyledHeroineGrid = styled.div`
-  margin: ${spaceStackCenterQuad};
   max-width: 104.8rem;
   width: 100%;
-  display: grid;
+  position: relative;
 
-  @media (max-width: 786px) {
-    grid-template-rows: auto ${spaceDefault} auto ${spaceQuad} auto;
-    grid-template-columns: ${spaceQuad} auto ${spaceDouble};
-  }
-
-  @media (min-width: 787px) {
-    grid-template-rows: auto ${spaceDouble} 1fr auto;
-    grid-template-columns: auto ${spaceDouble} ${spaceQuad} auto;
+  @media (min-width: 889px) {
+    margin: ${spaceStackCenterQuad};
   }
 `;
 
 const StyledHeadline = styled(TypeHeadline)`
-  @media (max-width: 786px) {
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 2;
-  }
+  margin: ${spaceStackDouble};
 `;
 
 const StyledHeroineImageStart = styled(Img)`
   max-width: 70.5rem;
   width: 100%;
+  display: block;
 
-  @media (max-width: 786px) {
-    grid-row: 3 / span 2;
-    grid-column: 1 / span 2;
+  @media (max-width: 888px) {
+    margin: ${spaceStackDouble};
   }
 
-  @media (min-width: 787px) {
+  @media (min-width: 1200px) {
     z-index: 1;
-    grid-row: 3 / span 2;
-    grid-column: 1 / span 3;
   }
 `;
 
 const StyledHeroineImageEnd = styled(Img)`
   max-width: 42rem;
   width: 100%;
+  display: block;
 
-  @media (max-width: 786px) {
-    margin-left: auto;
-    grid-row: 4 / span 2;
-    grid-column: 2 / span 2;
+  @media (max-width: 888px) {
+    display: none;
   }
 
-  @media (min-width: 787px) {
-    grid-row: 1 / span 3;
-    grid-column: 3 / span 2;
+  @media (min-width: 889px) and (max-width: 1199px) {
+    margin-top: calc(${spaceDouble} * -1);
+    margin-left: auto;
+  }
+
+  @media (min-width: 1200px) {
+    position: absolute !important;
+    top: 0;
+    right: 0;
   }
 `;
 

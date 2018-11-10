@@ -29,10 +29,10 @@ const AboutPage = props => (
             title
           }
         }
-        imageHeroineStart: file(relativePath: { eq: "three.jpg" }) {
+        imageHeroineStart: file(relativePath: { eq: "jacqs-and-sara-laughing.jpg" }) {
           ...imageFragmentHeroineStart
         }
-        imageHeroineEnd: file(relativePath: { eq: "one.jpg" }) {
+        imageHeroineEnd: file(relativePath: { eq: "jacqs-and-sara-leaning-against-brick-wall.jpg" }) {
           ...imageFragmentHeroineEnd
         }
       }
@@ -52,9 +52,9 @@ const AboutPage = props => (
               <HeroineGrid
                 headline="Oh, Hello There"
                 imageStart={data.imageHeroineStart.childImageSharp.fluid}
-                imageStartAlt="Jacque and Sara sitting together"
+                imageStartAlt="Jacqs and Sara laughing outside"
                 imageEnd={data.imageHeroineEnd.childImageSharp.fluid}
-                imageEndAlt="Jacque and Sara walking down stairs"
+                imageEndAlt="Jacqs and Sara leaning against brick"
               />
               <StyledIntro>
                 <StyledIntroCopy as="p">
