@@ -16,10 +16,13 @@ const HeroineGrid = ({ headline, imageEnd, imageEndAlt, imageStart, imageStartAl
 );
 
 const StyledHeroineGrid = styled.div`
-  margin: ${spaceStackCenterQuad};
   max-width: 104.8rem;
   width: 100%;
   position: relative;
+
+  @media (min-width: 889px) {
+    margin: ${spaceStackCenterQuad};
+  }
 `;
 
 const StyledHeadline = styled(TypeHeadline)`
@@ -44,6 +47,10 @@ const StyledHeroineImageEnd = styled(Img)`
   max-width: 42rem;
   width: 100%;
   display: block;
+
+  @media (max-width: 888px) {
+    display: none;
+  }
 
   @media (min-width: 889px) and (max-width: 1199px) {
     margin-top: calc(${spaceDouble} * -1);
