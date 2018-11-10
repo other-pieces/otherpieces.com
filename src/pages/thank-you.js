@@ -1,5 +1,4 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import { spaceStackDefault, spaceStackDouble, spaceStackOct, spaceStackQuad } from '../theme/settings';
@@ -14,33 +13,20 @@ import SuggestedContent from '../components/Content/SuggestedContent';
 const seoTitle = 'Thank You | Other Pieces';
 
 const ThankYouPage = props => (
-  <StaticQuery
-    query={graphql`
-      query ThankYouQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <SEO
-          seoTitle={seoTitle}
-          pagePath={props.location.pathname}
-        />
-        <GlobalLayout>
-          <StyledMain id="mainContent">
-            <StyledHeadline as="h1">Thanks, Babe</StyledHeadline>
-            <StyledP as="p">We&rsquo;ll get back to you as soon as we can.</StyledP>
-            <StyledLastP as="p">In the meantime, keep smashing the patriarchy.</StyledLastP>
-            <SuggestedContent hiddenCalloutSectionTitle={true} />
-          </StyledMain>
-        </GlobalLayout>
-      </>
-    )}
-  />
+  <>
+    <SEO
+      seoTitle={seoTitle}
+      pagePath={props.location.pathname}
+    />
+    <GlobalLayout>
+      <StyledMain id="mainContent">
+        <StyledHeadline as="h1">Thanks, Babe</StyledHeadline>
+        <StyledP as="p">We&rsquo;ll get back to you as soon as we can.</StyledP>
+        <StyledLastP as="p">In the meantime, keep smashing the patriarchy.</StyledLastP>
+        <SuggestedContent hiddenCalloutSectionTitle={true} />
+      </StyledMain>
+    </GlobalLayout>
+  </>
 );
 
 const StyledMain = styled(Main)`
