@@ -12,7 +12,7 @@ import SuggestedContent from '../components/Content/SuggestedContent';
 
 import homeOGImage from '../assets/images/home-og-image.jpg';
 
-const seoTitle = 'Other Pieces | A Hideout for Interesting, Inteligent, Badass Women';
+const seoTitle = 'Other Pieces | A Hideout for Interesting, Intelligent, Badass Women';
 const seoDescription = 'Where fashion isn’t shallow and our conversations aren’t either. A place where you can talk freely about style, travel, money, and smashing the patriarchy.';
 const seoImage = homeOGImage;
 

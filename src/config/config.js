@@ -1,5 +1,5 @@
 const config = {
-  title: 'Other Pieces | A Hideout for Interesting, Inteligent, Badass Women',
+  title: 'Other Pieces | A Hideout for Interesting, Intelligent, Badass Women',
   description:
     'Where fashion isn’t shallow and our conversations aren’t either. A place where you can talk freely about style, travel, money, and smashing the patriarchy.',
   url: 'https://otherpieces.com',
