@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('OpenSans-Light.woff2') format('woff2'),
+    url('OpenSans-Light.woff') format('woff'),
+    url('OpenSans-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('OpenSans-LightItalic.woff2') format('woff2'),
+    url('OpenSans-LightItalic.woff') format('woff'),
+    url('OpenSans-LightItalic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('OpenSans-Regular.woff2') format('woff2'),
+    url('OpenSans-Regular.woff') format('woff'),
+    url('OpenSans-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('OpenSans-SemiBold.woff2') format('woff2'),
+    url('OpenSans-SemiBold.woff') format('woff'),
+    url('OpenSans-SemiBold.ttf') format('ttf');
+}
