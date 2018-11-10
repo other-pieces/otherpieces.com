@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: ${weightLight};
-    font-display: swap;
+    font-display: fallback;
     src: url(${openSansLightWOFF2}) format('woff2'),
       url(${openSansLightWOFF}) format('woff'),
       url(${openSansLightTTF}) format('ttf');
@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans';
     font-style: italic;
     font-weight: ${weightLight};
-    font-display: swap;
+    font-display: fallback;
     src: url(${openSansLightItalicWOFF2}) format('woff2'),
       url(${openSansLightItalicWOFF}) format('woff'),
       url(${openSansLightItalicTTF}) format('ttf');
@@ -67,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: ${weightRegular};
-    font-display: swap;
+    font-display: fallback;
     src: url(${openSansRegularWOFF2}) format('woff2'),
       url(${openSansRegularWOFF}) format('woff'),
       url(${openSansRegularTTF}) format('ttf');
@@ -77,7 +77,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: ${weightSemiBold};
-    font-display: swap;
+    font-display: fallback;
     src: url(${openSansSemiBoldWOFF2}) format('woff2'),
       url(${openSansSemiBoldWOFF}) format('woff'),
       url(${openSansSemiBoldTTF}) format('ttf');
@@ -88,7 +88,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Old Standard TT';
     font-style: normal;
     font-weight: ${weightRegular};
-    font-display: swap;
+    font-display: fallback;
     src: url(${oldStandardRegularWOFF2}) format('woff2'),
       url(${oldStandardRegularWOFF}) format('woff'),
       url(${oldStandardRegularTTF}) format('ttf');
@@ -98,7 +98,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Old Standard TT';
     font-style: italic;
     font-weight: ${weightRegular};
-    font-display: swap;
+    font-display: fallback;
     src: url(${oldStandardItalicWOFF2}) format('woff2'),
       url(${oldStandardItalicWOFF}) format('woff'),
       url(${oldStandardItalicTTF}) format('ttf');
