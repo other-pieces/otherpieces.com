@@ -67,7 +67,7 @@ const getSchemaOrgJSONLD = ({ isBlogPost, url, title, author, image, description
 const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost, datePublished }) => {
   const title = seoTitle || config.title;
   const description = seoDescription || config.description;
-  const image = seoImage ? `${config.url}${seoImage}` : config.image;
+  const image = seoImage;
   const url = pagePath ? `${config.url}${pagePath}` : config.url;
   const date = isBlogPost ? datePublished : false;
 
@@ -97,7 +97,7 @@ const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost,
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="fb:app_id" content={config.fbAppID} />
+      {/* <meta property="fb:app_id" content={config.fbAppID} /> */}
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />

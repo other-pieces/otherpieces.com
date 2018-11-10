@@ -16,9 +16,11 @@ import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 import Divider from '../components/UI/Decoration/Divider';
 import ContactForm from '../components/Content/ContactForm';
 
-const seoTitle = 'Other Pieces | ABOUT TITLE';
-const seoDescription = 'Other Pieces ABOUT DESCRIPTION';
-const seoImage = '/about-image';
+import aboutOGImage from '../assets/images/about-og-image.jpg';
+
+const seoTitle = 'About | Other Pieces | Two Boss Babes Running Shit and Taking Names';
+const seoDescription = 'Self-proclaimed style junkies seeking dope girl gang. Interest in cozy throw pillows, carbs, and the notorious RBG preferred. All welcome. Inquire within.';
+const seoImage = aboutOGImage;
 
 const AboutPage = props => (
   <StaticQuery
