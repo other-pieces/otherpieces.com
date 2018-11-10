@@ -7,33 +7,11 @@ import {
   colorWhite,
   fontFamilySans,
   spaceDefault,
-  spaceQuad,
-  weightLight,
-  weightRegular,
-  weightSemiBold,
+  spaceQuad
 } from '../../theme/settings';
 
-// Typography
-// Open Sans
-import openSansLightTTF from '../../assets/fonts/open-sans/OpenSans-Light.ttf';
-import openSansLightWOFF from '../../assets/fonts/open-sans/OpenSans-Light.woff';
-import openSansLightWOFF2 from '../../assets/fonts/open-sans/OpenSans-Light.woff2';
-import openSansLightItalicTTF from '../../assets/fonts/open-sans/OpenSans-LightItalic.ttf';
-import openSansLightItalicWOFF from '../../assets/fonts/open-sans/OpenSans-LightItalic.woff';
-import openSansLightItalicWOFF2 from '../../assets/fonts/open-sans/OpenSans-LightItalic.woff2';
-import openSansRegularTTF from '../../assets/fonts/open-sans/OpenSans-Regular.ttf';
-import openSansRegularWOFF from '../../assets/fonts/open-sans/OpenSans-Regular.woff';
-import openSansRegularWOFF2 from '../../assets/fonts/open-sans/OpenSans-Regular.woff2';
-import openSansSemiBoldTTF from '../../assets/fonts/open-sans/OpenSans-SemiBold.ttf';
-import openSansSemiBoldWOFF from '../../assets/fonts/open-sans/OpenSans-SemiBold.woff';
-import openSansSemiBoldWOFF2 from '../../assets/fonts/open-sans/OpenSans-SemiBold.woff2';
-// Old Standard TT
-import oldStandardRegularTTF from '../../assets/fonts/old-standard-tt/OldStandard-Regular.ttf';
-import oldStandardRegularWOFF from '../../assets/fonts/old-standard-tt/OldStandard-Regular.woff';
-import oldStandardRegularWOFF2 from '../../assets/fonts/old-standard-tt/OldStandard-Regular.woff2';
-import oldStandardItalicTTF from '../../assets/fonts/old-standard-tt/OldStandard-Italic.ttf';
-import oldStandardItalicWOFF from '../../assets/fonts/old-standard-tt/OldStandard-Italic.woff';
-import oldStandardItalicWOFF2 from '../../assets/fonts/old-standard-tt/OldStandard-Italic.woff2';
+import '../../assets/fonts/open-sans/open-sans.css';
+import '../../assets/fonts/old-standard-tt/old-standard-tt.css';
 
 // Components
 import SkipNav from '../A11y/SkipNav';
@@ -41,69 +19,6 @@ import Header from './GlobalHeader/Header';
 import Footer from './Footer';
 
 const GlobalStyle = createGlobalStyle`
-  /* Typography */
-  /* Open Sans */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: ${weightLight};
-    font-display: fallback;
-    src: url(${openSansLightWOFF2}) format('woff2'),
-      url(${openSansLightWOFF}) format('woff'),
-      url(${openSansLightTTF}) format('ttf');
-  }
-
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: ${weightLight};
-    font-display: fallback;
-    src: url(${openSansLightItalicWOFF2}) format('woff2'),
-      url(${openSansLightItalicWOFF}) format('woff'),
-      url(${openSansLightItalicTTF}) format('ttf');
-  }
-
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: ${weightRegular};
-    font-display: fallback;
-    src: url(${openSansRegularWOFF2}) format('woff2'),
-      url(${openSansRegularWOFF}) format('woff'),
-      url(${openSansRegularTTF}) format('ttf');
-  }
-
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: ${weightSemiBold};
-    font-display: fallback;
-    src: url(${openSansSemiBoldWOFF2}) format('woff2'),
-      url(${openSansSemiBoldWOFF}) format('woff'),
-      url(${openSansSemiBoldTTF}) format('ttf');
-  }
-
-  /* Old Standard TT */
-  @font-face {
-    font-family: 'Old Standard TT';
-    font-style: normal;
-    font-weight: ${weightRegular};
-    font-display: fallback;
-    src: url(${oldStandardRegularWOFF2}) format('woff2'),
-      url(${oldStandardRegularWOFF}) format('woff'),
-      url(${oldStandardRegularTTF}) format('ttf');
-  }
-
-  @font-face {
-    font-family: 'Old Standard TT';
-    font-style: italic;
-    font-weight: ${weightRegular};
-    font-display: fallback;
-    src: url(${oldStandardItalicWOFF2}) format('woff2'),
-      url(${oldStandardItalicWOFF}) format('woff'),
-      url(${oldStandardItalicTTF}) format('ttf');
-  }
-
   /* Reset */
   /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
