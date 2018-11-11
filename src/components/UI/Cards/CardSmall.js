@@ -11,10 +11,10 @@ import { colorPeacockLight, spaceStackHalf, spaceStackDefault, spaceNone } from 
 
 // TODO: Implement redundant click event pattern: https://inclusive-components.design/cards/
 
-const CardSmall = ({ caption, heading, fixed, imageAlt, linkText, path }) => (
+const CardSmall = ({ caption, heading, fluid, imageAlt, linkText, path }) => (
   <StyledCardSmall to={path}>
     <HiddenLinkText>{linkText}</HiddenLinkText>
-    <StyledCardSmallImage fixed={fixed} alt={imageAlt} />
+    <StyledCardSmallImage fluid={fluid} alt={imageAlt} />
     <StyledCardSmallContent>
       {heading && <StyledCardSmallHeading as="h3">{heading}</StyledCardSmallHeading>}
       {caption && <StyledCardSmallCaption as="p">{caption}</StyledCardSmallCaption>}
@@ -39,6 +39,7 @@ const HiddenLinkText = styled.span`
 
 const StyledCardSmallImage = styled(Img)`
   margin: ${spaceStackDefault};
+  max-width: 25.6rem;
   width: 100%;
 
   ${StyledCardSmall}:hover &,
@@ -73,7 +74,7 @@ const StyledCardSmallCaption = styled(TypeCaption)`
 CardSmall.propTypes = {
   caption: PropTypes.string,
   heading: PropTypes.string,
-  fixed: PropTypes.object.isRequired,
+  fluid: PropTypes.object.isRequired,
   imageAlt: PropTypes.string.isRequired,
   linkText: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
