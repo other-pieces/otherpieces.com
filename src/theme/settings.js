@@ -12,7 +12,7 @@ export const colorPeacock018 = '#1c2e2e';
 export const colorPeacock028 = '#2c4747';
 export const colorPeacock048 = '#4c7a7a';
 export const colorPeacock086 = '#bddbdb';
-export const colorPeacock096 = '#ebf5f5';
+export const colorPeacock096 = '#f0fafa';
 
 // State
 export const colorStateDisabled = '#999';

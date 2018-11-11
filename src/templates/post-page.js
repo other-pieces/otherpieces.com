@@ -15,7 +15,7 @@ import {
   colorPeacock096,
   fontFamilySans,
   fontFamilySerif,
-  spaceInsetDefault,
+  spaceInsetSquishDouble,
   spaceStackDefault,
   spaceStackDouble,
   spaceStackEighth,
@@ -25,8 +25,7 @@ import {
   weightLight,
   weightRegular,
   weightSemiBold,
-  spaceHalf,
-  spaceQuad
+  spaceHalf
 } from '../theme/settings';
 
 const PostPage = ({
@@ -235,9 +234,10 @@ const StyledArticleBody = styled.div`
   }
 
   ul {
-    margin-top: ${spaceQuad};
-    padding: ${spaceInsetDefault};
-    border-top: ${spaceHalf} solid ${colorPeacock096};
+    margin: ${spaceStackDouble};
+    padding: ${spaceInsetSquishDouble};
+    background-color: ${colorPeacock096};
+    border-top: ${spaceHalf} solid ${colorCharcoal012};
   }
 
   li {
@@ -247,7 +247,6 @@ const StyledArticleBody = styled.div`
     font-family: ${fontFamilySans};
     font-weight: ${weightLight};
     color: ${colorCharcoal012};
-    text-align: center;
 
     @media (max-width: 575px) {
       font-size: 1.6rem;
