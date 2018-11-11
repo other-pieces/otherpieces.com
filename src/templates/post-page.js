@@ -10,18 +10,23 @@ import TypeHeadline from '../components/Typography/TypeHeadline';
 import TypeBylineHeading from '../components/Typography/TypeBylineHeading';
 
 import {
-  colorCharcoal,
-  colorPeacockLight,
+  colorCharcoal012,
+  colorPeacock048,
+  colorPeacock096,
   fontFamilySans,
   fontFamilySerif,
+  spaceInsetDefault,
   spaceStackDefault,
   spaceStackDouble,
+  spaceStackEighth,
   spaceStackQuad,
   spaceStackOct,
   weightBold,
   weightLight,
   weightRegular,
   weightSemiBold,
+  spaceHalf,
+  spaceQuad
 } from '../theme/settings';
 
 const PostPage = ({
@@ -133,7 +138,7 @@ const StyledArticleBody = styled.div`
     width: 100%;
     font-family: ${fontFamilySerif};
     font-weight: ${weightRegular};
-    color: ${colorCharcoal};
+    color: ${colorCharcoal012};
 
     @media (max-width: 575px) {
       font-size: 2.6rem;
@@ -152,7 +157,7 @@ const StyledArticleBody = styled.div`
     width: 100%;
     font-family: ${fontFamilySerif};
     font-weight: ${weightRegular};
-    color: ${colorCharcoal};
+    color: ${colorCharcoal012};
 
     @media (max-width: 575px) {
       font-size: 2rem;
@@ -171,7 +176,7 @@ const StyledArticleBody = styled.div`
     width: 100%;
     font-family: ${fontFamilySerif};
     font-weight: ${weightRegular};
-    color: ${colorCharcoal};
+    color: ${colorCharcoal012};
 
     @media (max-width: 575px) {
       font-size: 1.6rem;
@@ -190,7 +195,7 @@ const StyledArticleBody = styled.div`
     width: 100%;
     font-family: ${fontFamilySans};
     font-weight: ${weightLight};
-    color: ${colorCharcoal};
+    color: ${colorCharcoal012};
 
     @media (max-width: 575px) {
       font-size: 1.6rem;
@@ -206,7 +211,7 @@ const StyledArticleBody = styled.div`
   a {
     font-family: ${fontFamilySans};
     font-weight: ${weightSemiBold};
-    color: ${colorCharcoal};
+    color: ${colorCharcoal012};
 
     @media (max-width: 575px) {
       font-size: 1.6rem;
@@ -220,12 +225,38 @@ const StyledArticleBody = styled.div`
 
     &:hover,
     &:focus {
-      color: ${colorPeacockLight};
+      color: ${colorPeacock048};
     }
 
     &:focus {
-      outline: 0.2rem solid ${colorPeacockLight};
+      outline: 0.2rem solid ${colorPeacock048};
       outline-offset: 0.4rem;
+    }
+  }
+
+  ul {
+    margin-top: ${spaceQuad};
+    padding: ${spaceInsetDefault};
+    border-top: ${spaceHalf} solid ${colorPeacock096};
+  }
+
+  li {
+    margin: ${spaceStackEighth};
+    max-width: 60.4rem;
+    width: 100%;
+    font-family: ${fontFamilySans};
+    font-weight: ${weightLight};
+    color: ${colorCharcoal012};
+    text-align: center;
+
+    @media (max-width: 575px) {
+      font-size: 1.6rem;
+      line-height: 1.625;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 1.8rem;
+      line-height: 1.778;
     }
   }
 

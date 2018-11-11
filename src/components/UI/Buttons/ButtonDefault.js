@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import TypeButton from '../../Typography/TypeButton';
 
 import {
-  colorLinen,
-  colorPeacock,
-  colorPeacockLight,
-  colorPeacockDark,
+  colorLinen095,
+  colorPeacock018,
+  colorPeacock028,
+  colorPeacock048,
   colorStateDisabled,
   spaceDefault,
 } from '../../../theme/settings';
@@ -20,8 +20,8 @@ const ButtonDefault = ({ children, className }) => (
 );
 
 const StyledButtonDefault = styled(TypeButton)`
-  color: ${colorLinen};
-  background-color: ${colorPeacock};
+  color: ${colorLinen095};
+  background-color: ${colorPeacock028};
   border: none;
   cursor: pointer;
 
@@ -35,15 +35,15 @@ const StyledButtonDefault = styled(TypeButton)`
 
   &:hover,
   &:focus {
-    background-color: ${colorPeacockLight};
+    background-color: ${colorPeacock048};
   }
 
   &:active {
-    background-color: ${colorPeacockDark};
+    background-color: ${colorPeacock018};
   }
 
   &:focus {
-    outline: 0.2rem solid ${colorPeacockLight};
+    outline: 0.2rem solid ${colorPeacock048};
     outline-offset: 0.2rem;
   }
 

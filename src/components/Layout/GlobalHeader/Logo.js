@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import ScreenReaderOnly from '../../A11y/ScreenReaderOnly';
 
-import { colorPeacock, colorPeacockLight, spaceStackDefault, spaceStackQuad } from '../../../theme/settings';
+import { colorPeacock028, colorPeacock048, spaceStackDefault, spaceStackQuad } from '../../../theme/settings';
 
 const Logo = () => (
   <StyledLogo to="/">
@@ -31,19 +31,19 @@ const StyledLogo = styled(Link)`
   &:hover,
   &:focus {
     svg {
-      fill: ${colorPeacockLight};
+      fill: ${colorPeacock048};
     }
   }
 
   &:focus {
-    outline: 0.4rem solid ${colorPeacockLight};
+    outline: 0.4rem solid ${colorPeacock048};
     outline-offset: 0.8rem;
   }
 `;
 
 const StyledLogoIcon = styled.svg`
   width: 100%;
-  fill: ${colorPeacock};
+  fill: ${colorPeacock028};
 `;
 
 export default Logo;

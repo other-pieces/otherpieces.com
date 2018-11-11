@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 
-import { colorCharcoal, colorPeacockLight, fontFamilySans, weightSemiBold } from '../../theme/settings';
+import { colorCharcoal012, colorPeacock048, fontFamilySans, weightSemiBold } from '../../theme/settings';
 
 const TypeLink = styled(Link)`
   font-family: ${fontFamilySans};
   font-weight: ${weightSemiBold};
-  color: ${colorCharcoal};
+  color: ${colorCharcoal012};
 
   @media (max-width: 575px) {
     font-size: 1.6rem;
@@ -20,11 +20,11 @@ const TypeLink = styled(Link)`
 
   &:hover,
   &:focus {
-    color: ${colorPeacockLight};
+    color: ${colorPeacock048};
   }
 
   &:focus {
-    outline: 0.2rem solid ${colorPeacockLight};
+    outline: 0.2rem solid ${colorPeacock048};
     outline-offset: 0.4rem;
   }
 `;

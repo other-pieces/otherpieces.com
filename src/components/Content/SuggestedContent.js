@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
 
-import { colorPeacockLight } from '../../theme/settings';
+import { colorPeacock048 } from '../../theme/settings';
 
 import ScreenReaderOnly from '../A11y/ScreenReaderOnly';
 import CategoryCalloutSection from '../Layout/CategoryCalloutSection';
@@ -57,12 +57,12 @@ const StyledInstagramLink = styled(TypeSectionHeading)`
 
   &:hover,
   &:focus {
-    color: ${colorPeacockLight};
+    color: ${colorPeacock048};
     text-decoration: underline;
   }
 
   &:focus {
-    outline: 0.2rem solid ${colorPeacockLight};
+    outline: 0.2rem solid ${colorPeacock048};
     outline-offset: 0.4rem;
   }
 `;

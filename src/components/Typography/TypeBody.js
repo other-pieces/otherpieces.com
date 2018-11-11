@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { colorCharcoal, fontFamilySans, weightLight } from '../../theme/settings';
+import { colorCharcoal012, fontFamilySans, weightLight } from '../../theme/settings';
 
 const TypeBody = styled.span`
   font-family: ${fontFamilySans};
   font-weight: ${weightLight};
-  color: ${colorCharcoal};
+  color: ${colorCharcoal012};
 
   @media (max-width: 575px) {
     font-size: 1.6rem;

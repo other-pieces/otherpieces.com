@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import TypeCaption from '../Typography/TypeCaption';
 
-import { colorCharcoal, spaceInsetDouble } from '../../theme/settings';
+import { colorCharcoal012, spaceInsetDouble } from '../../theme/settings';
 
 const Footer = () => (
   <StyledFooter>
@@ -18,7 +18,7 @@ const StyledFooter = styled.footer`
 `;
 
 const StyledCopyright = styled(TypeCaption)`
-  color: ${colorCharcoal};
+  color: ${colorCharcoal012};
 `;
 
 export default Footer;
