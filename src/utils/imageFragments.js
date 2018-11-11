@@ -13,8 +13,8 @@ export const imageFragmentOGImage = graphql`
 export const imageFragmentCard = graphql`
   fragment imageFragmentCard on File {
     childImageSharp {
-      fixed(width: 360) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 360) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -23,8 +23,8 @@ export const imageFragmentCard = graphql`
 export const imageFragmentCardSmall = graphql`
   fragment imageFragmentCardSmall on File {
     childImageSharp {
-      fixed(width: 256) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 256) {
+        ...GatsbyImageSharpFluid
       }
     }
   }

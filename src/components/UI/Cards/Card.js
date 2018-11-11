@@ -12,7 +12,7 @@ import { colorPeacockLight, spaceStackDouble, spaceNone } from '../../../theme/s
 const Card = ({ heading, linkText, image, imageAlt, path, subhead }) => (
   <StyledCard to={path}>
     <HiddenLinkText>{linkText}</HiddenLinkText>
-    <StyledCardImage resolutions={image} alt={imageAlt} />
+    <StyledCardImage fluid={image} alt={imageAlt} />
     <StyledCardContent>
       {heading && <StyledCardHeading as="h2">{heading}</StyledCardHeading>}
       {subhead && <StyledCardSubhead as="p">{subhead}</StyledCardSubhead>}
@@ -38,6 +38,14 @@ const HiddenLinkText = styled.span`
 const StyledCardImage = styled(Img)`
   margin: ${spaceStackDouble};
   width: 100%;
+
+  @media (max-width: 575px) {
+    max-width: 28.8rem;
+  }
+
+  @media (min-width: 576px) {
+    max-width: 36rem;
+  }
 
   ${StyledCard}:hover &,
   ${StyledCard}:focus & {

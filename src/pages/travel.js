@@ -61,7 +61,7 @@ const TravelPage = props => (
                       key={node.id}
                       path={node.frontmatter.path}
                       linkText={`Read ${node.frontmatter.title}`}
-                      image={node.frontmatter.imageCard.childImageSharp.fixed}
+                      image={node.frontmatter.imageCard.childImageSharp.fluid}
                       imageAlt={node.frontmatter.imageCardAlt}
                       heading={node.frontmatter.title}
                       subhead={`By ${node.frontmatter.author}`}

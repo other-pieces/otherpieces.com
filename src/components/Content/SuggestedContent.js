@@ -29,9 +29,9 @@ const SuggestedContent = ({ hiddenCalloutSectionTitle }) => (
       <>
         <CategoryCalloutSection
           hiddenTitle={hiddenCalloutSectionTitle}
-          calloutImageStart={data.imageCategoryCalloutStart.childImageSharp.fixed}
-          calloutImageCenter={data.imageCategoryCalloutCenter.childImageSharp.fixed}
-          calloutImageEnd={data.imageCategoryCalloutEnd.childImageSharp.fixed}
+          calloutImageStart={data.imageCategoryCalloutStart.childImageSharp.fluid}
+          calloutImageCenter={data.imageCategoryCalloutCenter.childImageSharp.fluid}
+          calloutImageEnd={data.imageCategoryCalloutEnd.childImageSharp.fluid}
         />
         <Divider />
         <StyledInstagramFeed>
