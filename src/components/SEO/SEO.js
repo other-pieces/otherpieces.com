@@ -67,7 +67,7 @@ const getSchemaOrgJSONLD = ({ isBlogPost, url, title, author, image, description
 const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost, datePublished }) => {
   const title = seoTitle || config.title;
   const description = seoDescription || config.description;
-  const image = seoImage;
+  const image = seoImage ? `${config.url}${seoImage}` : config.image;
   const url = pagePath ? `${config.url}${pagePath}` : config.url;
   const date = isBlogPost ? datePublished : false;
 
