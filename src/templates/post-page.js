@@ -34,13 +34,13 @@ const PostPage = ({
         title,
         seoTitle,
         seoDescription,
-        seoImage,
         imageHeroine,
         imageHeroineAlt,
         isImageHeroinePortrait,
       },
       fields: { slug },
     },
+    postOGImage
   },
 }) => (
   <>
@@ -49,7 +49,7 @@ const PostPage = ({
       datePublished={date}
       seoTitle={seoTitle}
       seoDescription={seoDescription}
-      seoImage={seoImage}
+      seoImage={postOGImage.childImageSharp.fixed.src}
       pagePage={slug}
       isBlogPost
     />
@@ -63,7 +63,7 @@ const PostPage = ({
             alt={imageHeroineAlt}
           />
         )}
-        <StyledByline as="p">By {author}</StyledByline>
+        <StyledByline as="p">By {author} | {date}</StyledByline>
         <StyledArticleBody dangerouslySetInnerHTML={{ __html: html }} />
       </StyledArticle>
     </GlobalLayout>
@@ -239,12 +239,12 @@ const StyledArticleBody = styled.div`
 `;
 
 export const postPageQuery = graphql`
-  query PostPageQuery($slug: String!) {
+  query PostPageQuery($slug: String!, $imageRegex: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         author
-        date
+        date(formatString: "MM.DD.YYYY")
         title
         seoTitle
         seoDescription
@@ -258,6 +258,9 @@ export const postPageQuery = graphql`
       fields {
         slug
       }
+    }
+    postOGImage: file(relativePath: { regex: $imageRegex }) {
+      ...imageFragmentOGImage
     }
   }
 `;

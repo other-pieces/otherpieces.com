@@ -67,7 +67,7 @@ const IndexPage = props => (
                 />
               ))}
             </CardGrid>
-            <SuggestedContent />
+            <SuggestedContent hiddenCalloutSectionTitle={false} />
           </Main>
         </GlobalLayout>
       </>

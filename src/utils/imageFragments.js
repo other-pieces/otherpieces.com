@@ -1,5 +1,15 @@
 import { graphql } from 'gatsby';
 
+export const imageFragmentOGImage = graphql`
+  fragment imageFragmentOGImage on File {
+    childImageSharp {
+      fixed(width: 1600) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`;
+
 export const imageFragmentCard = graphql`
   fragment imageFragmentCard on File {
     childImageSharp {

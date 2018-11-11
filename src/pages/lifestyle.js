@@ -1,11 +1,16 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+
+import { spaceStackDefault, spaceStackDouble } from '../theme/settings';
 
 import SEO from '../components/SEO/SEO';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
 import CardGrid from '../components/UI/Cards/CardGrid';
 import Card from '../components/UI/Cards/Card';
+import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
+import TypeBody from '../components/Typography/TypeBody';
 
 import lifestyleOGImage from '../assets/images/lifestyle-og-image.jpg';
 
@@ -48,24 +53,46 @@ const LifestylePage = props => (
         />
         <GlobalLayout>
           <Main id="mainContent">
-            <CardGrid>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Card
-                  key={node.id}
-                  path={node.frontmatter.path}
-                  linkText={`Read ${node.frontmatter.title}`}
-                  image={node.frontmatter.imageCard.childImageSharp.fixed}
-                  imageAlt={node.frontmatter.imageCardAlt}
-                  heading={node.frontmatter.title}
-                  subhead={`By ${node.frontmatter.author}`}
-                />
-              ))}
-            </CardGrid>
+            {data.allMarkdownRemark
+              ?
+                <CardGrid>
+                  {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <Card
+                      key={node.id}
+                      path={node.frontmatter.path}
+                      linkText={`Read ${node.frontmatter.title}`}
+                      image={node.frontmatter.imageCard.childImageSharp.fixed}
+                      imageAlt={node.frontmatter.imageCardAlt}
+                      heading={node.frontmatter.title}
+                      subhead={`By ${node.frontmatter.author}`}
+                    />
+                  ))}
+                </CardGrid>
+              :
+                <StyledEmptyContent>
+                  <StyledHeadline as="h1">Sorry</StyledHeadline>
+                  <StyledP as="p">Lifestyle posts are coming soon!</StyledP>
+                </StyledEmptyContent>
+            }
           </Main>
         </GlobalLayout>
       </>
     )}
   />
 );
+
+const StyledEmptyContent = styled('div')`
+  @media (min-width: 576px) {
+    text-align: center;
+  }
+`;
+
+const StyledHeadline = styled(TypeMastheadHeadline)`
+  margin: ${spaceStackDouble};
+`;
+
+const StyledP = styled(TypeBody)`
+  margin: ${spaceStackDefault};
+`;
 
 export default LifestylePage;
