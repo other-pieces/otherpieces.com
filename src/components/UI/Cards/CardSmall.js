@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import TypeNavLink from '../../Typography/TypeNavLink';
 import TypeCaption from '../../Typography/TypeCaption';
 
-import { colorPeacockLight, spaceStackHalf, spaceStackDefault, spaceNone } from '../../../theme/settings';
+import { colorPeacock048, spaceStackHalf, spaceStackDefault, spaceNone } from '../../../theme/settings';
 
 // TODO: Implement redundant click event pattern: https://inclusive-components.design/cards/
 
@@ -28,7 +28,7 @@ const StyledCardSmall = styled(Link)`
   text-decoration: none;
 
   &:focus {
-    outline: 0.4rem solid ${colorPeacockLight};
+    outline: 0.4rem solid ${colorPeacock048};
   }
 `;
 
@@ -61,7 +61,7 @@ const StyledCardSmallHeading = styled(TypeNavLink)`
 
   ${StyledCardSmall}:hover &,
   ${StyledCardSmall}:focus & {
-    color: ${colorPeacockLight};
+    color: ${colorPeacock048};
     text-decoration: underline;
   }
 `;

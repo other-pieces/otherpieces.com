@@ -3,17 +3,17 @@ import styled from 'styled-components';
 import TypeInput from '../../Typography/TypeInput';
 
 import {
-  colorCharcoalLighter,
-  colorLinenLight,
+  colorCharcoal054,
+  colorLinen098,
   colorStateDisabledLight,
-  colorPeacockLight,
+  colorPeacock048,
   spaceDefault,
   spaceInsetDefault,
 } from '../../../theme/settings';
 
 const FormField = styled(TypeInput)`
   box-sizing: border-box;
-  background-color: ${colorLinenLight};
+  background-color: ${colorLinen098};
   border: none;
 
   @media (max-width: 575px) {
@@ -25,31 +25,31 @@ const FormField = styled(TypeInput)`
   }
 
   &:focus {
-    outline: 2px solid ${colorPeacockLight};
+    outline: 2px solid ${colorPeacock048};
   }
 
   &:disabled {
     background-color: ${colorStateDisabledLight};
-    color: ${colorCharcoalLighter};
+    color: ${colorCharcoal054};
     cursor: not-allowed;
 
     &::placeholder {
-      color: ${colorCharcoalLighter};
+      color: ${colorCharcoal054};
     }
 
     &::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
-      color: ${colorCharcoalLighter};
+      color: ${colorCharcoal054};
     }
 
     &::-moz-placeholder {
       /* Firefox 19+ */
-      color: ${colorCharcoalLighter};
+      color: ${colorCharcoal054};
     }
 
     &:-ms-input-placeholder {
       /* IE 10+ */
-      color: ${colorCharcoalLighter};
+      color: ${colorCharcoal054};
     }
   }
 `;

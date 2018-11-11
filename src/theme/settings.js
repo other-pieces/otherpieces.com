@@ -1,24 +1,18 @@
 // Colorbook
 // Brand
 export const colorWhite = '#fff';
-export const colorCharcoal = '#1f1f1f';
-export const colorCharcoalLight = '#525252';
-export const colorCharcoalLighter = '#8a8a8a';
+export const colorCharcoal012 = '#1f1f1f';
+export const colorCharcoal032 = '#525252';
+export const colorCharcoal054 = '#8a8a8a';
 
-export const colorLinen = '#f2efe9';
-export const colorLinenLight = '#faf8f5';
+export const colorLinen095 = '#f2efe9';
+export const colorLinen098 = '#faf8f5';
 
-export const colorPeacock = '#2c4747';
-export const colorPeacockLight = '#4c7a7a';
-export const colorPeacockDark = '#1c2e2e';
-
-export const colorPlum = '#472c2c';
-export const colorPlumLight = '#7a4c4c';
-export const colorPlumDark = '#2b1b1b';
-
-export const colorElectric = '#4685ff';
-export const colorElectricLight = '#94b8ff';
-export const colorElectricDark = '#315db2';
+export const colorPeacock018 = '#1c2e2e';
+export const colorPeacock028 = '#2c4747';
+export const colorPeacock048 = '#4c7a7a';
+export const colorPeacock086 = '#bddbdb';
+export const colorPeacock096 = '#ebf5f5';
 
 // State
 export const colorStateDisabled = '#999';

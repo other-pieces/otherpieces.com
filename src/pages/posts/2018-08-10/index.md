@@ -8,7 +8,7 @@ seoDescription: 'For a long time I believed every woman on the planet owned a wr
 seoImage: '/sara-walking-down-sidewalk-in-button-dress-og-image.jpg'
 category: 'style'
 imageCard: './sara-walking-down-sidewalk-in-button-dress-card.jpg'
-imageCardAlt: 'Card alt text'
+imageCardAlt: 'Sara wearing navy blue midi dress with tortoise shell buttons down front'
 imageHeroine: './sara-walking-down-sidewalk-in-button-dress.jpg'
 imageHeroineAlt: 'Sara wearing navy blue midi dress with tortoise shell buttons down front'
 isImageHeroinePortrait: true

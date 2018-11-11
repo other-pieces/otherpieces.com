@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import TypeTitle1 from '../../Typography/TypeTitle1';
 import TypeBylineHeading from '../../Typography/TypeBylineHeading';
 
-import { colorPeacockLight, spaceStackDouble, spaceNone } from '../../../theme/settings';
+import { colorPeacock048, spaceStackDouble, spaceNone } from '../../../theme/settings';
 
 const Card = ({ heading, linkText, image, imageAlt, path, subhead }) => (
   <StyledCard to={path}>
@@ -26,7 +26,7 @@ const StyledCard = styled(Link)`
   text-decoration: none;
 
   &:focus {
-    outline: 0.4rem solid ${colorPeacockLight};
+    outline: 0.4rem solid ${colorPeacock048};
   }
 `;
 
@@ -65,7 +65,7 @@ const StyledCardHeading = styled(TypeTitle1)`
 
   ${StyledCard}:hover &,
   ${StyledCard}:focus & {
-    color: ${colorPeacockLight};
+    color: ${colorPeacock048};
     text-decoration: underline;
   }
 `;

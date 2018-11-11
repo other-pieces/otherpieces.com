@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { colorLinen, colorPeacockLight, spaceDefault, spaceHalf } from '../../theme/settings';
+import { colorLinen095, colorPeacock048, spaceDefault, spaceHalf } from '../../theme/settings';
 
 import TypeButton from '../Typography/TypeButton';
 
@@ -42,11 +42,11 @@ const StyledSkipNav = styled(TypeButton)`
     position: fixed;
     top: ${spaceHalf};
     left: ${spaceHalf};
-    color: ${colorLinen};
-    background-color: ${colorPeacockLight};
+    color: ${colorLinen095};
+    background-color: ${colorPeacock048};
     border: none;
     cursor: pointer;
-    outline: 0.2rem solid ${colorPeacockLight};
+    outline: 0.2rem solid ${colorPeacock048};
     outline-offset: 0.2rem;
   }
 `;

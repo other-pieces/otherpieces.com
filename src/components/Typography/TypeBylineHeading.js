@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { colorCharcoal, fontFamilySans, weightRegular } from '../../theme/settings';
+import { colorCharcoal012, fontFamilySans, weightRegular } from '../../theme/settings';
 
 const TypeBylineHeading = styled.span`
   font-family: ${fontFamilySans};
   font-weight: ${weightRegular};
-  color: ${colorCharcoal};
+  color: ${colorCharcoal012};
   text-transform: uppercase;
 
   @media (max-width: 575px) {

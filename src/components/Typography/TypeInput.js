@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { colorCharcoal, colorCharcoalLight, fontFamilySans, weightLight, weightRegular } from '../../theme/settings';
+import { colorCharcoal012, colorCharcoal032, fontFamilySans, weightLight, weightRegular } from '../../theme/settings';
 
 const TypeInput = styled.span`
   font-family: ${fontFamilySans};
   font-weight: ${weightRegular};
-  color: ${colorCharcoal};
+  color: ${colorCharcoal012};
 
   @media (max-width: 575px) {
     font-size: 1.6rem;
@@ -19,25 +19,25 @@ const TypeInput = styled.span`
 
   &::placeholder {
     font-weight: ${weightLight};
-    color: ${colorCharcoalLight};
+    color: ${colorCharcoal032};
   }
 
   &::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     font-weight: ${weightLight};
-    color: ${colorCharcoalLight};
+    color: ${colorCharcoal032};
   }
 
   &::-moz-placeholder {
     /* Firefox 19+ */
     font-weight: ${weightLight};
-    color: ${colorCharcoalLight};
+    color: ${colorCharcoal032};
   }
 
   &:-ms-input-placeholder {
     /* IE 10+ */
     font-weight: ${weightLight};
-    color: ${colorCharcoalLight};
+    color: ${colorCharcoal032};
   }
 `;
 
