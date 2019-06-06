@@ -1,18 +1,18 @@
+import { graphql, StaticQuery } from 'gatsby';
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-
-import { spaceStackDefault, spaceStackDouble } from '../theme/settings';
-
-import SEO from '../components/SEO/SEO';
+import travelOGImage from '../assets/images/travel-og-image.jpg';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
-import CardGrid from '../components/UI/Cards/CardGrid';
-import Card from '../components/UI/Cards/Card';
-import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
+import SEO from '../components/SEO/SEO';
 import TypeBody from '../components/Typography/TypeBody';
+import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
+import Card from '../components/UI/Cards/Card';
+import CardGrid from '../components/UI/Cards/CardGrid';
+import { spaceStackDefault, spaceStackDouble } from '../theme/settings';
 
-import travelOGImage from '../assets/images/travel-og-image.jpg';
+
+
 
 const seoTitle = 'Travel | Other Pieces | Travel Tips for When you Need to Skip Town';
 const seoDescription = 'Where to go, what to eat, and how to pack. So set that OOO email. We’re thinking Kyoto, ramen (duh), and with room for souveniers. We’ll be there in a sec.';
@@ -53,7 +53,7 @@ const TravelPage = props => (
         />
         <GlobalLayout>
           <Main id="mainContent">
-            {data.allMarkdownRemark
+            {data.allMarkdownRemark.edges > 0
               ?
                 <CardGrid>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
