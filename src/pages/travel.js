@@ -11,9 +11,6 @@ import Card from '../components/UI/Cards/Card';
 import CardGrid from '../components/UI/Cards/CardGrid';
 import { spaceStackDefault, spaceStackDouble } from '../theme/settings';
 
-
-
-
 const seoTitle = 'Travel | Other Pieces | Travel Tips for When you Need to Skip Town';
 const seoDescription = 'Where to go, what to eat, and how to pack. So set that OOO email. We’re thinking Kyoto, ramen (duh), and with room for souveniers. We’ll be there in a sec.';
 const seoImage = travelOGImage;
@@ -53,7 +50,7 @@ const TravelPage = props => (
         />
         <GlobalLayout>
           <Main id="mainContent">
-            {data.allMarkdownRemark.edges > 0
+            {data.allMarkdownRemark.edges.length > 0
               ?
                 <CardGrid>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
