@@ -1,19 +1,20 @@
+import { graphql, StaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-
-import SEO from '../components/SEO/SEO';
+import styleOGImage from '../assets/images/style-og-image.jpg';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
-import CardGrid from '../components/UI/Cards/CardGrid';
+import SEO from '../components/SEO/SEO';
 import Card from '../components/UI/Cards/Card';
-
-import styleOGImage from '../assets/images/style-og-image.jpg';
+import CardGrid from '../components/UI/Cards/CardGrid';
 
 const seoTitle = 'Style | Other Pieces | Super Cute ’Fits with an Ethical, Minimal Twist';
-const seoDescription = 'Ethical, minimal style doesn’t mean sacrficing your personal flair. Style is an ongoing exploration, and we’re still learning. It’s cool if you are, too.';
+const seoDescription =
+  'Ethical, minimal style doesn’t mean sacrficing your personal flair. Style is an ongoing exploration, and we’re still learning. It’s cool if you are, too.';
 const seoImage = styleOGImage;
+const seoImageAlt = 'Jaqs wearing a thick wool sweater, vintage denim, and antique gold ring';
 
-const StylePage = props => (
+const StylePage = ({ location: { pathname } }) => (
   <StaticQuery
     query={graphql`
       query StyleQuery {
@@ -44,7 +45,8 @@ const StylePage = props => (
           seoTitle={seoTitle}
           seoDescription={seoDescription}
           seoImage={seoImage}
-          pagePath={props.location.pathname}
+          seoImageAlt={seoImageAlt}
+          pagePath={pathname}
         />
         <GlobalLayout>
           <Main id="mainContent">
@@ -67,5 +69,9 @@ const StylePage = props => (
     )}
   />
 );
+
+StylePage.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
 export default StylePage;

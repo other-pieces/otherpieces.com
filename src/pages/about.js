@@ -1,26 +1,25 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
+import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-
-import { spaceStackDouble, spaceStackQuad, spaceStackCenterOct, spaceStackCenterQuad } from '../theme/settings';
-
-import SEO from '../components/SEO/SEO';
+import React from 'react';
+import styled from 'styled-components';
+import aboutOGImage from '../assets/images/about-og-image.jpg';
+import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
+import ContactForm from '../components/Content/ContactForm';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
-import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
-import HeroineGrid from '../components/UI/Heroines/HeroineGrid';
+import SEO from '../components/SEO/SEO';
 import TypeBody from '../components/Typography/TypeBody';
 import TypeHeadline from '../components/Typography/TypeHeadline';
 import TypeSectionHeading from '../components/Typography/TypeSectionHeading';
 import Divider from '../components/UI/Decoration/Divider';
-import ContactForm from '../components/Content/ContactForm';
-
-import aboutOGImage from '../assets/images/about-og-image.jpg';
+import HeroineGrid from '../components/UI/Heroines/HeroineGrid';
+import { spaceStackCenterOct, spaceStackCenterQuad, spaceStackDouble, spaceStackQuad } from '../theme/settings';
 
 const seoTitle = 'About | Other Pieces | Two Boss Babes Running Shit and Taking Names';
-const seoDescription = 'Self-proclaimed style junkies seeking dope girl gang. Interest in cozy throw pillows, carbs, and the notorious RBG preferred. All welcome. Inquire within.';
+const seoDescription =
+  'Self-proclaimed style junkies seeking dope girl gang. Interest in cozy throw pillows, carbs, and the notorious RBG preferred. All welcome. Inquire within.';
 const seoImage = aboutOGImage;
+const seoImageAlt = 'Jaqs and Sara laughing outside in button up tops and sunglasses';
 
 const AboutPage = props => (
   <StaticQuery
@@ -45,6 +44,7 @@ const AboutPage = props => (
           seoTitle={seoTitle}
           seoDescription={seoDescription}
           seoImage={seoImage}
+          seoImageAlt={seoImageAlt}
           pagePath={props.location.pathname}
         />
         <GlobalLayout>

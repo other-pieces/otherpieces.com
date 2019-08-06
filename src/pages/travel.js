@@ -1,4 +1,5 @@
 import { graphql, StaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import travelOGImage from '../assets/images/travel-og-image.jpg';
@@ -12,10 +13,12 @@ import CardGrid from '../components/UI/Cards/CardGrid';
 import { spaceStackDefault, spaceStackDouble } from '../theme/settings';
 
 const seoTitle = 'Travel | Other Pieces | Travel Tips for When you Need to Skip Town';
-const seoDescription = 'Where to go, what to eat, and how to pack. So set that OOO email. We’re thinking Kyoto, ramen (duh), and with room for souveniers. We’ll be there in a sec.';
+const seoDescription =
+  'Where to go, what to eat, and how to pack. So set that OOO email. We’re thinking Kyoto, ramen (duh), and with room for souveniers. We’ll be there in a sec.';
 const seoImage = travelOGImage;
+const seoImageAlt = 'Sara in a white wrap dress overlooking the vineyard valley in coastal Italy';
 
-const TravelPage = props => (
+const TravelPage = ({ location: { pathname } }) => (
   <StaticQuery
     query={graphql`
       query TravelQuery {
@@ -46,32 +49,32 @@ const TravelPage = props => (
           seoTitle={seoTitle}
           seoDescription={seoDescription}
           seoImage={seoImage}
-          pagePath={props.location.pathname}
+          seoImageAlt={seoImageAlt}
+          pagePath={pathname}
         />
         <GlobalLayout>
           <Main id="mainContent">
-            {data.allMarkdownRemark.edges.length > 0
-              ?
-                <CardGrid>
-                  {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <Card
-                      key={node.id}
-                      path={node.frontmatter.path}
-                      linkText={`Read ${node.frontmatter.title}`}
-                      image={node.frontmatter.imageCard.childImageSharp.fluid}
-                      imageAlt={node.frontmatter.imageCardAlt}
-                      heading={node.frontmatter.title}
-                      subhead={`By ${node.frontmatter.author}`}
-                    />
-                  ))}
-                </CardGrid>
-              :
-                <StyledEmptyContent>
-                  <StyledHeadline as="h1">Sorry</StyledHeadline>
-                  <StyledP as="p">We&rsquo;re sleeping off the jet lag.</StyledP>
-                  <StyledP>But we promise great travel posts are coming soon!</StyledP>
-                </StyledEmptyContent>
-            }
+            {data.allMarkdownRemark.edges.length > 0 ? (
+              <CardGrid>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                  <Card
+                    key={node.id}
+                    path={node.frontmatter.path}
+                    linkText={`Read ${node.frontmatter.title}`}
+                    image={node.frontmatter.imageCard.childImageSharp.fluid}
+                    imageAlt={node.frontmatter.imageCardAlt}
+                    heading={node.frontmatter.title}
+                    subhead={`By ${node.frontmatter.author}`}
+                  />
+                ))}
+              </CardGrid>
+            ) : (
+              <StyledEmptyContent>
+                <StyledHeadline as="h1">Sorry</StyledHeadline>
+                <StyledP as="p">We&rsquo;re sleeping off the jet lag.</StyledP>
+                <StyledP>But we promise great travel posts are coming soon!</StyledP>
+              </StyledEmptyContent>
+            )}
           </Main>
         </GlobalLayout>
       </>
@@ -92,5 +95,9 @@ const StyledHeadline = styled(TypeMastheadHeadline)`
 const StyledP = styled(TypeBody)`
   margin: ${spaceStackDefault};
 `;
+
+TravelPage.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
 export default TravelPage;

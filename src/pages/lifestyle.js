@@ -1,19 +1,20 @@
+import { graphql, StaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-
-import SEO from '../components/SEO/SEO';
+import lifestyleOGImage from '../assets/images/lifestyle-og-image.jpg';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
-import CardGrid from '../components/UI/Cards/CardGrid';
+import SEO from '../components/SEO/SEO';
 import Card from '../components/UI/Cards/Card';
-
-import lifestyleOGImage from '../assets/images/lifestyle-og-image.jpg';
+import CardGrid from '../components/UI/Cards/CardGrid';
 
 const seoTitle = 'Lifestyle | Other Pieces | Everything that Isn’t Style or Travel';
-const seoDescription = 'Mostly food and couches. But also money, politics, dating, feminism, the Real Housewives, and all the other stuff we have opinions on. It’s a long list.';
+const seoDescription =
+  'Mostly food and couches. But also money, politics, dating, feminism, the Real Housewives, and all the other stuff we have opinions on. It’s a long list.';
 const seoImage = lifestyleOGImage;
+const seoImageAlt = 'A cozy room with a well made bed and nighstand with books';
 
-const LifestylePage = props => (
+const LifestylePage = ({ location: { pathname } }) => (
   <StaticQuery
     query={graphql`
       query LifestyleQuery {
@@ -44,7 +45,8 @@ const LifestylePage = props => (
           seoTitle={seoTitle}
           seoDescription={seoDescription}
           seoImage={seoImage}
-          pagePath={props.location.pathname}
+          seoImageAlt={seoImageAlt}
+          pagePath={pathname}
         />
         <GlobalLayout>
           <Main id="mainContent">
@@ -67,5 +69,9 @@ const LifestylePage = props => (
     )}
   />
 );
+
+LifestylePage.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
 export default LifestylePage;

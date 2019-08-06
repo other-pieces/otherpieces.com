@@ -1,20 +1,20 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-
-import SEO from '../components/SEO/SEO';
+import React from 'react';
+import homeOGImage from '../assets/images/home-og-image.jpg';
+import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
+import SuggestedContent from '../components/Content/SuggestedContent';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
-import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
-import CardGrid from '../components/UI/Cards/CardGrid';
+import SEO from '../components/SEO/SEO';
 import Card from '../components/UI/Cards/Card';
-import SuggestedContent from '../components/Content/SuggestedContent';
-
-import homeOGImage from '../assets/images/home-og-image.jpg';
+import CardGrid from '../components/UI/Cards/CardGrid';
 
 const seoTitle = 'Other Pieces | A Hideout for Interesting, Intelligent, Badass Women';
-const seoDescription = 'Where fashion isn’t shallow and our conversations aren’t either. A place where you can talk freely about style, travel, money, and smashing the patriarchy.';
+const seoDescription =
+  'Where fashion isn’t shallow and our conversations aren’t either. A place where you can talk freely about style, travel, money, and smashing the patriarchy.';
 const seoImage = homeOGImage;
+const seoImageAlt = 'Jaqs and Sara standing in front of a store in sunglasses and button up tops';
 
 const IndexPage = props => (
   <StaticQuery
@@ -49,6 +49,7 @@ const IndexPage = props => (
           seoTitle={seoTitle}
           seoDescription={seoDescription}
           seoImage={seoImage}
+          seoImageAlt={seoImageAlt}
           pagePath={props.location.pathname}
         />
         <GlobalLayout>

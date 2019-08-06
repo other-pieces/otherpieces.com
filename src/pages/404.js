@@ -1,30 +1,29 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-
-import { spaceStackDouble, spaceStackOct, spaceStackQuad } from '../theme/settings';
-
-import SEO from '../components/SEO/SEO';
+import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
+import SuggestedContent from '../components/Content/SuggestedContent';
 import GlobalLayout from '../components/Layout/GlobalLayout';
 import Main from '../components/Layout/Main';
-import ScreenReaderOnly from '../components/A11y/ScreenReaderOnly';
-import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
+import SEO from '../components/SEO/SEO';
 import TypeBody from '../components/Typography/TypeBody';
-import SuggestedContent from '../components/Content/SuggestedContent';
+import TypeMastheadHeadline from '../components/Typography/TypeMastheadHeadline';
+import { spaceStackDouble, spaceStackOct, spaceStackQuad } from '../theme/settings';
 
 const seoTitle = 'Oops, We Lost It. | Other Pieces';
 
-const NotFoundPage = props => (
+const NotFoundPage = ({ location: { pathname } }) => (
   <>
-    <SEO
-      seoTitle={seoTitle}
-      pagePath={props.location.pathname}
-    />
+    <SEO seoTitle={seoTitle} pagePath={pathname} />
     <GlobalLayout>
       <StyledMain id="mainContent">
         <ScreenReaderOnly as="h1">404 Page Not Found</ScreenReaderOnly>
         <StyledHeadline as="h2">O.O.O.</StyledHeadline>
-        <StyledP as="p">We will be out of the office starting (Start Date) through (End Date). If you need immediate assistance during our absence, slide into our DMs. For all other matters, see below:</StyledP>
-        <SuggestedContent hiddenCalloutSectionTitle={true} />
+        <StyledP as="p">
+          We will be out of the office starting (Start Date) through (End Date). If you need immediate assistance during
+          our absence, slide into our DMs. For all other matters, see below:
+        </StyledP>
+        <SuggestedContent hiddenCalloutSectionTitle />
       </StyledMain>
     </GlobalLayout>
   </>
@@ -53,5 +52,9 @@ const StyledP = styled(TypeBody)`
     margin: ${spaceStackOct};
   }
 `;
+
+NotFoundPage.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
 export default NotFoundPage;
