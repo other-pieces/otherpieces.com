@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
 import config from '../../config/config';
 
 const getSchemaOrgJSONLD = ({ isBlogPost, url, title, author, image, description, date }) => {
@@ -64,10 +64,11 @@ const getSchemaOrgJSONLD = ({ isBlogPost, url, title, author, image, description
     : schemaOrgJSONLD;
 };
 
-const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost, datePublished }) => {
+const SEO = ({ author, seoTitle, seoDescription, seoImage, seoImageAlt, pagePath, isBlogPost, datePublished }) => {
   const title = seoTitle || config.title;
   const description = seoDescription || config.description;
   const image = seoImage ? `${config.url}${seoImage}` : config.image;
+  const imageAlt = seoImage ? seoImageAlt : config.imageAlt;
   const url = pagePath ? `${config.url}${pagePath}` : config.url;
   const date = isBlogPost ? datePublished : false;
 
@@ -77,6 +78,7 @@ const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost,
     url,
     title,
     image,
+    imageAlt,
     description,
     date,
   });
@@ -97,6 +99,7 @@ const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost,
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content={imageAlt} />
       {/* <meta property="fb:app_id" content={config.fbAppID} /> */}
 
       {/* Twitter Card tags */}
@@ -105,22 +108,29 @@ const SEO = ({ author, seoTitle, seoDescription, seoImage, pagePath, isBlogPost,
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:image:alt" content={imageAlt} />
     </Helmet>
   );
 };
 
 SEO.propTypes = {
+  author: PropTypes.string,
+  datePublished: PropTypes.string,
   seoTitle: PropTypes.string,
   seoDescription: PropTypes.string,
   seoImage: PropTypes.string,
+  seoImageAlt: PropTypes.string,
   pagePath: PropTypes.string,
   isBlogPost: PropTypes.bool,
 };
 
 SEO.defaultProps = {
+  author: null,
+  datePublished: null,
   seoTitle: null,
   seoDescription: null,
   seoImage: null,
+  seoImageAlt: null,
   pagePath: null,
   isBlogPost: false,
 };
